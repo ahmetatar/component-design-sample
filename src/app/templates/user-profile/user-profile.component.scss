@@ -1,0 +1,28 @@
+desx-user-profile {
+  .user-profile {
+    border: 1px solid #eee;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #ccc;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .profile-section,
+  .social-button,
+  .booking-section,
+  .statistic-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .booking-section {
+    button {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 30px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: .6rem 1.4rem .6rem 1.4rem;
+    }
+  }
+}

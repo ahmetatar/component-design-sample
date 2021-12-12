@@ -1,0 +1,28 @@
+<div [id]="id" [ngClass]="['accordion', options?.flush ? 'accordion-flush' : '']">
+  <ng-template ngFor [ngForOf]="items" let-item>
+    <div class="accordion-item">
+      <h2 class="accordion-header" [id]="'heading_' + item.id">
+        <button
+          [ngClass]="['accordion-button', !item.show ? 'collapsed' : '']"
+          [attr.data-bs-target]="'#' + item.id"
+          [attr.aria-expanded]="item.show ? 'true' : 'false'"
+          [attr.aria-controls]="item.id"
+          type="button"
+          data-bs-toggle="collapse"
+        >
+          <ng-container [ngTemplateOutlet]="item.headerTmpl.tmplRef"></ng-container>
+        </button>
+      </h2>
+      <div
+        [id]="item.id"
+        [ngClass]="['accordion-collapse collapse', item.show ? 'show' : '']"
+        [attr.aria-labelledby]="'heading_' + item.id"
+        [attr.data-bs-parent]="!options?.alwaysOpen ? '#' + id : ''"
+      >
+        <div class="accordion-body">
+          <ng-container [ngTemplateOutlet]="item.contentTmpl.tmplRef"></ng-container>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

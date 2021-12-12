@@ -1,0 +1,12 @@
+<div class="social-buttons">
+  <desx-button
+    *ngFor="let button of buttons"
+    type="button"
+    buttonStyle="primary"
+    [options]="{ isOutline: true }"
+  >
+    <a [href]="button.link">
+      <i [ngClass]="['bi', button.type]"></i>
+    </a>
+  </desx-button>
+</div>

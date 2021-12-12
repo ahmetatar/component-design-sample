@@ -1,0 +1,14 @@
+desx-accordion {
+  .accordion-button:not(.collapsed) {
+    font-weight: 700;
+  }
+
+  .accordion-button:focus {
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    font-weight: 700;
+  }
+}

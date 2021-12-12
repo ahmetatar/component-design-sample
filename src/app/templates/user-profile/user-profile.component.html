@@ -1,0 +1,25 @@
+<div class="user-profile">
+  <div class="profile-section">
+    <desx-profile
+      [profileImage]="profile.image"
+      [fullName]="profile.fullName"
+      [userName]="profile.userName"
+      [link]="profile.link"
+      [options]="options?.profileOptions"
+    ></desx-profile>
+  </div>
+  <div class="social-button">
+    <desx-social-buttons
+      [buttons]="profile.socialLinks"
+      [options]="options?.profileOptions"
+    ></desx-social-buttons>
+  </div>
+  <div class="booking-section">
+    <desx-button [options]="options?.buttonOptions"
+      ><i class="bi bi-clock"></i> Book Now</desx-button
+    >
+  </div>
+  <div class="statistic-section">
+    <desx-statistics [statistics]="profile.statistics"></desx-statistics>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<ng-container
+  *ngTemplateOutlet="options?.floatingLabels ? floatingTextboxTemplate : labeledTextboxTemplate"
+></ng-container>
+
+<ng-template #defaultTextboxTemplate>
+  <input
+    [id]="id"
+    [name]="id"
+    [type]="textboxType"
+    [placeholder]="placeholder"
+    [ngClass]="['form-control', size]"
+    [(ngModel)]="value"
+  />
+</ng-template>
+
+<ng-template #validationTemplate>
+  <div *ngIf="parentForm?.valid && parentForm?.touched" class="valid-feedback">
+    {{ validFeedback }}
+  </div>
+  <div *ngIf="parentForm?.invalid" class="invalid-feedback">{{ invalidFeedback }}</div>
+</ng-template>
+
+<ng-template #labeledTextboxTemplate>
+  <label class="form-label" [for]="id">{{ label }}</label>
+  <ng-container *ngTemplateOutlet="defaultTextboxTemplate"></ng-container>
+  <ng-container *ngTemplateOutlet="validationTemplate"></ng-container>
+</ng-template>
+
+<ng-template #floatingTextboxTemplate>
+  <div class="form-floating">
+    <ng-container *ngTemplateOutlet="defaultTextboxTemplate"></ng-container>
+    <label class="form-label" [for]="id">{{ label }}</label>
+  </div>
+  <ng-container *ngTemplateOutlet="validationTemplate"></ng-container>
+</ng-template>

@@ -1,0 +1,18 @@
+desx-social-buttons {
+  text-align: center;
+
+  desx-button {
+    button.btn {
+      border-radius: 50%;
+      padding: 5px 9px 5px 9px;
+      border-width: .125rem;
+      margin-right: .3rem;
+    }
+
+    button.btn-outline-primary {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}
