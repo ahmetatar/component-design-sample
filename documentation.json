@@ -2,7 +2,7 @@
     "pipes": [
         {
             "name": "ButtonStylePipe",
-            "id": "pipe-ButtonStylePipe-e182d2be2107097545fd2a572d0d5ca377b2a7d19aa02e2d3127a5f17e626d13963e1abde8f77ee4db794bffd95c432fee722670bcf48d852541b28307bd5116",
+            "id": "pipe-ButtonStylePipe-71d40ad4d8ac8469a50716f3eee5454fa9ae5f855bd38cd8f6fc53829316175acefec147436be1e1861ff18348ac1f7bcc7d6050a2f821f27692265e31b45280",
             "file": "src/app/shared/components/button/pipes/button-style.pipe.ts",
             "type": "pipe",
             "deprecated": false,
@@ -30,16 +30,16 @@
                     "optional": false,
                     "returnType": "string",
                     "typeParameters": [],
-                    "line": 15,
+                    "line": 16,
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "rawdescription": "\n\nIt transforms given class name by outline option\n",
+                    "rawdescription": "\n\nIt transforms given class name by outline option\n\n",
                     "description": "<p>It transforms given class name by outline option</p>\n",
                     "jsdoctags": [
                         {
                             "name": {
-                                "pos": 316,
-                                "end": 321,
+                                "pos": 321,
+                                "end": 326,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -50,8 +50,8 @@
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
-                                "pos": 310,
-                                "end": 315,
+                                "pos": 315,
+                                "end": 320,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -62,8 +62,8 @@
                         },
                         {
                             "name": {
-                                "pos": 372,
-                                "end": 379,
+                                "pos": 377,
+                                "end": 384,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -74,8 +74,8 @@
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
-                                "pos": 366,
-                                "end": 371,
+                                "pos": 371,
+                                "end": 376,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -86,8 +86,8 @@
                         },
                         {
                             "tagName": {
-                                "pos": 406,
-                                "end": 413,
+                                "pos": 411,
+                                "end": 418,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -100,7 +100,7 @@
                 }
             ],
             "ngname": "buttonStyle",
-            "sourceCode": "import { Pipe, PipeTransform } from '@angular/core';\nimport { ButtonStyles } from '../button.models';\nimport { ButtonOptions } from '../button.options';\n\n@Pipe({\n  name: 'buttonStyle',\n})\nexport class ButtonStylePipe implements PipeTransform {\n  /**\n   * It transforms given class name by outline option\n   * @param value takes one of ButtonStyles type values\n   * @param options takes ButtonOptions\n   * @returns transformed class name\n   */\n  transform(value: ButtonStyles, options: Partial<ButtonOptions> | undefined): string {\n    return options?.isOutline ? `btn-outline-${value}` : `btn-${value}`;\n  }\n}\n"
+            "sourceCode": "import { Pipe, PipeTransform } from '@angular/core';\nimport { ButtonStyles } from '../button.models';\nimport { ButtonOptions } from '../button.options';\n\n@Pipe({\n  name: 'buttonStyle',\n})\nexport class ButtonStylePipe implements PipeTransform {\n  /**\n   * It transforms given class name by outline option\n   *\n   * @param value takes one of ButtonStyles type values\n   * @param options takes ButtonOptions\n   * @returns transformed class name\n   */\n  transform(value: ButtonStyles, options: Partial<ButtonOptions> | undefined): string {\n    return options?.isOutline ? `btn-outline-${value}` : `btn-${value}`;\n  }\n}\n"
         }
     ],
     "interfaces": [
@@ -394,12 +394,12 @@
         },
         {
             "name": "UserProfile",
-            "id": "interface-UserProfile-516435fe3e123f7b9e35e57273388bad25e5c9cd273db66c60438598b0779001c147ff09512db911cf4318aa23c87a930dd697ef0b0a8bacf75e7c56c6872042",
+            "id": "interface-UserProfile-a3bca79c6f0be0048e2c2af0fe5b63e120d60b80f83b39a4328c57ac3e97aa321344a617fc57cf7454b1d5e8e0d2b55abd940247f76e9e7ad149e80429d9b75e",
             "file": "src/app/templates/user-profile/user-profile.models.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "import { SocialButton } from 'src/app/modules/social-buttons/social-buttons.models';\r\nimport { Statistic } from 'src/app/modules/statistics/statistics.models';\r\n\r\n/**\r\n * To be updated\r\n */\r\nexport interface UserProfile {\r\n  image: string;\r\n  userName: string;\r\n  fullName: string;\r\n  link: string;\r\n  socialLinks: SocialButton[];\r\n  statistics: Statistic[];\r\n}\r\n",
+            "sourceCode": "import { SocialButton } from 'src/app/modules/social-buttons/social-buttons.models';\r\nimport { Statistic } from 'src/app/modules/statistics/statistics.models';\r\n\r\n/**\r\n * User profile view model\r\n */\r\nexport interface UserProfile {\r\n  image: string;\r\n  userName: string;\r\n  fullName: string;\r\n  link: string;\r\n  socialLinks: SocialButton[];\r\n  statistics: Statistic[];\r\n}\r\n",
             "properties": [
                 {
                     "name": "fullName",
@@ -458,8 +458,8 @@
             ],
             "indexSignatures": [],
             "kind": 165,
-            "description": "<p>To be updated</p>\n",
-            "rawdescription": "\n\nTo be updated\n",
+            "description": "<p>User profile view model</p>\n",
+            "rawdescription": "\n\nUser profile view model\n",
             "methods": []
         },
         {
@@ -3773,7 +3773,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-8\">\n      <desx-image id=\"profileImage\" [source]=\"profileImage\" width=\"100\" height=\"100\"></desx-image>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-8\">\n      <h4 class=\"profile-full-name\">{{ fullName }}</h4>\n      <span class=\"profile-user-name\">{{ userName }}</span>\n      <span *ngIf=\"options?.showLink\" class=\"seperator\">|</span>\n      <a *ngIf=\"options?.showLink\" class=\"profile-user-link\" href=\"#\">{{ link }}</a>\n    </div>\n  </div>\n</div>\n"
+            "templateData": "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <desx-image id=\"profileImage\" [source]=\"profileImage\" width=\"100\" height=\"100\"></desx-image>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <h4 class=\"profile-full-name\">{{ fullName }}</h4>\n      <span class=\"profile-user-name\">{{ userName }}</span>\n      <span *ngIf=\"options?.showLink\" class=\"seperator\">|</span>\n      <a *ngIf=\"options?.showLink\" class=\"profile-user-link\" href=\"#\">{{ link }}</a>\n    </div>\n  </div>\n</div>\n"
         },
         {
             "name": "SocialButtonsComponent",
@@ -3839,7 +3839,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "desx-social-buttons {\r\n  desx-button {\r\n    button.btn {\r\n      border-radius: 50%;\r\n      padding: 5px 9px 5px 9px;\r\n      border-width: 0.125rem;\r\n      margin-right: 0.3rem;\r\n    }\r\n\r\n    button.btn-outline-primary {\r\n      &:hover {\r\n        border-color: none;\r\n        background-color: none;\r\n      }\r\n    }\r\n  }\r\n}\r\n",
+                    "data": "desx-social-buttons {\r\n  text-align: center;\r\n\r\n  desx-button {\r\n    button.btn {\r\n      border-radius: 50%;\r\n      padding: 5px 9px 5px 9px;\r\n      border-width: .125rem;\r\n      margin-right: .3rem;\r\n    }\r\n\r\n    button.btn-outline-primary {\r\n      &:hover {\r\n        background-color: transparent;\r\n      }\r\n    }\r\n  }\r\n}\r\n",
                     "styleUrl": "./social-buttons.component.scss"
                 }
             ],
@@ -3973,7 +3973,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"row statistics\">\r\n  <div *ngFor=\"let statistic of statistics\" class=\"statistic-item col-md-4 col-lg-2 col-sm-4\">\r\n    <h5>{{ statistic.value }}</h5>\r\n    <p>{{ statistic.text }}</p>\r\n  </div>\r\n</div>\r\n"
+            "templateData": "<div class=\"row statistics\">\r\n  <div *ngFor=\"let statistic of statistics\" class=\"statistic-item col-md-4\">\r\n    <h5>{{ statistic.value }}</h5>\r\n    <p>{{ statistic.text }}</p>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "TextboxComponent",
@@ -4458,7 +4458,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "desx-user-profile {\r\n  section {\r\n    margin-bottom: 1.5rem;\r\n  }\r\n\r\n  #bookingSection button {\r\n    margin-top: 1rem;\r\n    margin-bottom: 1rem;\r\n    border-radius: 20px;\r\n    font-weight: 600;\r\n    text-transform: uppercase;\r\n    padding-right: 1.1rem;\r\n    padding-left: 1.1rem;\r\n  }\r\n}\r\n",
+                    "data": "desx-user-profile {\r\n  .user-profile {\r\n    border: 1px solid #eee;\r\n    padding: 1rem;\r\n    border-radius: 10px;\r\n    box-shadow: 0 0 5px #ccc;\r\n    max-width: 400px;\r\n    text-align: center;\r\n  }\r\n\r\n  .profile-section,\r\n  .social-button,\r\n  .booking-section,\r\n  .statistic-section {\r\n    margin-bottom: 1.5rem;\r\n  }\r\n\r\n  .booking-section {\r\n    button {\r\n      margin-top: 1rem;\r\n      margin-bottom: 1rem;\r\n      border-radius: 30px;\r\n      font-weight: 600;\r\n      text-transform: uppercase;\r\n      padding: .6rem 1.4rem .6rem 1.4rem;\r\n    }\r\n  }\r\n}\r\n",
                     "styleUrl": "./user-profile.component.scss"
                 }
             ],
@@ -4492,7 +4492,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"user-profile\">\n  <section id=\"profileSection\">\n    <desx-profile\n      [profileImage]=\"profile.image\"\n      [fullName]=\"profile.fullName\"\n      [userName]=\"profile.userName\"\n      [link]=\"profile.link\"\n      [options]=\"options?.profileOptions\"\n    ></desx-profile>\n  </section>\n  <section id=\"socialSection\">\n    <desx-social-buttons\n      [buttons]=\"profile.socialLinks\"\n      [options]=\"options?.profileOptions\"\n    ></desx-social-buttons>\n  </section>\n  <section id=\"bookingSection\">\n    <desx-button [options]=\"options?.buttonOptions\"\n      ><i class=\"bi bi-clock\"></i> Book Now</desx-button\n    >\n  </section>\n  <section id=\"statisticSection\">\n    <desx-statistics [statistics]=\"profile.statistics\"></desx-statistics>\n  </section>\n</div>\n"
+            "templateData": "<div class=\"user-profile\">\n  <div class=\"profile-section\">\n    <desx-profile\n      [profileImage]=\"profile.image\"\n      [fullName]=\"profile.fullName\"\n      [userName]=\"profile.userName\"\n      [link]=\"profile.link\"\n      [options]=\"options?.profileOptions\"\n    ></desx-profile>\n  </div>\n  <div class=\"social-button\">\n    <desx-social-buttons\n      [buttons]=\"profile.socialLinks\"\n      [options]=\"options?.profileOptions\"\n    ></desx-social-buttons>\n  </div>\n  <div class=\"booking-section\">\n    <desx-button [options]=\"options?.buttonOptions\"\n      ><i class=\"bi bi-clock\"></i> Book Now</desx-button\n    >\n  </div>\n  <div class=\"statistic-section\">\n    <desx-statistics [statistics]=\"profile.statistics\"></desx-statistics>\n  </div>\n</div>\n"
         }
     ],
     "modules": [
@@ -4671,11 +4671,11 @@
                 "name": "actions",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/components/alert/alert.stories.ts",
+                "file": "src/app/shared/components/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\r\n  onClosed: action(EventType.Close),\r\n}",
+                "defaultValue": "{\r\n  onClick: action('onClick'),\r\n}",
                 "rawdescription": "Component events",
                 "description": "<p>Component events</p>\n"
             },
@@ -4683,11 +4683,11 @@
                 "name": "actions",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/components/button/button.stories.ts",
+                "file": "src/app/shared/components/alert/alert.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\r\n  onClick: action('onClick'),\r\n}",
+                "defaultValue": "{\r\n  onClosed: action(EventType.Close),\r\n}",
                 "rawdescription": "Component events",
                 "description": "<p>Component events</p>\n"
             },
@@ -4819,7 +4819,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/components/alert/alert.stories.ts",
+                "file": "src/app/shared/components/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4831,7 +4831,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/components/button/button.stories.ts",
+                "file": "src/app/shared/components/image/image.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4855,7 +4855,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/components/image/image.stories.ts",
+                "file": "src/app/shared/components/alert/alert.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -5194,11 +5194,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/components/alert/alert.stories.ts",
+                "file": "src/app/shared/components/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n  },\r\n  template: `\r\n    <desx-alert [options]=\"options\" [type]=\"type\" [dismissible]=\"dismissible\">\r\n      A simple primary alert—check it out!\r\n    </desx-alert>\r\n  `,\r\n})",
+                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    click: actions.onClick,\r\n  },\r\n  template: `\r\n    <desx-button\r\n      [id]=\"id\"\r\n      [type]=\"type\"\r\n      [btnStyle]=\"style\"\r\n      [options]=\"options\"\r\n      (click)=\"onClick($event)\"\r\n    ><i class=\"bi bi-bag-plus\"></i>  Confirm your bags</desx-button>\r\n  `,\r\n})",
                 "rawdescription": "Default template for stories",
                 "description": "<p>Default template for stories</p>\n"
             },
@@ -5206,11 +5206,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/components/button/button.stories.ts",
+                "file": "src/app/shared/components/image/image.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    click: actions.onClick,\r\n  },\r\n  template: `\r\n    <desx-button\r\n      [id]=\"id\"\r\n      [type]=\"type\"\r\n      [btnStyle]=\"style\"\r\n      [options]=\"options\"\r\n      (click)=\"onClick($event)\"\r\n    ><i class=\"bi bi-bag-plus\"></i>  Confirm your bags</desx-button>\r\n  `,\r\n})",
+                "defaultValue": "(args) => ({\r\n  props: args,\r\n})",
                 "rawdescription": "Default template for stories",
                 "description": "<p>Default template for stories</p>\n"
             },
@@ -5230,11 +5230,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/components/image/image.stories.ts",
+                "file": "src/app/shared/components/alert/alert.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "(args) => ({\r\n  props: args,\r\n})",
+                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n  },\r\n  template: `\r\n    <desx-alert [options]=\"options\" [type]=\"type\" [dismissible]=\"dismissible\">\r\n      A simple primary alert—check it out!\r\n    </desx-alert>\r\n  `,\r\n})",
                 "rawdescription": "Default template for stories",
                 "description": "<p>Default template for stories</p>\n"
             },
@@ -5539,6 +5539,56 @@
                     "description": "<p>Default template for stories</p>\n"
                 }
             ],
+            "src/app/shared/components/button/button.stories.ts": [
+                {
+                    "name": "actions",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shared/components/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  onClick: action('onClick'),\r\n}",
+                    "rawdescription": "Component events",
+                    "description": "<p>Component events</p>\n"
+                },
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shared/components/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})",
+                    "rawdescription": "Default story",
+                    "description": "<p>Default story</p>\n"
+                },
+                {
+                    "name": "OutlineDefault",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shared/components/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})",
+                    "rawdescription": "Default outlined story",
+                    "description": "<p>Default outlined story</p>\n"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shared/components/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    click: actions.onClick,\r\n  },\r\n  template: `\r\n    <desx-button\r\n      [id]=\"id\"\r\n      [type]=\"type\"\r\n      [btnStyle]=\"style\"\r\n      [options]=\"options\"\r\n      (click)=\"onClick($event)\"\r\n    ><i class=\"bi bi-bag-plus\"></i>  Confirm your bags</desx-button>\r\n  `,\r\n})",
+                    "rawdescription": "Default template for stories",
+                    "description": "<p>Default template for stories</p>\n"
+                }
+            ],
             "src/app/shared/components/alert/alert.stories.ts": [
                 {
                     "name": "actions",
@@ -5595,56 +5645,6 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n  },\r\n  template: `\r\n    <desx-alert [options]=\"options\" [type]=\"type\" [dismissible]=\"dismissible\">\r\n      A simple primary alert—check it out!\r\n    </desx-alert>\r\n  `,\r\n})",
-                    "rawdescription": "Default template for stories",
-                    "description": "<p>Default template for stories</p>\n"
-                }
-            ],
-            "src/app/shared/components/button/button.stories.ts": [
-                {
-                    "name": "actions",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/shared/components/button/button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\r\n  onClick: action('onClick'),\r\n}",
-                    "rawdescription": "Component events",
-                    "description": "<p>Component events</p>\n"
-                },
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/shared/components/button/button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})",
-                    "rawdescription": "Default story",
-                    "description": "<p>Default story</p>\n"
-                },
-                {
-                    "name": "OutlineDefault",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/shared/components/button/button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})",
-                    "rawdescription": "Default outlined story",
-                    "description": "<p>Default outlined story</p>\n"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/shared/components/button/button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    click: actions.onClick,\r\n  },\r\n  template: `\r\n    <desx-button\r\n      [id]=\"id\"\r\n      [type]=\"type\"\r\n      [btnStyle]=\"style\"\r\n      [options]=\"options\"\r\n      (click)=\"onClick($event)\"\r\n    ><i class=\"bi bi-bag-plus\"></i>  Confirm your bags</desx-button>\r\n  `,\r\n})",
                     "rawdescription": "Default template for stories",
                     "description": "<p>Default template for stories</p>\n"
                 }
@@ -5822,6 +5822,32 @@
                     "description": "<p>Default template for stories</p>\n"
                 }
             ],
+            "src/app/shared/components/image/image.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shared/components/image/image.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})",
+                    "rawdescription": "Default story",
+                    "description": "<p>Default story</p>\n"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shared/components/image/image.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})",
+                    "rawdescription": "Default template for stories",
+                    "description": "<p>Default template for stories</p>\n"
+                }
+            ],
             "src/app/shared/components/textbox/textbox.stories.ts": [
                 {
                     "name": "Default",
@@ -5894,32 +5920,6 @@
                     "defaultValue": "FormTemplate.bind({})",
                     "rawdescription": "Textbox w/ form wrapper",
                     "description": "<p>Textbox w/ form wrapper</p>\n"
-                }
-            ],
-            "src/app/shared/components/image/image.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/shared/components/image/image.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})",
-                    "rawdescription": "Default story",
-                    "description": "<p>Default story</p>\n"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/shared/components/image/image.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})",
-                    "rawdescription": "Default template for stories",
-                    "description": "<p>Default template for stories</p>\n"
                 }
             ],
             "src/app/shared/components/components.config.ts": [
