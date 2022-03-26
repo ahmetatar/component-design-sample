@@ -23,7 +23,8 @@
       "@modules/*": ["src/app/modules/*"],
       "@pages/*": ["src/app/pages/*"],
       "@app/*": ["src/app/*"],
-      "@shared/*": ["src/app/shared/*"]
+      "@shared/*": ["src/app/shared/*"],
+      "@bootstrap": ["../../node_modules/bootstrap/scss/"]
     }
   },
   "angularCompilerOptions": {

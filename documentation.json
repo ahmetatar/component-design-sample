@@ -4659,6 +4659,18 @@
                 "name": "actions",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/shared/components/alert/alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  onClosed: action(EventType.Close),\r\n}",
+                "rawdescription": "Component events",
+                "description": "<p>Component events</p>\n"
+            },
+            {
+                "name": "actions",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/shared/components/accordion/accordion.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -4676,18 +4688,6 @@
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\r\n  onClick: action('onClick'),\r\n}",
-                "rawdescription": "Component events",
-                "description": "<p>Component events</p>\n"
-            },
-            {
-                "name": "actions",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/shared/components/alert/alert.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\r\n  onClosed: action(EventType.Close),\r\n}",
                 "rawdescription": "Component events",
                 "description": "<p>Component events</p>\n"
             },
@@ -4759,7 +4759,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/modules/profile/profile.stories.ts",
+                "file": "src/app/modules/statistics/statistics.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4783,7 +4783,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/modules/statistics/statistics.stories.ts",
+                "file": "src/app/modules/profile/profile.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4796,6 +4796,18 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/app/templates/user-profile/user-profile.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})",
+                "rawdescription": "Default story",
+                "description": "<p>Default story</p>\n"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/shared/components/alert/alert.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4844,18 +4856,6 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/app/shared/components/textbox/textbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})",
-                "rawdescription": "Default story",
-                "description": "<p>Default story</p>\n"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/shared/components/alert/alert.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4985,21 +4985,21 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.prod.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: true,\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/environments/environment.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: false,\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: true,\n}"
             },
             {
                 "name": "Floating",
@@ -5134,7 +5134,7 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/modules/profile/profile.stories.ts",
+                "file": "src/app/modules/statistics/statistics.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -5158,7 +5158,7 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/modules/statistics/statistics.stories.ts",
+                "file": "src/app/modules/profile/profile.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -5182,11 +5182,23 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/shared/components/alert/alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n  },\r\n  template: `\r\n    <desx-alert [options]=\"options\" [type]=\"type\" [dismissible]=\"dismissible\">\r\n      A simple primary alert—check it out!\r\n    </desx-alert>\r\n  `,\r\n})",
+                "rawdescription": "Default template for stories",
+                "description": "<p>Default template for stories</p>\n"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/shared/components/accordion/accordion.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "(args) => ({\n  props: {\n    ...args,\n  },\n  show: actions.onShow,\n  shown: actions.onShown,\n  side: actions.onHide,\n  sidden: actions.onHidden,\n  template: `\n    <desx-accordion id=\"mainAccordion\" [options]=\"options\"\n      (show)=\"onShow($event)\" (shown)=\"onShown($event)\" (hide)=\"onHide($event)\" (hidden)=\"onHidden($event)\">\n      <desx-accordion-item id=\"item1\">\n        <ng-template desx-accordion-header>\n          Accordion Item #1\n        </ng-template>\n        <ng-template desx-accordion-content>\n          This is a test content\n        </ng-template>\n      </desx-accordion-item>\n      <desx-accordion-item id=\"item2\">\n        <ng-template desx-accordion-header>\n          Accordion Item #2\n        </ng-template>\n        <ng-template desx-accordion-content>\n          This is a test content\n        </ng-template>\n      </desx-accordion-item>\n    </desx-accordion>\n  `,\n})",
+                "defaultValue": "(args) => ({\n  props: {\n    ...args,\n    onShow: actions.onShow,\n    onShown: actions.onShown,\n    onHide: actions.onHide,\n    onHidden: actions.onHidden,\n  },\n  template: `\n    <desx-accordion id=\"mainAccordion\" [options]=\"options\"\n      (show)=\"onShow($event)\" (shown)=\"onShown($event)\" (hide)=\"onHide($event)\" (hidden)=\"onHidden($event)\">\n      <desx-accordion-item id=\"item1\">\n        <ng-template desx-accordion-header>\n          Accordion Item #1\n        </ng-template>\n        <ng-template desx-accordion-content>\n          This is a test content\n        </ng-template>\n      </desx-accordion-item>\n      <desx-accordion-item id=\"item2\">\n        <ng-template desx-accordion-header>\n          Accordion Item #2\n        </ng-template>\n        <ng-template desx-accordion-content>\n          This is a test content\n        </ng-template>\n      </desx-accordion-item>\n    </desx-accordion>\n  `,\n})",
                 "rawdescription": "Default template for stories",
                 "description": "<p>Default template for stories</p>\n"
             },
@@ -5223,18 +5235,6 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "(args) => ({\r\n  props: args,\r\n})",
-                "rawdescription": "Default template for stories",
-                "description": "<p>Default template for stories</p>\n"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/shared/components/alert/alert.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n  },\r\n  template: `\r\n    <desx-alert [options]=\"options\" [type]=\"type\" [dismissible]=\"dismissible\">\r\n      A simple primary alert—check it out!\r\n    </desx-alert>\r\n  `,\r\n})",
                 "rawdescription": "Default template for stories",
                 "description": "<p>Default template for stories</p>\n"
             },
@@ -5356,6 +5356,29 @@
                 "name": "EventType",
                 "childs": [
                     {
+                        "name": "Close",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "close.bs.alert"
+                    },
+                    {
+                        "name": "Closed",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "closed.bs.alert"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "<p>Alert events</p>\n",
+                "file": "src/app/shared/components/alert/alert.models.ts"
+            },
+            {
+                "name": "EventType",
+                "childs": [
+                    {
                         "name": "Show",
                         "deprecated": false,
                         "deprecationMessage": "",
@@ -5386,29 +5409,6 @@
                 "deprecationMessage": "",
                 "description": "<p>Bootstrap collapse events</p>\n",
                 "file": "src/app/shared/components/accordion/accordion.models.ts"
-            },
-            {
-                "name": "EventType",
-                "childs": [
-                    {
-                        "name": "Close",
-                        "deprecated": false,
-                        "deprecationMessage": "",
-                        "value": "close.bs.alert"
-                    },
-                    {
-                        "name": "Closed",
-                        "deprecated": false,
-                        "deprecationMessage": "",
-                        "value": "closed.bs.alert"
-                    }
-                ],
-                "ctype": "miscellaneous",
-                "subtype": "enum",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "<p>Alert events</p>\n",
-                "file": "src/app/shared/components/alert/alert.models.ts"
             },
             {
                 "name": "SocialButtonTypes",
@@ -5477,6 +5477,66 @@
                     "description": "<p>Default accordion component options</p>\n"
                 }
             ],
+            "src/app/shared/components/alert/alert.stories.ts": [
+                {
+                    "name": "actions",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shared/components/alert/alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  onClosed: action(EventType.Close),\r\n}",
+                    "rawdescription": "Component events",
+                    "description": "<p>Component events</p>\n"
+                },
+                {
+                    "name": "AdditionalContent",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shared/components/alert/alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "AdditionalContentTemplate.bind({})"
+                },
+                {
+                    "name": "AdditionalContentTemplate",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shared/components/alert/alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    closed: actions.onClosed,\r\n  },\r\n  template: `\r\n    <desx-alert [options]=\"options\" [type]=\"type\" [dismissible]=\"dismissible\" (closed)=\"onClosed($event)\">\r\n      <h4 class=\"alert-heading\">Well done!</h4>\r\n      <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\r\n      <hr>\r\n      <p class=\"mb-0\">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\r\n    </desx-alert>\r\n  `,\r\n})",
+                    "rawdescription": "Additional template",
+                    "description": "<p>Additional template</p>\n"
+                },
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shared/components/alert/alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})",
+                    "rawdescription": "Default story",
+                    "description": "<p>Default story</p>\n"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shared/components/alert/alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n  },\r\n  template: `\r\n    <desx-alert [options]=\"options\" [type]=\"type\" [dismissible]=\"dismissible\">\r\n      A simple primary alert—check it out!\r\n    </desx-alert>\r\n  `,\r\n})",
+                    "rawdescription": "Default template for stories",
+                    "description": "<p>Default template for stories</p>\n"
+                }
+            ],
             "src/app/shared/components/accordion/accordion.stories.ts": [
                 {
                     "name": "actions",
@@ -5534,7 +5594,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "(args) => ({\n  props: {\n    ...args,\n  },\n  show: actions.onShow,\n  shown: actions.onShown,\n  side: actions.onHide,\n  sidden: actions.onHidden,\n  template: `\n    <desx-accordion id=\"mainAccordion\" [options]=\"options\"\n      (show)=\"onShow($event)\" (shown)=\"onShown($event)\" (hide)=\"onHide($event)\" (hidden)=\"onHidden($event)\">\n      <desx-accordion-item id=\"item1\">\n        <ng-template desx-accordion-header>\n          Accordion Item #1\n        </ng-template>\n        <ng-template desx-accordion-content>\n          This is a test content\n        </ng-template>\n      </desx-accordion-item>\n      <desx-accordion-item id=\"item2\">\n        <ng-template desx-accordion-header>\n          Accordion Item #2\n        </ng-template>\n        <ng-template desx-accordion-content>\n          This is a test content\n        </ng-template>\n      </desx-accordion-item>\n    </desx-accordion>\n  `,\n})",
+                    "defaultValue": "(args) => ({\n  props: {\n    ...args,\n    onShow: actions.onShow,\n    onShown: actions.onShown,\n    onHide: actions.onHide,\n    onHidden: actions.onHidden,\n  },\n  template: `\n    <desx-accordion id=\"mainAccordion\" [options]=\"options\"\n      (show)=\"onShow($event)\" (shown)=\"onShown($event)\" (hide)=\"onHide($event)\" (hidden)=\"onHidden($event)\">\n      <desx-accordion-item id=\"item1\">\n        <ng-template desx-accordion-header>\n          Accordion Item #1\n        </ng-template>\n        <ng-template desx-accordion-content>\n          This is a test content\n        </ng-template>\n      </desx-accordion-item>\n      <desx-accordion-item id=\"item2\">\n        <ng-template desx-accordion-header>\n          Accordion Item #2\n        </ng-template>\n        <ng-template desx-accordion-content>\n          This is a test content\n        </ng-template>\n      </desx-accordion-item>\n    </desx-accordion>\n  `,\n})",
                     "rawdescription": "Default template for stories",
                     "description": "<p>Default template for stories</p>\n"
                 }
@@ -5585,66 +5645,6 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    click: actions.onClick,\r\n  },\r\n  template: `\r\n    <desx-button\r\n      [id]=\"id\"\r\n      [type]=\"type\"\r\n      [btnStyle]=\"style\"\r\n      [options]=\"options\"\r\n      (click)=\"onClick($event)\"\r\n    ><i class=\"bi bi-bag-plus\"></i>  Confirm your bags</desx-button>\r\n  `,\r\n})",
-                    "rawdescription": "Default template for stories",
-                    "description": "<p>Default template for stories</p>\n"
-                }
-            ],
-            "src/app/shared/components/alert/alert.stories.ts": [
-                {
-                    "name": "actions",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/shared/components/alert/alert.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\r\n  onClosed: action(EventType.Close),\r\n}",
-                    "rawdescription": "Component events",
-                    "description": "<p>Component events</p>\n"
-                },
-                {
-                    "name": "AdditionalContent",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/shared/components/alert/alert.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "AdditionalContentTemplate.bind({})"
-                },
-                {
-                    "name": "AdditionalContentTemplate",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/shared/components/alert/alert.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    closed: actions.onClosed,\r\n  },\r\n  template: `\r\n    <desx-alert [options]=\"options\" [type]=\"type\" [dismissible]=\"dismissible\" (closed)=\"onClosed($event)\">\r\n      <h4 class=\"alert-heading\">Well done!</h4>\r\n      <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\r\n      <hr>\r\n      <p class=\"mb-0\">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\r\n    </desx-alert>\r\n  `,\r\n})",
-                    "rawdescription": "Additional template",
-                    "description": "<p>Additional template</p>\n"
-                },
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/shared/components/alert/alert.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})",
-                    "rawdescription": "Default story",
-                    "description": "<p>Default story</p>\n"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/shared/components/alert/alert.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n  },\r\n  template: `\r\n    <desx-alert [options]=\"options\" [type]=\"type\" [dismissible]=\"dismissible\">\r\n      A simple primary alert—check it out!\r\n    </desx-alert>\r\n  `,\r\n})",
                     "rawdescription": "Default template for stories",
                     "description": "<p>Default template for stories</p>\n"
                 }
@@ -5718,12 +5718,12 @@
                     "type": "literal type"
                 }
             ],
-            "src/app/modules/profile/profile.stories.ts": [
+            "src/app/modules/statistics/statistics.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/modules/profile/profile.stories.ts",
+                    "file": "src/app/modules/statistics/statistics.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -5735,7 +5735,7 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/modules/profile/profile.stories.ts",
+                    "file": "src/app/modules/statistics/statistics.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -5770,12 +5770,12 @@
                     "description": "<p>Default template for stories</p>\n"
                 }
             ],
-            "src/app/modules/statistics/statistics.stories.ts": [
+            "src/app/modules/profile/profile.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/modules/statistics/statistics.stories.ts",
+                    "file": "src/app/modules/profile/profile.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -5787,7 +5787,7 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/modules/statistics/statistics.stories.ts",
+                    "file": "src/app/modules/profile/profile.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -6078,18 +6078,6 @@
                     "defaultValue": "new InjectionToken<UserProfileOptions>(\r\n  'Default user profile component options'\r\n)"
                 }
             ],
-            "src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.prod.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: true,\n}"
-                }
-            ],
             "src/environments/environment.ts": [
                 {
                     "name": "environment",
@@ -6100,6 +6088,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: false,\n}"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true,\n}"
                 }
             ],
             "src/app/modules/social-buttons/social-buttons.mocks.ts": [
@@ -6129,6 +6129,31 @@
         },
         "groupedFunctions": {},
         "groupedEnumerations": {
+            "src/app/shared/components/alert/alert.models.ts": [
+                {
+                    "name": "EventType",
+                    "childs": [
+                        {
+                            "name": "Close",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "close.bs.alert"
+                        },
+                        {
+                            "name": "Closed",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "closed.bs.alert"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "<p>Alert events</p>\n",
+                    "file": "src/app/shared/components/alert/alert.models.ts"
+                }
+            ],
             "src/app/shared/components/accordion/accordion.models.ts": [
                 {
                     "name": "EventType",
@@ -6164,31 +6189,6 @@
                     "deprecationMessage": "",
                     "description": "<p>Bootstrap collapse events</p>\n",
                     "file": "src/app/shared/components/accordion/accordion.models.ts"
-                }
-            ],
-            "src/app/shared/components/alert/alert.models.ts": [
-                {
-                    "name": "EventType",
-                    "childs": [
-                        {
-                            "name": "Close",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "value": "close.bs.alert"
-                        },
-                        {
-                            "name": "Closed",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "value": "closed.bs.alert"
-                        }
-                    ],
-                    "ctype": "miscellaneous",
-                    "subtype": "enum",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "<p>Alert events</p>\n",
-                    "file": "src/app/shared/components/alert/alert.models.ts"
                 }
             ],
             "src/app/modules/social-buttons/social-buttons.models.ts": [

@@ -51,11 +51,11 @@ const actions = {
 const Template: Story = (args) => ({
   props: {
     ...args,
+    onShow: actions.onShow,
+    onShown: actions.onShown,
+    onHide: actions.onHide,
+    onHidden: actions.onHidden,
   },
-  show: actions.onShow,
-  shown: actions.onShown,
-  side: actions.onHide,
-  sidden: actions.onHidden,
   template: `
     <desx-accordion id="mainAccordion" [options]="options"
       (show)="onShow($event)" (shown)="onShown($event)" (hide)="onHide($event)" (hidden)="onHidden($event)">
