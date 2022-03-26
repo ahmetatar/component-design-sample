@@ -53,7 +53,7 @@ const Template: Story = (args) => ({
       [btnStyle]="style"
       [options]="options"
       (click)="onClick($event)"
-    ><i class="bi bi-bag-plus"></i>  Confirm your bags</desx-button>
+    >Confirm your bags</desx-button>
   `,
 });
 
