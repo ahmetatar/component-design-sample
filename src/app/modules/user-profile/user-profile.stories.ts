@@ -1,11 +1,11 @@
 import { moduleMetadata, Meta, Story, componentWrapperDecorator } from '@storybook/angular';
-import { SOCIAL_BUTTONS } from '@modules/social-buttons/social-buttons.mocks';
-import { STATISTICS } from '@modules/statistics/statistics.mocks';
+import { SOCIAL_BUTTONS } from '@components/social-buttons/social-buttons.mocks';
+import { STATISTICS } from '@components/statistics/statistics.mocks';
 import { SharedModule } from '@shared/shared.module';
 import { UserProfileComponent } from './user-profile.component';
-import { ProfileComponent } from '@modules/profile/profile.component';
-import { StatisticsComponent } from '@modules/statistics/statistics.component';
-import { SocialButtonsComponent } from '@modules/social-buttons/social-buttons.component';
+import { ProfileComponent } from '@components/profile/profile.component';
+import { StatisticsComponent } from '@components/statistics/statistics.component';
+import { SocialButtonsComponent } from '@components/social-buttons/social-buttons.component';
 
 export default {
   title: 'Design System/Templates/User Profile',

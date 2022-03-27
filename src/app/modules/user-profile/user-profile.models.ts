@@ -1,5 +1,5 @@
-import { SocialButton } from 'src/app/modules/social-buttons/social-buttons.models';
-import { Statistic } from 'src/app/modules/statistics/statistics.models';
+import { SocialButton } from '@components/social-buttons/social-buttons.models';
+import { Statistic } from '@components/statistics/statistics.models';
 
 /**
  * User profile view model

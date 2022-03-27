@@ -1,8 +1,8 @@
 import { InjectionToken } from '@angular/core';
 import { ButtonOptions } from '@app/shared/components/button/button.options';
-import { ProfileOptions } from 'src/app/modules/profile/profile.options';
-import { SocialButtonOptions } from 'src/app/modules/social-buttons/social-buttons.options';
-import { StatisticsOptions } from 'src/app/modules/statistics/statistics.options';
+import { ProfileOptions } from '@components/profile/profile.options';
+import { SocialButtonOptions } from '@components/social-buttons/social-buttons.options';
+import { StatisticsOptions } from '@components/statistics/statistics.options';
 
 export interface UserProfileOptions {
   profileOptions?: ProfileOptions;

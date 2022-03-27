@@ -58,7 +58,9 @@ describe('AccordionComponent', () => {
 
     expect(itemElements).toBeTruthy();
     expect(itemElements?.length).toBe(2);
-    expect(itemElements && itemElements[0].querySelector('h2 button')?.textContent).toBe('Accordion Item #1');
+    expect(itemElements && itemElements[0].querySelector('h2 button')?.textContent).toBe(
+      'Accordion Item #1'
+    );
   });
 });
 

@@ -20,7 +20,7 @@
     "module": "es2020",
     "lib": ["es2020", "dom"],
     "paths": {
-      "@modules/*": ["src/app/modules/*"],
+      "@components/*": ["src/app/components/*"],
       "@pages/*": ["src/app/pages/*"],
       "@app/*": ["src/app/*"],
       "@shared/*": ["src/app/shared/*"],
