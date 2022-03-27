@@ -4659,11 +4659,11 @@
                 "name": "actions",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/components/button/button.stories.ts",
+                "file": "src/app/shared/components/accordion/accordion.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\r\n  onClick: action('onClick'),\r\n}",
+                "defaultValue": "{\n  onShow: action(EventType.Show),\n  onShown: action(EventType.Shown),\n  onHide: action(EventType.Hide),\n  onHidden: action(EventType.Hidden),\n}",
                 "rawdescription": "Component events",
                 "description": "<p>Component events</p>\n"
             },
@@ -4683,11 +4683,11 @@
                 "name": "actions",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/components/accordion/accordion.stories.ts",
+                "file": "src/app/shared/components/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\n  onShow: action(EventType.Show),\n  onShown: action(EventType.Shown),\n  onHide: action(EventType.Hide),\n  onHidden: action(EventType.Hidden),\n}",
+                "defaultValue": "{\r\n  onClick: action('onClick'),\r\n}",
                 "rawdescription": "Component events",
                 "description": "<p>Component events</p>\n"
             },
@@ -4807,13 +4807,13 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/components/button/button.stories.ts",
+                "file": "src/app/shared/components/accordion/accordion.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({})",
-                "rawdescription": "Default story",
-                "description": "<p>Default story</p>\n"
+                "rawdescription": "Default Accordion",
+                "description": "<p>Default Accordion</p>\n"
             },
             {
                 "name": "Default",
@@ -4831,13 +4831,13 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/components/accordion/accordion.stories.ts",
+                "file": "src/app/shared/components/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({})",
-                "rawdescription": "Default Accordion",
-                "description": "<p>Default Accordion</p>\n"
+                "rawdescription": "Default story",
+                "description": "<p>Default story</p>\n"
             },
             {
                 "name": "Default",
@@ -5182,11 +5182,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/components/button/button.stories.ts",
+                "file": "src/app/shared/components/accordion/accordion.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    click: actions.onClick,\r\n  },\r\n  template: `\r\n    <desx-button\r\n      [id]=\"id\"\r\n      [type]=\"type\"\r\n      [btnStyle]=\"style\"\r\n      [options]=\"options\"\r\n      (click)=\"onClick($event)\"\r\n    ><i class=\"bi bi-bag-plus\"></i>  Confirm your bags</desx-button>\r\n  `,\r\n})",
+                "defaultValue": "(args) => ({\n  props: {\n    ...args,\n    onShow: actions.onShow,\n    onShown: actions.onShown,\n    onHide: actions.onHide,\n    onHidden: actions.onHidden,\n  },\n  template: `\n    <desx-accordion id=\"mainAccordion\" [options]=\"options\"\n      (show)=\"onShow($event)\" (shown)=\"onShown($event)\" (hide)=\"onHide($event)\" (hidden)=\"onHidden($event)\">\n      <desx-accordion-item id=\"item1\">\n        <ng-template desx-accordion-header>\n          Accordion Item #1\n        </ng-template>\n        <ng-template desx-accordion-content>\n          This is a test content\n        </ng-template>\n      </desx-accordion-item>\n      <desx-accordion-item id=\"item2\">\n        <ng-template desx-accordion-header>\n          Accordion Item #2\n        </ng-template>\n        <ng-template desx-accordion-content>\n          This is a test content\n        </ng-template>\n      </desx-accordion-item>\n    </desx-accordion>\n  `,\n})",
                 "rawdescription": "Default template for stories",
                 "description": "<p>Default template for stories</p>\n"
             },
@@ -5206,11 +5206,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/components/accordion/accordion.stories.ts",
+                "file": "src/app/shared/components/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "(args) => ({\n  props: {\n    ...args,\n    onShow: actions.onShow,\n    onShown: actions.onShown,\n    onHide: actions.onHide,\n    onHidden: actions.onHidden,\n  },\n  template: `\n    <desx-accordion id=\"mainAccordion\" [options]=\"options\"\n      (show)=\"onShow($event)\" (shown)=\"onShown($event)\" (hide)=\"onHide($event)\" (hidden)=\"onHidden($event)\">\n      <desx-accordion-item id=\"item1\">\n        <ng-template desx-accordion-header>\n          Accordion Item #1\n        </ng-template>\n        <ng-template desx-accordion-content>\n          This is a test content\n        </ng-template>\n      </desx-accordion-item>\n      <desx-accordion-item id=\"item2\">\n        <ng-template desx-accordion-header>\n          Accordion Item #2\n        </ng-template>\n        <ng-template desx-accordion-content>\n          This is a test content\n        </ng-template>\n      </desx-accordion-item>\n    </desx-accordion>\n  `,\n})",
+                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    click: actions.onClick,\r\n  },\r\n  template: `\r\n    <desx-button\r\n      [id]=\"id\"\r\n      [type]=\"type\"\r\n      [btnStyle]=\"style\"\r\n      [options]=\"options\"\r\n      (click)=\"onClick($event)\"\r\n    >Confirm your bags</desx-button>\r\n  `,\r\n})",
                 "rawdescription": "Default template for stories",
                 "description": "<p>Default template for stories</p>\n"
             },
@@ -5356,29 +5356,6 @@
                 "name": "EventType",
                 "childs": [
                     {
-                        "name": "Close",
-                        "deprecated": false,
-                        "deprecationMessage": "",
-                        "value": "close.bs.alert"
-                    },
-                    {
-                        "name": "Closed",
-                        "deprecated": false,
-                        "deprecationMessage": "",
-                        "value": "closed.bs.alert"
-                    }
-                ],
-                "ctype": "miscellaneous",
-                "subtype": "enum",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "<p>Alert events</p>\n",
-                "file": "src/app/shared/components/alert/alert.models.ts"
-            },
-            {
-                "name": "EventType",
-                "childs": [
-                    {
                         "name": "Show",
                         "deprecated": false,
                         "deprecationMessage": "",
@@ -5409,6 +5386,29 @@
                 "deprecationMessage": "",
                 "description": "<p>Bootstrap collapse events</p>\n",
                 "file": "src/app/shared/components/accordion/accordion.models.ts"
+            },
+            {
+                "name": "EventType",
+                "childs": [
+                    {
+                        "name": "Close",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "close.bs.alert"
+                    },
+                    {
+                        "name": "Closed",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "closed.bs.alert"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "<p>Alert events</p>\n",
+                "file": "src/app/shared/components/alert/alert.models.ts"
             },
             {
                 "name": "SocialButtonTypes",
@@ -5477,52 +5477,64 @@
                     "description": "<p>Default accordion component options</p>\n"
                 }
             ],
-            "src/app/shared/components/button/button.stories.ts": [
+            "src/app/shared/components/accordion/accordion.stories.ts": [
                 {
                     "name": "actions",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/shared/components/button/button.stories.ts",
+                    "file": "src/app/shared/components/accordion/accordion.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\r\n  onClick: action('onClick'),\r\n}",
+                    "defaultValue": "{\n  onShow: action(EventType.Show),\n  onShown: action(EventType.Shown),\n  onHide: action(EventType.Hide),\n  onHidden: action(EventType.Hidden),\n}",
                     "rawdescription": "Component events",
                     "description": "<p>Component events</p>\n"
+                },
+                {
+                    "name": "AlwaysOpen",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shared/components/accordion/accordion.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})",
+                    "rawdescription": "Multi collapsible accordion",
+                    "description": "<p>Multi collapsible accordion</p>\n"
                 },
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/shared/components/button/button.stories.ts",
+                    "file": "src/app/shared/components/accordion/accordion.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "Template.bind({})",
-                    "rawdescription": "Default story",
-                    "description": "<p>Default story</p>\n"
+                    "rawdescription": "Default Accordion",
+                    "description": "<p>Default Accordion</p>\n"
                 },
                 {
-                    "name": "OutlineDefault",
+                    "name": "Flushed",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/shared/components/button/button.stories.ts",
+                    "file": "src/app/shared/components/accordion/accordion.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "Template.bind({})",
-                    "rawdescription": "Default outlined story",
-                    "description": "<p>Default outlined story</p>\n"
+                    "rawdescription": "Flush Accordion",
+                    "description": "<p>Flush Accordion</p>\n"
                 },
                 {
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/shared/components/button/button.stories.ts",
+                    "file": "src/app/shared/components/accordion/accordion.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    click: actions.onClick,\r\n  },\r\n  template: `\r\n    <desx-button\r\n      [id]=\"id\"\r\n      [type]=\"type\"\r\n      [btnStyle]=\"style\"\r\n      [options]=\"options\"\r\n      (click)=\"onClick($event)\"\r\n    ><i class=\"bi bi-bag-plus\"></i>  Confirm your bags</desx-button>\r\n  `,\r\n})",
+                    "defaultValue": "(args) => ({\n  props: {\n    ...args,\n    onShow: actions.onShow,\n    onShown: actions.onShown,\n    onHide: actions.onHide,\n    onHidden: actions.onHidden,\n  },\n  template: `\n    <desx-accordion id=\"mainAccordion\" [options]=\"options\"\n      (show)=\"onShow($event)\" (shown)=\"onShown($event)\" (hide)=\"onHide($event)\" (hidden)=\"onHidden($event)\">\n      <desx-accordion-item id=\"item1\">\n        <ng-template desx-accordion-header>\n          Accordion Item #1\n        </ng-template>\n        <ng-template desx-accordion-content>\n          This is a test content\n        </ng-template>\n      </desx-accordion-item>\n      <desx-accordion-item id=\"item2\">\n        <ng-template desx-accordion-header>\n          Accordion Item #2\n        </ng-template>\n        <ng-template desx-accordion-content>\n          This is a test content\n        </ng-template>\n      </desx-accordion-item>\n    </desx-accordion>\n  `,\n})",
                     "rawdescription": "Default template for stories",
                     "description": "<p>Default template for stories</p>\n"
                 }
@@ -5587,64 +5599,52 @@
                     "description": "<p>Default template for stories</p>\n"
                 }
             ],
-            "src/app/shared/components/accordion/accordion.stories.ts": [
+            "src/app/shared/components/button/button.stories.ts": [
                 {
                     "name": "actions",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/shared/components/accordion/accordion.stories.ts",
+                    "file": "src/app/shared/components/button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\n  onShow: action(EventType.Show),\n  onShown: action(EventType.Shown),\n  onHide: action(EventType.Hide),\n  onHidden: action(EventType.Hidden),\n}",
+                    "defaultValue": "{\r\n  onClick: action('onClick'),\r\n}",
                     "rawdescription": "Component events",
                     "description": "<p>Component events</p>\n"
-                },
-                {
-                    "name": "AlwaysOpen",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/shared/components/accordion/accordion.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})",
-                    "rawdescription": "Multi collapsible accordion",
-                    "description": "<p>Multi collapsible accordion</p>\n"
                 },
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/shared/components/accordion/accordion.stories.ts",
+                    "file": "src/app/shared/components/button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "Template.bind({})",
-                    "rawdescription": "Default Accordion",
-                    "description": "<p>Default Accordion</p>\n"
+                    "rawdescription": "Default story",
+                    "description": "<p>Default story</p>\n"
                 },
                 {
-                    "name": "Flushed",
+                    "name": "OutlineDefault",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/shared/components/accordion/accordion.stories.ts",
+                    "file": "src/app/shared/components/button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "Template.bind({})",
-                    "rawdescription": "Flush Accordion",
-                    "description": "<p>Flush Accordion</p>\n"
+                    "rawdescription": "Default outlined story",
+                    "description": "<p>Default outlined story</p>\n"
                 },
                 {
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/shared/components/accordion/accordion.stories.ts",
+                    "file": "src/app/shared/components/button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "(args) => ({\n  props: {\n    ...args,\n    onShow: actions.onShow,\n    onShown: actions.onShown,\n    onHide: actions.onHide,\n    onHidden: actions.onHidden,\n  },\n  template: `\n    <desx-accordion id=\"mainAccordion\" [options]=\"options\"\n      (show)=\"onShow($event)\" (shown)=\"onShown($event)\" (hide)=\"onHide($event)\" (hidden)=\"onHidden($event)\">\n      <desx-accordion-item id=\"item1\">\n        <ng-template desx-accordion-header>\n          Accordion Item #1\n        </ng-template>\n        <ng-template desx-accordion-content>\n          This is a test content\n        </ng-template>\n      </desx-accordion-item>\n      <desx-accordion-item id=\"item2\">\n        <ng-template desx-accordion-header>\n          Accordion Item #2\n        </ng-template>\n        <ng-template desx-accordion-content>\n          This is a test content\n        </ng-template>\n      </desx-accordion-item>\n    </desx-accordion>\n  `,\n})",
+                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    click: actions.onClick,\r\n  },\r\n  template: `\r\n    <desx-button\r\n      [id]=\"id\"\r\n      [type]=\"type\"\r\n      [btnStyle]=\"style\"\r\n      [options]=\"options\"\r\n      (click)=\"onClick($event)\"\r\n    >Confirm your bags</desx-button>\r\n  `,\r\n})",
                     "rawdescription": "Default template for stories",
                     "description": "<p>Default template for stories</p>\n"
                 }
@@ -6129,31 +6129,6 @@
         },
         "groupedFunctions": {},
         "groupedEnumerations": {
-            "src/app/shared/components/alert/alert.models.ts": [
-                {
-                    "name": "EventType",
-                    "childs": [
-                        {
-                            "name": "Close",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "value": "close.bs.alert"
-                        },
-                        {
-                            "name": "Closed",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "value": "closed.bs.alert"
-                        }
-                    ],
-                    "ctype": "miscellaneous",
-                    "subtype": "enum",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "<p>Alert events</p>\n",
-                    "file": "src/app/shared/components/alert/alert.models.ts"
-                }
-            ],
             "src/app/shared/components/accordion/accordion.models.ts": [
                 {
                     "name": "EventType",
@@ -6189,6 +6164,31 @@
                     "deprecationMessage": "",
                     "description": "<p>Bootstrap collapse events</p>\n",
                     "file": "src/app/shared/components/accordion/accordion.models.ts"
+                }
+            ],
+            "src/app/shared/components/alert/alert.models.ts": [
+                {
+                    "name": "EventType",
+                    "childs": [
+                        {
+                            "name": "Close",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "close.bs.alert"
+                        },
+                        {
+                            "name": "Closed",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "closed.bs.alert"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "<p>Alert events</p>\n",
+                    "file": "src/app/shared/components/alert/alert.models.ts"
                 }
             ],
             "src/app/modules/social-buttons/social-buttons.models.ts": [

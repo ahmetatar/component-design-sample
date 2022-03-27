@@ -10,7 +10,8 @@
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
     "storybook": "yarn docs:json && start-storybook -p 6006",
     "build-storybook": "yarn docs:json && build-storybook",
-    "chromatic": "npx chromatic --project-token=b9e7ec7a3b18"
+    "chromatic": "npx chromatic --project-token=b9e7ec7a3b18",
+    "chromatic:local": "npx chromatic --project-token=b9e7ec7a3b18 --exit-zero-on-changes"
   },
   "private": true,
   "dependencies": {
