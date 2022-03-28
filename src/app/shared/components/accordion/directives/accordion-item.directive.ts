@@ -3,6 +3,7 @@ import { AccordionContentDirective } from './accordion-content.directive';
 import { AccordionHeaderDirective } from './accordion-header.directive';
 
 @Directive({
+  // eslint-disable-next-line @angular-eslint/directive-selector
   selector: 'desx-accordion-item',
 })
 export class AccordionItemDirective implements AfterContentInit {

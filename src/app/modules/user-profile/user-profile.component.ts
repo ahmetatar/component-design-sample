@@ -16,7 +16,7 @@ export class UserProfileComponent implements OnInit {
   profile!: UserProfile;
 
   constructor(
-    @Optional() @Inject(USER_PROFILE_OPTIONS) private defaultOptions: UserProfileOptions
+    @Optional() @Inject(USER_PROFILE_OPTIONS) private defaultOptions: UserProfileOptions,
   ) {}
 
   ngOnInit(): void {

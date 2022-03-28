@@ -96,9 +96,18 @@
             "styles": ["src/styles.scss"],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+          }
         }
       }
     }
   },
-  "defaultProject": "component-design-sample"
+  "defaultProject": "component-design-sample",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

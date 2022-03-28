@@ -32,12 +32,13 @@ export class ButtonComponent implements OnInit {
   type: ButtonTypes = 'button';
 
   @Output()
+  // eslint-disable-next-line @angular-eslint/no-output-native
   click = new EventEmitter<Event>();
 
   constructor(
     @Inject(BUTTON_OPTIONS) private defaultOptions: ButtonOptions,
     private elRef: ElementRef,
-    private renderer: Renderer2
+    private renderer: Renderer2,
   ) {}
 
   ngOnInit(): void {

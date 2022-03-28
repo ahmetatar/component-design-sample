@@ -17,5 +17,5 @@ export interface UserProfileOptions {
 export const DEFAULT_USER_PROFILE_OPTIONS: UserProfileOptions = {};
 
 export const USER_PROFILE_OPTIONS = new InjectionToken<UserProfileOptions>(
-  'Default user profile component options'
+  'Default user profile component options',
 );

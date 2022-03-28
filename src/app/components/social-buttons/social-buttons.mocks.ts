@@ -1,4 +1,4 @@
-import { SocialButtonTypes } from "./social-buttons.models";
+import { SocialButtonTypes } from './social-buttons.models';
 
 export const SOCIAL_BUTTONS = [
   { type: SocialButtonTypes.Facebook, link: 'https://facebook.com' },

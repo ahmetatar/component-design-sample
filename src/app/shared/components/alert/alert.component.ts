@@ -37,7 +37,7 @@ export class AlertComponent implements OnInit {
     @Inject(ALERT_OPTIONS) private defaultOptions: AlertOptions,
     private elRef: ElementRef,
     private renderer: Renderer2,
-    private zone: NgZone
+    private zone: NgZone,
   ) {}
 
   ngOnInit(): void {

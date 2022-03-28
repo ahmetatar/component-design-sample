@@ -8,5 +8,5 @@ export interface StatisticsOptions {}
 export const DEFAULT_STATISTICS_OPTIONS: StatisticsOptions = {};
 
 export const STATISTICS_OPTIONS = new InjectionToken<StatisticsOptions>(
-  'Default statistics component options'
+  'Default statistics component options',
 );

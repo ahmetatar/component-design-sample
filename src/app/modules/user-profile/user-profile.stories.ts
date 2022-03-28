@@ -55,6 +55,6 @@ Default.args = {
     },
     buttonOptions: {
       isOutline: false,
-    }
+    },
   },
 };

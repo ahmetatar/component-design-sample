@@ -51,17 +51,18 @@ buttonStyle =
 The `buttonType` property of the button component is used to determine the type of the button and can take one of the following values;
 
 ```typescript
-buttonType = 
+buttonType =
   ButtonType.Button,
   ButtonType.Submit,
   ButtonType.Reset,
 ```
 
 ### Button Size
-A button can be created in different sizes using the ``size`` parameter;
+
+A button can be created in different sizes using the `size` parameter;
 
 ```typescript
-size = 
+size =
   ButtonSize.Default,
   ButtonSize.Large,
   ButtonSize.Small,
@@ -74,6 +75,6 @@ size =
 
 The button component emits a click event when clicked.
 
-| Event Type | Description                                                                                |
-| ---------- | ------------------------------------------------------------------------------------------ |
-| OnClick    | Triggered when button is clicked.                                |
+| Event Type | Description                       |
+| ---------- | --------------------------------- |
+| OnClick    | Triggered when button is clicked. |

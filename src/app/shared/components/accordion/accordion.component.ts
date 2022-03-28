@@ -30,6 +30,7 @@ export class AccordionComponent implements OnInit {
   options?: Partial<AccordionOptions>;
 
   @Output()
+  // eslint-disable-next-line @angular-eslint/no-output-native
   show = new EventEmitter<Event>();
 
   @Output()
@@ -47,7 +48,7 @@ export class AccordionComponent implements OnInit {
     @Inject(ACCORDION_OPTIONS) private defaultOptions: AccordionOptions,
     private elRef: ElementRef,
     private renderer: Renderer2,
-    private zone: NgZone
+    private zone: NgZone,
   ) {}
 
   ngOnInit(): void {
@@ -60,9 +61,7 @@ export class AccordionComponent implements OnInit {
       this.renderer.listen(this.elRef.nativeElement, EventType.Show, (e) => this.show.emit(e));
       this.renderer.listen(this.elRef.nativeElement, EventType.Shown, (e) => this.shown.emit(e));
       this.renderer.listen(this.elRef.nativeElement, EventType.Hide, (e) => this.hide.emit(e));
-      this.renderer.listen(this.elRef.nativeElement, EventType.Hidden, (e) =>
-        this.hidden.emit(e)
-      );
+      this.renderer.listen(this.elRef.nativeElement, EventType.Hidden, (e) => this.hidden.emit(e));
     });
   }
 }

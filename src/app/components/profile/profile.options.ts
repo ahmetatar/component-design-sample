@@ -16,5 +16,5 @@ export const DEFAULT_PROFILE_OPTIONS: ProfileOptions = {
 };
 
 export const PROFILE_OPTIONS = new InjectionToken<ProfileOptions>(
-  'Default profile component options'
+  'Default profile component options',
 );

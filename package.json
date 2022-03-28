@@ -11,7 +11,20 @@
     "storybook": "yarn docs:json && start-storybook -p 6006",
     "build-storybook": "yarn docs:json && build-storybook",
     "chromatic": "chromatic --exit-zero-on-changes",
-    "chromatic:local": "npx chromatic --project-token=b9e7ec7a3b18 --exit-zero-on-changes"
+    "chromatic:local": "npx chromatic --project-token=b9e7ec7a3b18 --exit-zero-on-changes",
+    "lint": "ng lint",
+    "format": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged --relative"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --fix"
+    ]
   },
   "private": true,
   "dependencies": {
@@ -26,12 +39,21 @@
     "@ngx-storybook/schematics": "1.0.5",
     "bootstrap": "^5.1.3",
     "bootstrap-icons": "^1.8.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.0.3",
+    "@angular-eslint/builder": "13.1.0",
+    "@angular-eslint/eslint-plugin": "13.1.0",
+    "@angular-eslint/eslint-plugin-template": "13.1.0",
+    "@angular-eslint/schematics": "13.1.0",
+    "@angular-eslint/template-parser": "13.1.0",
     "@angular/cdk": "^13.1.2",
     "@angular/cli": "~13.0.3",
     "@angular/compiler-cli": "~13.0.0",
@@ -49,16 +71,19 @@
     "@types/bootstrap": "^5.1.8",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "5.11.0",
+    "@typescript-eslint/parser": "5.11.0",
     "@webcomponents/custom-elements": "^1.5.0",
     "babel-loader": "^8.2.3",
     "chromatic": "^6.5.3",
+    "eslint": "^8.2.0",
     "jasmine-core": "~3.10.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
-    "prettier": "^2.5.1",
+    "prettier": "^2.6.1",
     "storybook-dark-mode": "^1.0.8",
     "typescript": "~4.4.3"
   }

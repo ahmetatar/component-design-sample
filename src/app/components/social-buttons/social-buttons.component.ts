@@ -16,7 +16,7 @@ export class SocialButtonsComponent implements OnInit {
   buttons: SocialButton[] = [];
 
   constructor(
-    @Optional() @Inject(SOCIAL_BUTTON_OPTIONS) private defaultOptions: SocialButtonOptions
+    @Optional() @Inject(SOCIAL_BUTTON_OPTIONS) private defaultOptions: SocialButtonOptions,
   ) {}
 
   ngOnInit(): void {

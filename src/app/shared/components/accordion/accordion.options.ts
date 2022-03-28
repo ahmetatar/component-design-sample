@@ -27,5 +27,5 @@ export const DEFAULT_ACCORDION_OPTIONS: AccordionOptions = {
 };
 
 export const ACCORDION_OPTIONS = new InjectionToken<AccordionOptions>(
-  'Default Accordion component options'
+  'Default Accordion component options',
 );

@@ -60,18 +60,18 @@ const Template: Story = (args) => ({
     <desx-accordion id="mainAccordion" [options]="options"
       (show)="onShow($event)" (shown)="onShown($event)" (hide)="onHide($event)" (hidden)="onHidden($event)">
       <desx-accordion-item id="item1">
-        <ng-template desx-accordion-header>
+        <ng-template desxAccordionHeader>
           Accordion Item #1
         </ng-template>
-        <ng-template desx-accordion-content>
+        <ng-template desxAccordionContent>
           This is a test content
         </ng-template>
       </desx-accordion-item>
       <desx-accordion-item id="item2">
-        <ng-template desx-accordion-header>
+        <ng-template desxAccordionHeader>
           Accordion Item #2
         </ng-template>
-        <ng-template desx-accordion-content>
+        <ng-template desxAccordionContent>
           This is a test content
         </ng-template>
       </desx-accordion-item>

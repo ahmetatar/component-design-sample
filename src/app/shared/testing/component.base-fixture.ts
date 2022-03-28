@@ -1,5 +1,5 @@
-import { DebugElement } from "@angular/core";
-import { By } from "@angular/platform-browser";
+import { DebugElement } from '@angular/core';
+import { By } from '@angular/platform-browser';
 
 export abstract class ComponentBaseFixture {
   constructor(private debugEl: DebugElement) {}
@@ -11,7 +11,7 @@ export abstract class ComponentBaseFixture {
    */
   public getElement<T>(selector: string) {
     const element = this.debugEl.query(By.css(selector));
-    return element ? element.nativeElement as T : null;
+    return element ? (element.nativeElement as T) : null;
   }
 
   /**

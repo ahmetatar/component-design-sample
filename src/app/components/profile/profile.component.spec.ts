@@ -21,7 +21,7 @@ describe('ProfileComponent', () => {
 
   it('hides link if options is set', () => {
     component.options = {
-      showLink: false
+      showLink: false,
     };
 
     fixture.detectChanges();

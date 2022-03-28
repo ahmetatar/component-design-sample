@@ -87,9 +87,9 @@ or
 
 The Accordion component raises some events when an accordion item collapse/expand. These events are executed outside the `NgZone` when no change detection is required when each item expands/collapses.
 
-| Event Type   | Description                                                           |
-| ------------ | ----------------------------------------------------------------------|
-| OnShow       | This event fires immediately when the show instance method is called. |
-| OnShown      | This event is fired when a collapse element has been made visible to the user (will wait for CSS transitions to complete). |
-| OnHide       | This event is fired immediately when the hide method has been called. |
-| OnHidden     | This event is fired when a collapse element has been hidden from the user (will wait for CSS transitions to complete). |
+| Event Type | Description                                                                                                                |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------- |
+| OnShow     | This event fires immediately when the show instance method is called.                                                      |
+| OnShown    | This event is fired when a collapse element has been made visible to the user (will wait for CSS transitions to complete). |
+| OnHide     | This event is fired immediately when the hide method has been called.                                                      |
+| OnHidden   | This event is fired when a collapse element has been hidden from the user (will wait for CSS transitions to complete).     |

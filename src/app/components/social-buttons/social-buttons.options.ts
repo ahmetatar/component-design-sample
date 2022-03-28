@@ -8,5 +8,5 @@ export interface SocialButtonOptions {}
 export const DEFAULT_SOCIAL_BUTTON_OPTIONS: SocialButtonOptions = {};
 
 export const SOCIAL_BUTTON_OPTIONS = new InjectionToken<SocialButtonOptions>(
-  'Default social buttons component options'
+  'Default social buttons component options',
 );

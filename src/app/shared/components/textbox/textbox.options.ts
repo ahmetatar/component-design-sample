@@ -21,5 +21,5 @@ export const DEFAULT_TEXTBOX_OPTIONS: TextboxOptions = {
 };
 
 export const TEXTBOX_OPTIONS = new InjectionToken<TextboxOptions>(
-  'Default Textbox component options'
+  'Default Textbox component options',
 );
