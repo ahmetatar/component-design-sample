@@ -18,7 +18,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged --relative"
+      "pre-commit": "lint-staged --relative",
+      "commit-msg": "npx commitlint --edit $1"
     }
   },
   "lint-staged": {
@@ -36,6 +37,8 @@
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
     "@ngx-storybook/schematics": "1.0.5",
     "bootstrap": "^5.1.3",
     "bootstrap-icons": "^1.8.1",
@@ -68,6 +71,7 @@
     "@storybook/angular": "^6.4.9",
     "@storybook/builder-webpack5": "^6.4.9",
     "@storybook/manager-webpack5": "^6.4.9",
+    "@storybook/testing-angular": "^0.0.12",
     "@types/bootstrap": "^5.1.8",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",

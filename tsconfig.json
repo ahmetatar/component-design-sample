@@ -21,10 +21,12 @@
     "lib": ["es2020", "dom"],
     "paths": {
       "@components/*": ["src/app/components/*"],
+      "@templates/*": ["src/app/templates/*"],
+      "@layouts/*": ["src/app/layouts/*"],
+      "@modules/*": ["src/app/modules/*"],
       "@pages/*": ["src/app/pages/*"],
       "@app/*": ["src/app/*"],
       "@shared/*": ["src/app/shared/*"],
-      "@bootstrap": ["../../node_modules/bootstrap/scss/"]
     }
   },
   "angularCompilerOptions": {
