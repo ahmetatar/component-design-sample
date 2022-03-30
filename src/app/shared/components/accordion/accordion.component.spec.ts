@@ -69,12 +69,12 @@ describe('AccordionComponent', () => {
   template: `
     <desx-accordion id="mainAccordion" [options]="options">
       <desx-accordion-item id="item1">
-        <ng-template desx-accordion-header>Accordion Item #1</ng-template>
-        <ng-template desx-accordion-content>This is a test content</ng-template>
+        <ng-template desxAccordionHeader>Accordion Item #1</ng-template>
+        <ng-template desxAccordionContent>This is a test content</ng-template>
       </desx-accordion-item>
       <desx-accordion-item id="item2">
-        <ng-template desx-accordion-header>Accordion Item #2</ng-template>
-        <ng-template desx-accordion-content>This is a test content</ng-template>
+        <ng-template desxAccordionHeader>Accordion Item #2</ng-template>
+        <ng-template desxAccordionContent>This is a test content</ng-template>
       </desx-accordion-item>
     </desx-accordion>
   `,

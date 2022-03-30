@@ -7,24 +7,21 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test:ci": "ng test --browsers=Headless --no-watch",
+    "lint:ci": "eslint",
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
     "storybook": "yarn docs:json && start-storybook -p 6006",
     "build-storybook": "yarn docs:json && build-storybook",
     "chromatic": "chromatic --exit-zero-on-changes",
     "chromatic:local": "npx chromatic --project-token=b9e7ec7a3b18 --exit-zero-on-changes",
-    "lint": "ng lint",
-    "format": "prettier --write .",
+    "lint": "eslint --fix && git add .",
+    "format": "prettier --write . && git add .",
     "prepare": "husky install"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged --relative",
-      "commit-msg": "npx commitlint --edit $1"
-    }
   },
   "lint-staged": {
     "*.{js,ts}": [
-      "eslint --fix"
+      "yarn format",
+      "yarn eslint"
     ]
   },
   "private": true,

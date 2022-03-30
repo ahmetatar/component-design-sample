@@ -1,0 +1,15 @@
+.angular
+.github
+.husky
+.storybook
+coverage
+dist
+node_modules
+*.json
+karma.conf.js
+package.json
+.gitignore
+src/storybook.test.js
+src/main.ts
+src/test.ts
+src/polyfills.ts
