@@ -3,7 +3,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { ProfileComponent } from './profile.component';
 
 export default {
-  title: 'Design System/Organisms/Profile',
+  title: 'Design System/@Components/Organisms/Profile',
   component: ProfileComponent,
   decorators: [
     moduleMetadata({
@@ -31,10 +31,12 @@ const Template: Story = (args) => ({
  */
 export const Default = Template.bind({});
 Default.args = {
-  profileImage: '/assets/profile/default-avatar-1.png',
-  fullName: 'Julie L. Arsenault',
-  link: 'microsoft.com',
-  userName: '@juliar',
+  profile: {
+    profileImage: '/assets/profile/default-avatar-1.png',
+    fullName: 'Julie L. Arsenault',
+    link: 'microsoft.com',
+    userName: '@juliar',
+  },
   options: {
     showLink: true,
   },

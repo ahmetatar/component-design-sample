@@ -1,1 +1,14 @@
-<p>profile-template works!</p>
+<div class="user-profile">
+  <div class="profile-section">
+    <desx-profile [profile]="profile" [options]="options"></desx-profile>
+  </div>
+  <div class="social-button">
+    <ng-content select="[social]"></ng-content>
+  </div>
+  <div class="booking-section">
+    <ng-content select="[booking]"></ng-content>
+  </div>
+  <div class="statistic-section">
+    <ng-content selec="[statistic]"></ng-content>
+  </div>
+</div>

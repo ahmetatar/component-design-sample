@@ -4,7 +4,7 @@ import { StatisticsComponent } from './statistics.component';
 import { STATISTICS } from './statistics.mocks';
 
 export default {
-  title: 'Design System/Organisms/Statistics',
+  title: 'Design System/@Components/Organisms/Statistics',
   component: StatisticsComponent,
   decorators: [
     moduleMetadata({

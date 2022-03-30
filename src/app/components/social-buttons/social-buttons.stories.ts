@@ -4,7 +4,7 @@ import { SocialButtonsComponent } from './social-buttons.component';
 import { SOCIAL_BUTTONS } from './social-buttons.mocks';
 
 export default {
-  title: 'Design System/Organisms/Social Buttons',
+  title: 'Design System/@Components/Organisms/Social Buttons',
   component: SocialButtonsComponent,
   decorators: [
     moduleMetadata({

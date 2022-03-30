@@ -9,6 +9,7 @@ import {
 import { moduleMetadata, Meta, Story, componentWrapperDecorator } from '@storybook/angular';
 import { ButtonComponent } from '../button/button.component';
 import { ButtonTypes } from '../button/button.models';
+import { ButtonStylePipe } from '../button/pipes/button-style.pipe';
 import { DEFAULT_COMPONENT_OPTIONS } from '../components.config';
 import { TextboxComponent } from './textbox.component';
 
@@ -51,7 +52,7 @@ export default {
   decorators: [
     moduleMetadata({
       imports: [FormsModule, ReactiveFormsModule],
-      declarations: [TextboxComponent, TextboxWrapperComponent, ButtonComponent],
+      declarations: [TextboxComponent, TextboxWrapperComponent, ButtonComponent, ButtonStylePipe],
       providers: [...DEFAULT_COMPONENT_OPTIONS],
     }),
     componentWrapperDecorator((story) => `<div style="margin: 5rem">${story}</div>`),
