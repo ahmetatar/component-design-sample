@@ -23,7 +23,7 @@ jobs:
       - name: Linting
         run: 'yarn lint:ci'
 
-      - name: Component Integration Tests
+      - name: Run Tests
         run: 'yarn test:ci'
 
       - name: Publish to Chromatic
