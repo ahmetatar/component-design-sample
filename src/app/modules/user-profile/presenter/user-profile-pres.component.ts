@@ -1,14 +1,14 @@
 import { Component, Inject, Input, OnInit, Optional, ViewEncapsulation } from '@angular/core';
-import { UserProfile } from './user-profile.models';
-import { UserProfileOptions, USER_PROFILE_OPTIONS } from './user-profile.options';
+import { UserProfile } from './user-profile-pres.models';
+import { UserProfileOptions, USER_PROFILE_OPTIONS } from './user-profile-pres.options';
 
 @Component({
-  selector: 'desx-user-profile',
-  templateUrl: './user-profile.component.html',
-  styleUrls: ['./user-profile.component.scss'],
+  selector: 'desx-user-profile-pres',
+  templateUrl: './user-profile-pres.component.html',
+  styleUrls: ['./user-profile-pres.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class UserProfileComponent implements OnInit {
+export class UserProfilePresComponent implements OnInit {
   @Input()
   options?: Partial<UserProfileOptions>;
 

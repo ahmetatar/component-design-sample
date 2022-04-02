@@ -2,7 +2,7 @@
     "pipes": [
         {
             "name": "ButtonStylePipe",
-            "id": "pipe-ButtonStylePipe-71d40ad4d8ac8469a50716f3eee5454fa9ae5f855bd38cd8f6fc53829316175acefec147436be1e1861ff18348ac1f7bcc7d6050a2f821f27692265e31b45280",
+            "id": "pipe-ButtonStylePipe-b4f9669044d101e4b9a99581661f92b7552baece66621390ae2126e7abbd13ab7ddd40da12f2ae3d39396b9bf24e5365fc167cd99e8e1a833a20ebb78df0bbde",
             "file": "src/app/shared/components/button/pipes/button-style.pipe.ts",
             "type": "pipe",
             "deprecated": false,
@@ -38,8 +38,8 @@
                     "jsdoctags": [
                         {
                             "name": {
-                                "pos": 321,
-                                "end": 326,
+                                "pos": 332,
+                                "end": 337,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -50,8 +50,8 @@
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
-                                "pos": 315,
-                                "end": 320,
+                                "pos": 326,
+                                "end": 331,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -62,8 +62,8 @@
                         },
                         {
                             "name": {
-                                "pos": 377,
-                                "end": 384,
+                                "pos": 389,
+                                "end": 396,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -74,8 +74,8 @@
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
-                                "pos": 371,
-                                "end": 376,
+                                "pos": 383,
+                                "end": 388,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -86,8 +86,8 @@
                         },
                         {
                             "tagName": {
-                                "pos": 411,
-                                "end": 418,
+                                "pos": 424,
+                                "end": 431,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -100,18 +100,18 @@
                 }
             ],
             "ngname": "buttonStyle",
-            "sourceCode": "import { Pipe, PipeTransform } from '@angular/core';\nimport { ButtonStyles } from '../button.models';\nimport { ButtonOptions } from '../button.options';\n\n@Pipe({\n  name: 'buttonStyle',\n})\nexport class ButtonStylePipe implements PipeTransform {\n  /**\n   * It transforms given class name by outline option\n   *\n   * @param value takes one of ButtonStyles type values\n   * @param options takes ButtonOptions\n   * @returns transformed class name\n   */\n  transform(value: ButtonStyles, options: Partial<ButtonOptions> | undefined): string {\n    return options?.isOutline ? `btn-outline-${value}` : `btn-${value}`;\n  }\n}\n"
+            "sourceCode": "import { Pipe, PipeTransform } from '@angular/core';\r\nimport { ButtonStyles } from '../button.models';\r\nimport { ButtonOptions } from '../button.options';\r\n\r\n@Pipe({\r\n  name: 'buttonStyle',\r\n})\r\nexport class ButtonStylePipe implements PipeTransform {\r\n  /**\r\n   * It transforms given class name by outline option\r\n   *\r\n   * @param value takes one of ButtonStyles type values\r\n   * @param options takes ButtonOptions\r\n   * @returns transformed class name\r\n   */\r\n  transform(value: ButtonStyles, options: Partial<ButtonOptions> | undefined): string {\r\n    return options?.isOutline ? `btn-outline-${value}` : `btn-${value}`;\r\n  }\r\n}\r\n"
         }
     ],
     "interfaces": [
         {
             "name": "AccordionOptions",
-            "id": "interface-AccordionOptions-e2221ab0a5a1b076844998fba32a449fde79feb829ba2d017f7ff01782ccde04d22f4c6277c90ae9d0c9e19231c4f2ae9dbc2580dd65808dc4243145d979764c",
+            "id": "interface-AccordionOptions-e58812c73e51e27fb493b0caa5c3fc7ae61bbdd5893e0dd2a118649e6ce0f04a354e2ee77fe0297b623aa8acb8445a221b0483aa93d1cd533da41f2af8ae3f64",
             "file": "src/app/shared/components/accordion/accordion.options.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "import { InjectionToken } from '@angular/core';\n\n/**\n * Accordion options provide settings to control the display and behavior of the component\n */\nexport interface AccordionOptions {\n  /**\n   * Add .accordion-flush to remove the default background-color, some borders,\n   * and some rounded corners to render accordions edge-to-edge with their parent container.\n   *\n   * @link https://getbootstrap.com/docs/5.0/components/accordion/#flush\n   */\n  flush?: boolean;\n\n  /**\n   * Allows accordion item's parent to be set to null.\n   * Thus, more than one item content can be displayed at the same time.\n   */\n  alwaysOpen?: boolean;\n}\n\n/**\n * Default accordion component options\n */\nexport const DEFAULT_ACCORDION_OPTIONS: AccordionOptions = {\n  flush: false,\n};\n\nexport const ACCORDION_OPTIONS = new InjectionToken<AccordionOptions>(\n  'Default Accordion component options',\n);\n",
+            "sourceCode": "import { InjectionToken } from '@angular/core';\r\n\r\n/**\r\n * Accordion options provide settings to control the display and behavior of the component\r\n */\r\nexport interface AccordionOptions {\r\n  /**\r\n   * Add .accordion-flush to remove the default background-color, some borders,\r\n   * and some rounded corners to render accordions edge-to-edge with their parent container.\r\n   *\r\n   * @link https://getbootstrap.com/docs/5.0/components/accordion/#flush\r\n   */\r\n  flush?: boolean;\r\n\r\n  /**\r\n   * Allows accordion item's parent to be set to null.\r\n   * Thus, more than one item content can be displayed at the same time.\r\n   */\r\n  alwaysOpen?: boolean;\r\n}\r\n\r\n/**\r\n * Default accordion component options\r\n */\r\nexport const DEFAULT_ACCORDION_OPTIONS: AccordionOptions = {\r\n  flush: false,\r\n};\r\n\r\nexport const ACCORDION_OPTIONS = new InjectionToken<AccordionOptions>(\r\n  'Default Accordion component options',\r\n);\r\n",
             "properties": [
                 {
                     "name": "alwaysOpen",
@@ -134,15 +134,15 @@
                     "rawdescription": "\n\nAdd .accordion-flush to remove the default background-color, some borders,\nand some rounded corners to render accordions edge-to-edge with their parent container.\n\n",
                     "jsdoctags": [
                         {
-                            "pos": 373,
-                            "end": 444,
+                            "pos": 383,
+                            "end": 455,
                             "flags": 4194304,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 325,
                             "tagName": {
-                                "pos": 374,
-                                "end": 378,
+                                "pos": 384,
+                                "end": 388,
                                 "flags": 4194304,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -445,7 +445,7 @@
         {
             "name": "UserProfile",
             "id": "interface-UserProfile-81e685412579d4ca2e89a77ec28c978773d4156b46c2c1545730899a6d7291db0440eea4b2e139e0b38e240626d3fa2d9c58bf5c78deff08a22633ea5832615f",
-            "file": "src/app/modules/user-profile/user-profile.models.ts",
+            "file": "src/app/modules/user-profile/presenter/user-profile-pres.models.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
@@ -488,7 +488,7 @@
         {
             "name": "UserProfileOptions",
             "id": "interface-UserProfileOptions-4c9bd5da8a2f49cc5fe2d832cbd906bf90f47184792c9e8b9746904deb96a3f502ad42dea6502d3b88373f20345fc2f5392e71cc472610a467033c0478685514",
-            "file": "src/app/modules/user-profile/user-profile.options.ts",
+            "file": "src/app/modules/user-profile/presenter/user-profile-pres.options.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
@@ -2756,12 +2756,12 @@
     "directives": [
         {
             "name": "AccordionContentDirective",
-            "id": "directive-AccordionContentDirective-89018af181502ef0beee2012b6adabb50e33a98e33fee415ea085aa4a04fda889f09fb25cd03bdace6f5812c3e06d332efb35a12cbd6eb6d884e3bfb0c714ef3",
+            "id": "directive-AccordionContentDirective-c80e6de5c5129cd8f0e9cd25ee21f6c274bddba5c714ec51f61aba5582e1036af4c8895bb5e63cbe3aae5d722456002fd1ae16e0333eb0b4a5c7b44b102d599f",
             "file": "src/app/shared/components/accordion/directives/accordion-content.directive.ts",
             "type": "directive",
             "description": "",
             "rawdescription": "\n",
-            "sourceCode": "import { Directive, TemplateRef } from '@angular/core';\n\n@Directive({\n  selector: 'ng-template[desxAccordionContent]',\n})\nexport class AccordionContentDirective {\n  constructor(public tmplRef: TemplateRef<any>) {}\n}\n",
+            "sourceCode": "import { Directive, TemplateRef } from '@angular/core';\r\n\r\n@Directive({\r\n  selector: 'ng-template[desxAccordionContent]',\r\n})\r\nexport class AccordionContentDirective {\r\n  constructor(public tmplRef: TemplateRef<any>) {}\r\n}\r\n",
             "selector": "ng-template[desxAccordionContent]",
             "providers": [],
             "inputsClass": [],
@@ -2814,12 +2814,12 @@
         },
         {
             "name": "AccordionHeaderDirective",
-            "id": "directive-AccordionHeaderDirective-ff384d5ae62a64cc71b7a279cc0f1086d24ba07ef12d33af668c2691ff157ad2c1c42d14651f650481a3fa43160a10a11356a49cadbac424c76f46bc58b6ae68",
+            "id": "directive-AccordionHeaderDirective-d786dbfda613c50f944df15eaf5daf7c503605e3e6aa67cc9da4fd2be34b74f3248920b6b2e27a68b1fe9ed3826a6c0ce5c2071f54df5e64c0fb544e440b5df7",
             "file": "src/app/shared/components/accordion/directives/accordion-header.directive.ts",
             "type": "directive",
             "description": "",
             "rawdescription": "\n",
-            "sourceCode": "import { Directive, TemplateRef } from '@angular/core';\n\n@Directive({\n  selector: 'ng-template[desxAccordionHeader]',\n})\nexport class AccordionHeaderDirective {\n  constructor(public tmplRef: TemplateRef<any>) {}\n}\n",
+            "sourceCode": "import { Directive, TemplateRef } from '@angular/core';\r\n\r\n@Directive({\r\n  selector: 'ng-template[desxAccordionHeader]',\r\n})\r\nexport class AccordionHeaderDirective {\r\n  constructor(public tmplRef: TemplateRef<any>) {}\r\n}\r\n",
             "selector": "ng-template[desxAccordionHeader]",
             "providers": [],
             "inputsClass": [],
@@ -2872,12 +2872,12 @@
         },
         {
             "name": "AccordionItemDirective",
-            "id": "directive-AccordionItemDirective-36a449f3363a7ac4627a9e10b03bfa1ba1445f35831c1a8b54cf29661686159547e8a59ccbd4dfd0c0283599d6bdcd4c8ec2707b7feeea2d0015973ee1d6e57d",
+            "id": "directive-AccordionItemDirective-f978d136f63bb2f3484105d30c688875dece0002a9958379cbaf70761685ae30e92188655dd5477ba8e5a152eb7ce65719d4988f99f3cd9c1f53863e28291964",
             "file": "src/app/shared/components/accordion/directives/accordion-item.directive.ts",
             "type": "directive",
             "description": "",
             "rawdescription": "\n",
-            "sourceCode": "import { AfterContentInit, ContentChildren, Directive, Input, QueryList } from '@angular/core';\nimport { AccordionContentDirective } from './accordion-content.directive';\nimport { AccordionHeaderDirective } from './accordion-header.directive';\n\n@Directive({\n  // eslint-disable-next-line @angular-eslint/directive-selector\n  selector: 'desx-accordion-item',\n})\nexport class AccordionItemDirective implements AfterContentInit {\n  headerTmpl!: AccordionHeaderDirective;\n  contentTmpl!: AccordionContentDirective;\n\n  @Input()\n  id!: string;\n\n  @Input()\n  show: boolean = false;\n\n  @ContentChildren(AccordionHeaderDirective, { descendants: true })\n  headerTmpls!: QueryList<AccordionHeaderDirective>;\n\n  @ContentChildren(AccordionContentDirective, { descendants: true })\n  contentTmpls!: QueryList<AccordionContentDirective>;\n\n  ngAfterContentInit(): void {\n    this.headerTmpl = this.headerTmpls.first;\n    this.contentTmpl = this.contentTmpls.first;\n  }\n}\n",
+            "sourceCode": "import { AfterContentInit, ContentChildren, Directive, Input, QueryList } from '@angular/core';\r\nimport { AccordionContentDirective } from './accordion-content.directive';\r\nimport { AccordionHeaderDirective } from './accordion-header.directive';\r\n\r\n@Directive({\r\n  // eslint-disable-next-line @angular-eslint/directive-selector\r\n  selector: 'desx-accordion-item',\r\n})\r\nexport class AccordionItemDirective implements AfterContentInit {\r\n  headerTmpl!: AccordionHeaderDirective;\r\n  contentTmpl!: AccordionContentDirective;\r\n\r\n  @Input()\r\n  id!: string;\r\n\r\n  @Input()\r\n  show: boolean = false;\r\n\r\n  @ContentChildren(AccordionHeaderDirective, { descendants: true })\r\n  headerTmpls!: QueryList<AccordionHeaderDirective>;\r\n\r\n  @ContentChildren(AccordionContentDirective, { descendants: true })\r\n  contentTmpls!: QueryList<AccordionContentDirective>;\r\n\r\n  ngAfterContentInit(): void {\r\n    this.headerTmpl = this.headerTmpls.first;\r\n    this.contentTmpl = this.contentTmpls.first;\r\n  }\r\n}\r\n",
             "selector": "desx-accordion-item",
             "providers": [],
             "inputsClass": [
@@ -2974,7 +2974,7 @@
     "components": [
         {
             "name": "AccordionComponent",
-            "id": "component-AccordionComponent-6a059a3ece2ea79a92d119141dfef4d150c7669cde20b2d88918fd44c5a7d425b6ff9bf592032da8a1642519d8771bd87368f1b2129f4e4df1a8db34f7e8dd68",
+            "id": "component-AccordionComponent-ddf2ad0adcc961d3324866b74f9ec453871233c51ac4e679a11e71a723231cf2a08a33d1f15db8a6931724d36adf2428e1c2567511bd334316910c0151b344b8",
             "file": "src/app/shared/components/accordion/accordion.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -3081,7 +3081,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {\n  Component,\n  ContentChildren,\n  ElementRef,\n  EventEmitter,\n  Inject,\n  Input,\n  NgZone,\n  OnInit,\n  Output,\n  QueryList,\n  Renderer2,\n  ViewEncapsulation,\n} from '@angular/core';\nimport { AccordionItemDirective } from './directives/accordion-item.directive';\nimport { EventType } from './accordion.models';\nimport { AccordionOptions, ACCORDION_OPTIONS } from './accordion.options';\n\n@Component({\n  selector: 'desx-accordion',\n  templateUrl: './accordion.component.html',\n  styleUrls: ['./accordion.component.scss'],\n  encapsulation: ViewEncapsulation.None,\n})\nexport class AccordionComponent implements OnInit {\n  @Input()\n  id: string = '';\n\n  @Input()\n  options?: Partial<AccordionOptions>;\n\n  @Output()\n  // eslint-disable-next-line @angular-eslint/no-output-native\n  show = new EventEmitter<Event>();\n\n  @Output()\n  shown = new EventEmitter<Event>();\n\n  @Output()\n  hide = new EventEmitter<Event>();\n\n  @Output()\n  hidden = new EventEmitter<Event>();\n\n  @ContentChildren(AccordionItemDirective) items!: QueryList<AccordionItemDirective>;\n\n  constructor(\n    @Inject(ACCORDION_OPTIONS) private defaultOptions: AccordionOptions,\n    private elRef: ElementRef,\n    private renderer: Renderer2,\n    private zone: NgZone,\n  ) {}\n\n  ngOnInit(): void {\n    this.options = {\n      ...this.defaultOptions,\n      ...this.options,\n    };\n\n    this.zone.runOutsideAngular(() => {\n      this.renderer.listen(this.elRef.nativeElement, EventType.Show, (e) => this.show.emit(e));\n      this.renderer.listen(this.elRef.nativeElement, EventType.Shown, (e) => this.shown.emit(e));\n      this.renderer.listen(this.elRef.nativeElement, EventType.Hide, (e) => this.hide.emit(e));\n      this.renderer.listen(this.elRef.nativeElement, EventType.Hidden, (e) => this.hidden.emit(e));\n    });\n  }\n}\n",
+            "sourceCode": "import {\r\n  Component,\r\n  ContentChildren,\r\n  ElementRef,\r\n  EventEmitter,\r\n  Inject,\r\n  Input,\r\n  NgZone,\r\n  OnInit,\r\n  Output,\r\n  QueryList,\r\n  Renderer2,\r\n  ViewEncapsulation,\r\n} from '@angular/core';\r\nimport { AccordionItemDirective } from './directives/accordion-item.directive';\r\nimport { EventType } from './accordion.models';\r\nimport { AccordionOptions, ACCORDION_OPTIONS } from './accordion.options';\r\n\r\n@Component({\r\n  selector: 'desx-accordion',\r\n  templateUrl: './accordion.component.html',\r\n  styleUrls: ['./accordion.component.scss'],\r\n  encapsulation: ViewEncapsulation.None,\r\n})\r\nexport class AccordionComponent implements OnInit {\r\n  @Input()\r\n  id: string = '';\r\n\r\n  @Input()\r\n  options?: Partial<AccordionOptions>;\r\n\r\n  @Output()\r\n  // eslint-disable-next-line @angular-eslint/no-output-native\r\n  show = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  shown = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  hide = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  hidden = new EventEmitter<Event>();\r\n\r\n  @ContentChildren(AccordionItemDirective) items!: QueryList<AccordionItemDirective>;\r\n\r\n  constructor(\r\n    @Inject(ACCORDION_OPTIONS) private defaultOptions: AccordionOptions,\r\n    private elRef: ElementRef,\r\n    private renderer: Renderer2,\r\n    private zone: NgZone,\r\n  ) {}\r\n\r\n  ngOnInit(): void {\r\n    this.options = {\r\n      ...this.defaultOptions,\r\n      ...this.options,\r\n    };\r\n\r\n    this.zone.runOutsideAngular(() => {\r\n      this.renderer.listen(this.elRef.nativeElement, EventType.Show, (e) => this.show.emit(e));\r\n      this.renderer.listen(this.elRef.nativeElement, EventType.Shown, (e) => this.shown.emit(e));\r\n      this.renderer.listen(this.elRef.nativeElement, EventType.Hide, (e) => this.hide.emit(e));\r\n      this.renderer.listen(this.elRef.nativeElement, EventType.Hidden, (e) => this.hidden.emit(e));\r\n    });\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -3168,7 +3168,7 @@
         },
         {
             "name": "AlertComponent",
-            "id": "component-AlertComponent-715208dde2cd2516deff3a0d4683b8d5e45225227e8606e746357448787a3841b0d6ccabd95d7795a7815e1e88600190bba7c67813473d1f8eadaf63f24a2112",
+            "id": "component-AlertComponent-4b132f8c62d779d905571f8b5a7d1619867d9b6153a1fff5b1e951c7b0022eaf177f47381dfb62c65d9f4fcf1d03e63166b8db37597281dbb1a672d72867ef0c",
             "file": "src/app/shared/components/alert/alert.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -3254,7 +3254,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {\n  Component,\n  ElementRef,\n  EventEmitter,\n  Inject,\n  Input,\n  NgZone,\n  OnInit,\n  Output,\n  Renderer2,\n  ViewEncapsulation,\n} from '@angular/core';\nimport { AlertTypes, EventType } from './alert.models';\nimport { AlertOptions, ALERT_OPTIONS } from './alert.options';\nimport * as bootstrap from 'bootstrap';\n\n@Component({\n  selector: 'desx-alert',\n  templateUrl: './alert.component.html',\n  styleUrls: ['./alert.component.scss'],\n  encapsulation: ViewEncapsulation.None,\n})\nexport class AlertComponent implements OnInit {\n  @Input()\n  options?: Partial<AlertOptions>;\n\n  @Input()\n  type: AlertTypes = 'alert-primary';\n\n  @Input()\n  dismissible: boolean = false;\n\n  @Output()\n  closed = new EventEmitter<Event>();\n\n  constructor(\n    @Inject(ALERT_OPTIONS) private defaultOptions: AlertOptions,\n    private elRef: ElementRef,\n    private renderer: Renderer2,\n    private zone: NgZone,\n  ) {}\n\n  ngOnInit(): void {\n    this.options = {\n      ...this.defaultOptions,\n      ...this.options,\n    };\n\n    this.zone.runOutsideAngular(() => {\n      this.renderer.listen(this.elRef.nativeElement, EventType.Close, (e) => this.closed.emit(e));\n    });\n  }\n\n  close(): void {\n    this.zone.runOutsideAngular(() => {\n      const alert = bootstrap.Alert.getInstance(this.elRef.nativeElement);\n      alert?.close();\n    });\n  }\n}\n",
+            "sourceCode": "import {\r\n  Component,\r\n  ElementRef,\r\n  EventEmitter,\r\n  Inject,\r\n  Input,\r\n  NgZone,\r\n  OnInit,\r\n  Output,\r\n  Renderer2,\r\n  ViewEncapsulation,\r\n} from '@angular/core';\r\nimport { AlertTypes, EventType } from './alert.models';\r\nimport { AlertOptions, ALERT_OPTIONS } from './alert.options';\r\nimport * as bootstrap from 'bootstrap';\r\n\r\n@Component({\r\n  selector: 'desx-alert',\r\n  templateUrl: './alert.component.html',\r\n  styleUrls: ['./alert.component.scss'],\r\n  encapsulation: ViewEncapsulation.None,\r\n})\r\nexport class AlertComponent implements OnInit {\r\n  @Input()\r\n  options?: Partial<AlertOptions>;\r\n\r\n  @Input()\r\n  type: AlertTypes = 'alert-primary';\r\n\r\n  @Input()\r\n  dismissible: boolean = false;\r\n\r\n  @Output()\r\n  closed = new EventEmitter<Event>();\r\n\r\n  constructor(\r\n    @Inject(ALERT_OPTIONS) private defaultOptions: AlertOptions,\r\n    private elRef: ElementRef,\r\n    private renderer: Renderer2,\r\n    private zone: NgZone,\r\n  ) {}\r\n\r\n  ngOnInit(): void {\r\n    this.options = {\r\n      ...this.defaultOptions,\r\n      ...this.options,\r\n    };\r\n\r\n    this.zone.runOutsideAngular(() => {\r\n      this.renderer.listen(this.elRef.nativeElement, EventType.Close, (e) => this.closed.emit(e));\r\n    });\r\n  }\r\n\r\n  close(): void {\r\n    this.zone.runOutsideAngular(() => {\r\n      const alert = bootstrap.Alert.getInstance(this.elRef.nativeElement);\r\n      alert?.close();\r\n    });\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -3337,11 +3337,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div [ngClass]=\"['alert', type, dismissible ? 'alert-dismissible fade show' : '']\" role=\"alert\">\n  <ng-content></ng-content>\n  <button\n    *ngIf=\"dismissible\"\n    type=\"button\"\n    class=\"btn-close\"\n    data-bs-dismiss=\"alert\"\n    aria-label=\"Close\"\n  ></button>\n</div>\n"
+            "templateData": "<div [ngClass]=\"['alert', type, dismissible ? 'alert-dismissible fade show' : '']\" role=\"alert\">\r\n  <ng-content></ng-content>\r\n  <button\r\n    *ngIf=\"dismissible\"\r\n    type=\"button\"\r\n    class=\"btn-close\"\r\n    data-bs-dismiss=\"alert\"\r\n    aria-label=\"Close\"\r\n  ></button>\r\n</div>\r\n"
         },
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-48dd39133c1197590a4b7e04bf787629ec0df8064223746ea84deb9e87586bca8a9d407349e4b7fd9f6a3ac193ceeb386566db4a71f6e09f0eb3480c89164de7",
+            "id": "component-AppComponent-ce13122b339ad6e8ed51d59a90d4ee2843c928bb6c0bb6c555f055e883befff010de92e3ef40ec3476c480b2caa7309fc3054b262f118beaa8f7b2ca981cfd1f",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -3365,14 +3365,14 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'desx-app-root',\n  template: '',\n})\nexport class AppComponent {}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-app-root',\r\n  template: '',\r\n})\r\nexport class AppComponent {}\r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
         },
         {
             "name": "BadgeComponent",
-            "id": "component-BadgeComponent-e36ca2d9285e38f4fa38f3434d267aeb7c8e224687a7aaa6882fae6a8a937bb3826a074ea15669fea7717f9f3962ec0263a16209bafab343190384d015314fcf",
+            "id": "component-BadgeComponent-1ac3a86897be74cbedab8dbd15b7ebdb60f210b6f80f19e0cd053debf1ea3fea128e09c6a272bde1a490fb7078a4c814a823578f2fd74466ce8c7793fa60380d",
             "file": "src/app/shared/components/badge/badge.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -3410,7 +3410,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'desx-badge',\n  templateUrl: './badge.component.html',\n  styleUrls: ['./badge.component.scss'],\n})\nexport class BadgeComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-badge',\r\n  templateUrl: './badge.component.html',\r\n  styleUrls: ['./badge.component.scss'],\r\n})\r\nexport class BadgeComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -3430,11 +3430,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>badge works!</p>\n"
+            "templateData": "<p>badge works!</p>\r\n"
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-a8647c40bcda0bf83657120e7082aa5af36ddb7e1d4ed6bc30cdac72c06a05a06cffc3729f256352a44eed3db39db92fcde96bcccc4591d69416614e14a54bbb",
+            "id": "component-ButtonComponent-e26710e3d3703e49fef208f80d70aa1af77ec92400e537ffc05d562e999dd4bb1ffb25e64f5791b1a6fd7f16e51f037ce4d8becd73dbf3e1881ff4b21cca354e",
             "file": "src/app/shared/components/button/button.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -3519,7 +3519,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {\n  Component,\n  ElementRef,\n  EventEmitter,\n  Inject,\n  Input,\n  OnInit,\n  Output,\n  Renderer2,\n  ViewEncapsulation,\n} from '@angular/core';\nimport { ButtonSizes, ButtonStyles, ButtonTypes } from './button.models';\nimport { ButtonOptions, BUTTON_OPTIONS } from './button.options';\n\n@Component({\n  selector: 'desx-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n  encapsulation: ViewEncapsulation.None,\n})\nexport class ButtonComponent implements OnInit {\n  @Input()\n  options?: Partial<ButtonOptions>;\n\n  @Input()\n  size: ButtonSizes = '';\n\n  @Input()\n  btnStyle: ButtonStyles = 'primary';\n\n  @Input()\n  type: ButtonTypes = 'button';\n\n  @Output()\n  // eslint-disable-next-line @angular-eslint/no-output-native\n  click = new EventEmitter<Event>();\n\n  constructor(\n    @Inject(BUTTON_OPTIONS) private defaultOptions: ButtonOptions,\n    private elRef: ElementRef,\n    private renderer: Renderer2,\n  ) {}\n\n  ngOnInit(): void {\n    this.options = {\n      ...this.defaultOptions,\n      ...this.options,\n    };\n\n    this.renderer.listen(this.elRef.nativeElement, 'click', (e) => this.click.emit(e));\n  }\n}\n",
+            "sourceCode": "import {\r\n  Component,\r\n  ElementRef,\r\n  EventEmitter,\r\n  Inject,\r\n  Input,\r\n  OnInit,\r\n  Output,\r\n  Renderer2,\r\n  ViewEncapsulation,\r\n} from '@angular/core';\r\nimport { ButtonSizes, ButtonStyles, ButtonTypes } from './button.models';\r\nimport { ButtonOptions, BUTTON_OPTIONS } from './button.options';\r\n\r\n@Component({\r\n  selector: 'desx-button',\r\n  templateUrl: './button.component.html',\r\n  styleUrls: ['./button.component.scss'],\r\n  encapsulation: ViewEncapsulation.None,\r\n})\r\nexport class ButtonComponent implements OnInit {\r\n  @Input()\r\n  options?: Partial<ButtonOptions>;\r\n\r\n  @Input()\r\n  size: ButtonSizes = '';\r\n\r\n  @Input()\r\n  btnStyle: ButtonStyles = 'primary';\r\n\r\n  @Input()\r\n  type: ButtonTypes = 'button';\r\n\r\n  @Output()\r\n  // eslint-disable-next-line @angular-eslint/no-output-native\r\n  click = new EventEmitter<Event>();\r\n\r\n  constructor(\r\n    @Inject(BUTTON_OPTIONS) private defaultOptions: ButtonOptions,\r\n    private elRef: ElementRef,\r\n    private renderer: Renderer2,\r\n  ) {}\r\n\r\n  ngOnInit(): void {\r\n    this.options = {\r\n      ...this.defaultOptions,\r\n      ...this.options,\r\n    };\r\n\r\n    this.renderer.listen(this.elRef.nativeElement, 'click', (e) => this.click.emit(e));\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -3587,11 +3587,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<button [type]=\"type\" [ngClass]=\"['btn', btnStyle | buttonStyle: options, size]\">\n  <ng-content></ng-content>\n</button>\n"
+            "templateData": "<button [type]=\"type\" [ngClass]=\"['btn', btnStyle | buttonStyle: options, size]\">\r\n  <ng-content></ng-content>\r\n</button>\r\n"
         },
         {
             "name": "ButtonGroupComponent",
-            "id": "component-ButtonGroupComponent-3e75ee9b039b407c615b6d2a76b8cd400affb6aef413deb054d6ccb633728b918b7b248814a4ee0c180464355431b37198acc49256202bd91a9fc441c65ac1cd",
+            "id": "component-ButtonGroupComponent-a4a0957f6dc57c9b4e297b2ea3b16721f63c8b3eefdb3a93fda5707adb122bf9c757a0f538428d96108d2c65676bbb725de316b678690dc986877e998747da8f",
             "file": "src/app/shared/components/button-group/button-group.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -3629,7 +3629,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'desx-button-group',\n  templateUrl: './button-group.component.html',\n  styleUrls: ['./button-group.component.scss'],\n})\nexport class ButtonGroupComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-button-group',\r\n  templateUrl: './button-group.component.html',\r\n  styleUrls: ['./button-group.component.scss'],\r\n})\r\nexport class ButtonGroupComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -3649,11 +3649,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>button-group works!</p>\n"
+            "templateData": "<p>button-group works!</p>\r\n"
         },
         {
             "name": "CardComponent",
-            "id": "component-CardComponent-0b89e177a3fe35d9591a02ec2dd0694942431eb131a4dbfef73f327da9348fdb04578c6cb63493de0bcc5e07c6809d2d042fdb90e4ab30f74f1e20fc7618dba1",
+            "id": "component-CardComponent-f4ff1f3113c8a0d4b7e6a45d7007e6275e04d0b56ad65dfaf3c89a3a35afbaeb91d89c8fc1ef31e7184f41e36a149c3a5798b176c47c5edf1b8d46042e7a744d",
             "file": "src/app/shared/components/card/card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -3691,7 +3691,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'desx-card',\n  templateUrl: './card.component.html',\n  styleUrls: ['./card.component.scss'],\n})\nexport class CardComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-card',\r\n  templateUrl: './card.component.html',\r\n  styleUrls: ['./card.component.scss'],\r\n})\r\nexport class CardComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -3711,11 +3711,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>card works!</p>\n"
+            "templateData": "<p>card works!</p>\r\n"
         },
         {
             "name": "CarouselComponent",
-            "id": "component-CarouselComponent-43ec528f86eb880b18bbc6e6944550efdf598de0bd92bd035e329796b4ac14077e351b022600b19935632f6813d85e0a641ac4c9cc8de90bf57dd8efaed6fd75",
+            "id": "component-CarouselComponent-5cf8923e8a039feed77fb5d9f1ecb862f9fa66c4e6642689266366a711f46c7d8fe37e4218d7e2341f67e5d09c0cc2a07c52f83067621883b604ff1e4dcdf425",
             "file": "src/app/shared/components/carousel/carousel.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -3753,7 +3753,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'desx-carousel',\n  templateUrl: './carousel.component.html',\n  styleUrls: ['./carousel.component.scss'],\n})\nexport class CarouselComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-carousel',\r\n  templateUrl: './carousel.component.html',\r\n  styleUrls: ['./carousel.component.scss'],\r\n})\r\nexport class CarouselComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -3773,11 +3773,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>carousel works!</p>\n"
+            "templateData": "<p>carousel works!</p>\r\n"
         },
         {
             "name": "DropdownComponent",
-            "id": "component-DropdownComponent-79b18e5986046c5ade7caf83a0903f3c3e33b1d51ccdf263f3f9293992285123be7dbf8bb01e5b46af334a68338ce64859dfab724a581bdacbec6f2c4d85bbde",
+            "id": "component-DropdownComponent-f39478a8f02bea3450b948221e7ef7f362fc6918bf7743a53df26d88f2ef92dfb04bfc0d1d0839d944debeb6ec6539fe4448909088abb7753875fc0e51ce7621",
             "file": "src/app/shared/components/dropdown/dropdown.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -3815,7 +3815,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'desx-dropdown',\n  templateUrl: './dropdown.component.html',\n  styleUrls: ['./dropdown.component.scss'],\n})\nexport class DropdownComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-dropdown',\r\n  templateUrl: './dropdown.component.html',\r\n  styleUrls: ['./dropdown.component.scss'],\r\n})\r\nexport class DropdownComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -3835,11 +3835,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>dropdown works!</p>\n"
+            "templateData": "<p>dropdown works!</p>\r\n"
         },
         {
             "name": "ImageComponent",
-            "id": "component-ImageComponent-8d596867889719174bea71dcb12bfbdafb15d6a22528711ab89e5cb83e83c6bf622cec1d588c225f61b20d0db592c9cd6a653f1c1755f7ec98d24d5bada4b98e",
+            "id": "component-ImageComponent-924f3100f2c3909d087cd8509076ba95f4d11f918a05c3540245a2600a7d2386ad1fd81ffdaea31fd009c4de9e07ba401f8509c2067bc763f2c1d48a9aea8014",
             "file": "src/app/shared/components/image/image.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -3942,7 +3942,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Inject, Input, OnInit, ViewEncapsulation } from '@angular/core';\nimport { ImageType } from './image.models';\nimport { ImageOptions, IMAGE_OPTIONS } from './image.options';\n\n@Component({\n  selector: 'desx-image',\n  templateUrl: './image.component.html',\n  styleUrls: ['./image.component.scss'],\n  encapsulation: ViewEncapsulation.None,\n})\nexport class ImageComponent implements OnInit {\n  @Input()\n  id: string = '';\n\n  @Input()\n  options?: Partial<ImageOptions>;\n\n  @Input()\n  source: string = '';\n\n  @Input()\n  altText: string = '';\n\n  @Input()\n  width: string = '0';\n\n  @Input()\n  height: string = '0';\n\n  @Input()\n  type: ImageType = 'rounded';\n\n  constructor(@Inject(IMAGE_OPTIONS) private defaultOptions: ImageOptions) {}\n\n  ngOnInit(): void {\n    this.options = {\n      ...this.defaultOptions,\n      ...this.options,\n    };\n  }\n}\n",
+            "sourceCode": "import { Component, Inject, Input, OnInit, ViewEncapsulation } from '@angular/core';\r\nimport { ImageType } from './image.models';\r\nimport { ImageOptions, IMAGE_OPTIONS } from './image.options';\r\n\r\n@Component({\r\n  selector: 'desx-image',\r\n  templateUrl: './image.component.html',\r\n  styleUrls: ['./image.component.scss'],\r\n  encapsulation: ViewEncapsulation.None,\r\n})\r\nexport class ImageComponent implements OnInit {\r\n  @Input()\r\n  id: string = '';\r\n\r\n  @Input()\r\n  options?: Partial<ImageOptions>;\r\n\r\n  @Input()\r\n  source: string = '';\r\n\r\n  @Input()\r\n  altText: string = '';\r\n\r\n  @Input()\r\n  width: string = '0';\r\n\r\n  @Input()\r\n  height: string = '0';\r\n\r\n  @Input()\r\n  type: ImageType = 'rounded';\r\n\r\n  constructor(@Inject(IMAGE_OPTIONS) private defaultOptions: ImageOptions) {}\r\n\r\n  ngOnInit(): void {\r\n    this.options = {\r\n      ...this.defaultOptions,\r\n      ...this.options,\r\n    };\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -3984,7 +3984,7 @@
         },
         {
             "name": "LabelComponent",
-            "id": "component-LabelComponent-e47a31cedf1ec6018f7be9b1333915373878c2a88fa2b3f4e412c121c15101b1923298dfa9092a8b4550dbfd77a59513b61ac669c37748e154042e11a02d2d6a",
+            "id": "component-LabelComponent-7e1d25f6d6687ed8bbf5f183820bc31ea090b4875ef765068cc0978835572e82096af92cdf4e1a07b45277a38478d3a75bfe4e2bcb2c30a2d1579e2cf7d4afae",
             "file": "src/app/shared/components/label/label.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -4022,7 +4022,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'desx-label',\n  templateUrl: './label.component.html',\n  styleUrls: ['./label.component.scss'],\n})\nexport class LabelComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-label',\r\n  templateUrl: './label.component.html',\r\n  styleUrls: ['./label.component.scss'],\r\n})\r\nexport class LabelComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -4042,11 +4042,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>label works!</p>\n"
+            "templateData": "<p>label works!</p>\r\n"
         },
         {
             "name": "ListGroupComponent",
-            "id": "component-ListGroupComponent-5da012e0b027e381bb197f92642fa4d7cf0b7a27d599e73e9226e719d50e917e5c3d20f790d2a26e198b391b421e890e1a83a05303c7e1f8fedb1a2e73ec19b5",
+            "id": "component-ListGroupComponent-9a7722c42ff633bb9ccf2ad802eb2ff4f638f321c712e207f0bcc85762c2f8cf1135decf74c842c8872f923bb178282d80ef74928acde6d000e2974aa24a8d69",
             "file": "src/app/shared/components/list-group/list-group.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -4084,7 +4084,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'desx-list-group',\n  templateUrl: './list-group.component.html',\n  styleUrls: ['./list-group.component.scss'],\n})\nexport class ListGroupComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-list-group',\r\n  templateUrl: './list-group.component.html',\r\n  styleUrls: ['./list-group.component.scss'],\r\n})\r\nexport class ListGroupComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -4104,11 +4104,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>list-group works!</p>\n"
+            "templateData": "<p>list-group works!</p>\r\n"
         },
         {
             "name": "LoginComponent",
-            "id": "component-LoginComponent-34d1032371b863efba44715b320e62b475bf7b9b5f4d17478f18433b677439be8fe7111df3af720832ac493568ee8ec0cb2bdd758710da96ba8a7d89c7a530f9",
+            "id": "component-LoginComponent-0d963edf290874b15c5275ae85678ce3e7abbe9cb92e14ec6cb1fcf23695aba5f3c5acee649830557b11a1c9131eef662d22f72ad4ba078fbfdb9b22b2cbe7e8",
             "file": "src/app/components/login/login.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -4146,7 +4146,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'desx-login',\n  templateUrl: './login.component.html',\n  styleUrls: ['./login.component.scss'],\n})\nexport class LoginComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-login',\r\n  templateUrl: './login.component.html',\r\n  styleUrls: ['./login.component.scss'],\r\n})\r\nexport class LoginComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -4166,11 +4166,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>login works!</p>\n"
+            "templateData": "<p>login works!</p>\r\n"
         },
         {
             "name": "LoginStatusComponent",
-            "id": "component-LoginStatusComponent-5a5791c3cb5f2d5e7df2fb9b3f1e55682b186d21c3ad67619af41248e205d5fd7ac573db12ed0e5a458cb1322fc72b69d0323fa164dad0497bf30bc52876bbf4",
+            "id": "component-LoginStatusComponent-f1a3abf0f60b282f0042e2ac1736e82495eb9f5bedd978e90c64d76c18b5f247892dfc34d392acc216c0fed9f99d95a220c75d72542e0bdab55231602e8de117",
             "file": "src/app/components/login-status/login-status.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -4208,7 +4208,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'desx-login-status',\n  templateUrl: './login-status.component.html',\n  styleUrls: ['./login-status.component.scss'],\n})\nexport class LoginStatusComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-login-status',\r\n  templateUrl: './login-status.component.html',\r\n  styleUrls: ['./login-status.component.scss'],\r\n})\r\nexport class LoginStatusComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -4228,11 +4228,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>login-status works!</p>\n"
+            "templateData": "<p>login-status works!</p>\r\n"
         },
         {
             "name": "ModalComponent",
-            "id": "component-ModalComponent-456457b3bf5a8bb976664e6cb90119dd613044df7f02e0e72cfbfc20353b2072f7139bea7ae856af5d547850ff0b8ef16988d4eed94add53e8fc902d716e6df1",
+            "id": "component-ModalComponent-1b287f85d54f89a4b39a60dcd56f337dd26320c3a66aaef99a89926d5287fa5f5f12e4e8ee859307cac4db803c27a6dc7d768c152d756eabb317f5847965cc8f",
             "file": "src/app/shared/components/modal/modal.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -4270,7 +4270,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'desx-modal',\n  templateUrl: './modal.component.html',\n  styleUrls: ['./modal.component.scss'],\n})\nexport class ModalComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-modal',\r\n  templateUrl: './modal.component.html',\r\n  styleUrls: ['./modal.component.scss'],\r\n})\r\nexport class ModalComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -4290,11 +4290,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>modal works!</p>\n"
+            "templateData": "<p>modal works!</p>\r\n"
         },
         {
             "name": "NavbarComponent",
-            "id": "component-NavbarComponent-9be58a72527f912929e64ffbe88b3ee302afce1d9dd7e413d44196e1a9757a7f9ee7639f867809f8cf43e869bba191e3a04e322c0670d033698a336f21da4fef",
+            "id": "component-NavbarComponent-c28e0efea801a5066b4b753958c44e21a5dc3d0d05721e5ebab105c07835d7ba0fc78e20676c83cc4e6889884267a4ba0be13f0b8c9f3719f6f358c80ab49040",
             "file": "src/app/shared/components/navbar/navbar.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -4332,7 +4332,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'desx-navbar',\n  templateUrl: './navbar.component.html',\n  styleUrls: ['./navbar.component.scss'],\n})\nexport class NavbarComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-navbar',\r\n  templateUrl: './navbar.component.html',\r\n  styleUrls: ['./navbar.component.scss'],\r\n})\r\nexport class NavbarComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -4352,11 +4352,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>navbar works!</p>\n"
+            "templateData": "<p>navbar works!</p>\r\n"
         },
         {
             "name": "PaginationComponent",
-            "id": "component-PaginationComponent-87c0310c8dea37b77919d8617be3273249444aaf614dbea3baeac32a78c027443cd25de0754662712d4a4def8b67bcaa63c020bb8bf79cbdb4f1ed937a12a125",
+            "id": "component-PaginationComponent-839c48cbd922c81287af1c27837ba365880e9d82d3093ad999b8c1a4452b02aa7ec78af7578c1beba4c58ac86cc82929bbb442f6a6aeac1208e9f9c1d362ef12",
             "file": "src/app/shared/components/pagination/pagination.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -4394,7 +4394,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'desx-pagination',\n  templateUrl: './pagination.component.html',\n  styleUrls: ['./pagination.component.scss'],\n})\nexport class PaginationComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-pagination',\r\n  templateUrl: './pagination.component.html',\r\n  styleUrls: ['./pagination.component.scss'],\r\n})\r\nexport class PaginationComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -4414,11 +4414,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>pagination works!</p>\n"
+            "templateData": "<p>pagination works!</p>\r\n"
         },
         {
             "name": "PopoversComponent",
-            "id": "component-PopoversComponent-3146a2c613764560c9c955387056c971e3df478ea077853efa4dca342f126d8afdadd493410c65b5cc8fea6ab529b0094411f38c3cd80fa49a97eec1f4ebad6f",
+            "id": "component-PopoversComponent-cb186c62ca6e013f71efb4e909a196b931fa05ced8e5154f93acb754d591e4988abfd13d1f6ec9f865f0444e7c0f4414c45efd503754ad824e4954ad795b8da8",
             "file": "src/app/shared/components/popovers/popovers.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -4456,7 +4456,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'desx-popovers',\n  templateUrl: './popovers.component.html',\n  styleUrls: ['./popovers.component.scss'],\n})\nexport class PopoversComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-popovers',\r\n  templateUrl: './popovers.component.html',\r\n  styleUrls: ['./popovers.component.scss'],\r\n})\r\nexport class PopoversComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -4476,11 +4476,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>popovers works!</p>\n"
+            "templateData": "<p>popovers works!</p>\r\n"
         },
         {
             "name": "ProfileComponent",
-            "id": "component-ProfileComponent-68d5d6a2f0b8bf683d1eaf5e4acc47782b159eb0f5bd00fb7c33825b25b66880411a0429aca5034031e5cf80fa2e437fa02bda8ebda4b2fa23d8a8e92df5e2ff",
+            "id": "component-ProfileComponent-62e33e9c0fbabdf96f8c7a60e6090da57d415cc6e53745767deba1dc42095169ddb9e99214235ab2977af4cd9c504924b7577e55d38a5e6b6c61deae0483688f",
             "file": "src/app/components/profile/profile.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -4537,7 +4537,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Inject, Input, OnInit, Optional, ViewEncapsulation } from '@angular/core';\nimport { Profile } from './profile.models';\nimport { ProfileOptions, PROFILE_OPTIONS } from './profile.options';\n\n@Component({\n  selector: 'desx-profile',\n  templateUrl: './profile.component.html',\n  styleUrls: ['./profile.component.scss'],\n  encapsulation: ViewEncapsulation.None,\n})\nexport class ProfileComponent implements OnInit {\n  @Input()\n  options?: Partial<ProfileOptions>;\n\n  @Input()\n  profile?: Profile;\n\n  constructor(@Optional() @Inject(PROFILE_OPTIONS) private defaultOptions: ProfileOptions) {}\n\n  ngOnInit(): void {\n    this.options = {\n      ...this.defaultOptions,\n      ...this.options,\n    };\n  }\n}\n",
+            "sourceCode": "import { Component, Inject, Input, OnInit, Optional, ViewEncapsulation } from '@angular/core';\r\nimport { Profile } from './profile.models';\r\nimport { ProfileOptions, PROFILE_OPTIONS } from './profile.options';\r\n\r\n@Component({\r\n  selector: 'desx-profile',\r\n  templateUrl: './profile.component.html',\r\n  styleUrls: ['./profile.component.scss'],\r\n  encapsulation: ViewEncapsulation.None,\r\n})\r\nexport class ProfileComponent implements OnInit {\r\n  @Input()\r\n  options?: Partial<ProfileOptions>;\r\n\r\n  @Input()\r\n  profile?: Profile;\r\n\r\n  constructor(@Optional() @Inject(PROFILE_OPTIONS) private defaultOptions: ProfileOptions) {}\r\n\r\n  ngOnInit(): void {\r\n    this.options = {\r\n      ...this.defaultOptions,\r\n      ...this.options,\r\n    };\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -4575,11 +4575,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <desx-image id=\"profileImage\" [source]=\"profile?.profileImage || ''\" width=\"100\" height=\"100\"></desx-image>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-12\">\n      <h4 class=\"profile-full-name\">{{ profile?.fullName }}</h4>\n      <span class=\"profile-user-name\">{{ profile?.userName }}</span>\n      <span *ngIf=\"options?.showLink\" class=\"seperator\">|</span>\n      <a *ngIf=\"options?.showLink\" class=\"profile-user-link\" href=\"#\">{{ profile?.link }}</a>\n    </div>\n  </div>\n</div>\n"
+            "templateData": "<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n      <desx-image\r\n        id=\"profileImage\"\r\n        [source]=\"profile?.profileImage || ''\"\r\n        width=\"100\"\r\n        height=\"100\"\r\n      ></desx-image>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n      <h4 class=\"profile-full-name\">{{ profile?.fullName }}</h4>\r\n      <span class=\"profile-user-name\">{{ profile?.userName }}</span>\r\n      <span *ngIf=\"options?.showLink\" class=\"seperator\">|</span>\r\n      <a *ngIf=\"options?.showLink\" class=\"profile-user-link\" href=\"#\">{{ profile?.link }}</a>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "ProfileTemplateComponent",
-            "id": "component-ProfileTemplateComponent-b18a037895247fbf5d077d76fea32746e5d4670f84c3c203143ee9856420957876076c02f53dc773641412dffcc0dedcf83baf504063600836322c783f12e3a2",
+            "id": "component-ProfileTemplateComponent-86a70c7be2f7dde0453cf71dc0bcc8411dac787871cb43addf3d6523a5e5ccbfd0bfe43f58593e457b976b678ad79d2735d264759095060cd307a27d51ce9c60",
             "file": "src/app/templates/profile-template/profile-template.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -4625,7 +4625,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, ViewEncapsulation } from '@angular/core';\nimport { Profile } from '@components/profile/profile.models';\nimport { ProfileOptions } from '@components/profile/profile.options';\n\n@Component({\n  selector: 'desx-profile-template',\n  templateUrl: './profile-template.component.html',\n  styleUrls: ['./profile-template.component.scss'],\n  encapsulation: ViewEncapsulation.None,\n})\nexport class ProfileTemplateComponent {\n  @Input()\n  options?: ProfileOptions;\n\n  @Input()\n  profile?: Profile;\n}\n",
+            "sourceCode": "import { Component, Input, ViewEncapsulation } from '@angular/core';\r\nimport { Profile } from '@components/profile/profile.models';\r\nimport { ProfileOptions } from '@components/profile/profile.options';\r\n\r\n@Component({\r\n  selector: 'desx-profile-template',\r\n  templateUrl: './profile-template.component.html',\r\n  styleUrls: ['./profile-template.component.scss'],\r\n  encapsulation: ViewEncapsulation.None,\r\n})\r\nexport class ProfileTemplateComponent {\r\n  @Input()\r\n  options?: ProfileOptions;\r\n\r\n  @Input()\r\n  profile?: Profile;\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -4634,11 +4634,11 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"user-profile\">\n  <div class=\"profile-section\">\n    <desx-profile [profile]=\"profile\" [options]=\"options\"></desx-profile>\n  </div>\n  <div class=\"social-button\">\n    <ng-content select=\"[social]\"></ng-content>\n  </div>\n  <div class=\"booking-section\">\n    <ng-content select=\"[booking]\"></ng-content>\n  </div>\n  <div class=\"statistic-section\">\n    <ng-content selec=\"[statistic]\"></ng-content>\n  </div>\n</div>\n"
+            "templateData": "<div class=\"user-profile\">\r\n  <div class=\"profile-section\">\r\n    <desx-profile [profile]=\"profile\" [options]=\"options\"></desx-profile>\r\n  </div>\r\n  <div class=\"social-button\">\r\n    <ng-content select=\"[social]\"></ng-content>\r\n  </div>\r\n  <div class=\"booking-section\">\r\n    <ng-content select=\"[booking]\"></ng-content>\r\n  </div>\r\n  <div class=\"statistic-section\">\r\n    <ng-content selec=\"[statistic]\"></ng-content>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "ProgressComponent",
-            "id": "component-ProgressComponent-6cc6906dd3af12b69e2802f9adf2fc34f0bdc3a39a3508f757c207a5ba98ed40b56af4882f9a1d23d99055c55f0f634e2e0820d0cf38baf33eb43eadd3dd2554",
+            "id": "component-ProgressComponent-d62b783912636dfdbd80083094241dd189be5114a122e1a7773a803f62547c24b8e5c14d4cbf403300757e8d8fd7b11dc3801af22c3de5dc7a07dd660a1c8798",
             "file": "src/app/shared/components/progress/progress.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -4676,7 +4676,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'desx-progress',\n  templateUrl: './progress.component.html',\n  styleUrls: ['./progress.component.scss'],\n})\nexport class ProgressComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-progress',\r\n  templateUrl: './progress.component.html',\r\n  styleUrls: ['./progress.component.scss'],\r\n})\r\nexport class ProgressComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -4696,11 +4696,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>progress works!</p>\n"
+            "templateData": "<p>progress works!</p>\r\n"
         },
         {
             "name": "SocialButtonsComponent",
-            "id": "component-SocialButtonsComponent-1c9e11de4afdbff2aa6dc16892926b879721615c7d9334ca5d6042c786c9ba079a7e132476cf4b8b66dae3696aff82ba10c2331fb4f932c3ba9d9f32de090307",
+            "id": "component-SocialButtonsComponent-474b8cac010d7e00d17c38e4d2622b45927c2a69c4ed4ee0e3de03a275a1977bb5fc94a769f043103bf024f7bbc14be9644ee1909809eab01cb4935df363eaba",
             "file": "src/app/components/social-buttons/social-buttons.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -4758,7 +4758,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Inject, Input, OnInit, Optional, ViewEncapsulation } from '@angular/core';\nimport { SocialButton } from './social-buttons.models';\nimport { SocialButtonOptions, SOCIAL_BUTTON_OPTIONS } from './social-buttons.options';\n\n@Component({\n  selector: 'desx-social-buttons',\n  templateUrl: './social-buttons.component.html',\n  styleUrls: ['./social-buttons.component.scss'],\n  encapsulation: ViewEncapsulation.None,\n})\nexport class SocialButtonsComponent implements OnInit {\n  @Input()\n  options?: Partial<SocialButtonOptions>;\n\n  @Input()\n  buttons: SocialButton[] = [];\n\n  constructor(\n    @Optional() @Inject(SOCIAL_BUTTON_OPTIONS) private defaultOptions: SocialButtonOptions,\n  ) {}\n\n  ngOnInit(): void {\n    this.options = {\n      ...this.defaultOptions,\n      ...this.options,\n    };\n  }\n}\n",
+            "sourceCode": "import { Component, Inject, Input, OnInit, Optional, ViewEncapsulation } from '@angular/core';\r\nimport { SocialButton } from './social-buttons.models';\r\nimport { SocialButtonOptions, SOCIAL_BUTTON_OPTIONS } from './social-buttons.options';\r\n\r\n@Component({\r\n  selector: 'desx-social-buttons',\r\n  templateUrl: './social-buttons.component.html',\r\n  styleUrls: ['./social-buttons.component.scss'],\r\n  encapsulation: ViewEncapsulation.None,\r\n})\r\nexport class SocialButtonsComponent implements OnInit {\r\n  @Input()\r\n  options?: Partial<SocialButtonOptions>;\r\n\r\n  @Input()\r\n  buttons: SocialButton[] = [];\r\n\r\n  constructor(\r\n    @Optional() @Inject(SOCIAL_BUTTON_OPTIONS) private defaultOptions: SocialButtonOptions,\r\n  ) {}\r\n\r\n  ngOnInit(): void {\r\n    this.options = {\r\n      ...this.defaultOptions,\r\n      ...this.options,\r\n    };\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -4796,11 +4796,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"social-buttons\">\n  <desx-button\n    *ngFor=\"let button of buttons\"\n    type=\"button\"\n    btnStyle=\"primary\"\n    [options]=\"{ isOutline: true }\"\n  >\n    <a [href]=\"button.link\">\n      <i [ngClass]=\"['bi', button.type]\"></i>\n    </a>\n  </desx-button>\n</div>\n"
+            "templateData": "<div class=\"social-buttons\">\r\n  <desx-button\r\n    *ngFor=\"let button of buttons\"\r\n    type=\"button\"\r\n    btnStyle=\"primary\"\r\n    [options]=\"{ isOutline: true }\"\r\n  >\r\n    <a [href]=\"button.link\">\r\n      <i [ngClass]=\"['bi', button.type]\"></i>\r\n    </a>\r\n  </desx-button>\r\n</div>\r\n"
         },
         {
             "name": "SpinnerComponent",
-            "id": "component-SpinnerComponent-b18403ba9d8297a6c3eddd24b0cc1fba57af6fea3908524b0acb3aec214eaaae0e3d3293d80a097849d3660b316e829995458c0474ad934b63095191f5cb5287",
+            "id": "component-SpinnerComponent-a37ce2486270fed89df61dd63b95c026bd357b37fe33efa787bc8298bf1afd429b5a27fb5dc18cdc3e2d59c6a7ffd3b352afa3690da503859260c19b5e6d9000",
             "file": "src/app/shared/components/spinner/spinner.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -4838,7 +4838,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'desx-spinner',\n  templateUrl: './spinner.component.html',\n  styleUrls: ['./spinner.component.scss'],\n})\nexport class SpinnerComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-spinner',\r\n  templateUrl: './spinner.component.html',\r\n  styleUrls: ['./spinner.component.scss'],\r\n})\r\nexport class SpinnerComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -4858,11 +4858,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>spinner works!</p>\n"
+            "templateData": "<p>spinner works!</p>\r\n"
         },
         {
             "name": "StatisticsComponent",
-            "id": "component-StatisticsComponent-f561fd83f3a56c3528df6f314173d4ac711f3cf905af80d6e1f60108ab670aa8622e15aee2a5cc8190daac12df8836addef929de6e4d84759c829b90cd4077bb",
+            "id": "component-StatisticsComponent-a9442dbca533f60e621638783f4e3ee9a56d1d3343c192b8976e755869ba57c60befa92ddc273a4b315dabda4fbb6759307906469677821886e4abd60044d23b",
             "file": "src/app/components/statistics/statistics.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -4920,7 +4920,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Inject, Input, OnInit, Optional, ViewEncapsulation } from '@angular/core';\nimport { Statistic } from './statistics.models';\nimport { StatisticsOptions, STATISTICS_OPTIONS } from './statistics.options';\n\n@Component({\n  selector: 'desx-statistics',\n  templateUrl: './statistics.component.html',\n  styleUrls: ['./statistics.component.scss'],\n  encapsulation: ViewEncapsulation.None,\n})\nexport class StatisticsComponent implements OnInit {\n  @Input()\n  options?: Partial<StatisticsOptions>;\n\n  @Input()\n  statistics: Statistic[] = [];\n\n  constructor(@Optional() @Inject(STATISTICS_OPTIONS) private defaultOptions: StatisticsOptions) {}\n\n  ngOnInit(): void {\n    this.options = {\n      ...this.defaultOptions,\n      ...this.options,\n    };\n  }\n}\n",
+            "sourceCode": "import { Component, Inject, Input, OnInit, Optional, ViewEncapsulation } from '@angular/core';\r\nimport { Statistic } from './statistics.models';\r\nimport { StatisticsOptions, STATISTICS_OPTIONS } from './statistics.options';\r\n\r\n@Component({\r\n  selector: 'desx-statistics',\r\n  templateUrl: './statistics.component.html',\r\n  styleUrls: ['./statistics.component.scss'],\r\n  encapsulation: ViewEncapsulation.None,\r\n})\r\nexport class StatisticsComponent implements OnInit {\r\n  @Input()\r\n  options?: Partial<StatisticsOptions>;\r\n\r\n  @Input()\r\n  statistics: Statistic[] = [];\r\n\r\n  constructor(@Optional() @Inject(STATISTICS_OPTIONS) private defaultOptions: StatisticsOptions) {}\r\n\r\n  ngOnInit(): void {\r\n    this.options = {\r\n      ...this.defaultOptions,\r\n      ...this.options,\r\n    };\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -4962,7 +4962,7 @@
         },
         {
             "name": "TextboxComponent",
-            "id": "component-TextboxComponent-ae1f4449ffd8e6067b2aa723410e1a3976ac649fb5d106df06fda734e03e411c2d85be935aca3662c685bd66d9eab6d7987db4705f9356a57c6b804a71590726",
+            "id": "component-TextboxComponent-d9fb7cfde914650d865ad48c3f856633eed24dde9e18a35e5ab02ef5fc9d53339ab19ee24dc629317af7ad75a995c5faee3539a0f093bf96f615e48ffe262ba5",
             "file": "src/app/shared/components/textbox/textbox.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -5211,7 +5211,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Inject, Input, OnInit, ViewEncapsulation } from '@angular/core';\nimport { ControlValueAccessor, FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';\nimport { TextboxSize, TextboxType } from './textbox.models';\nimport { TextboxOptions, TEXTBOX_OPTIONS } from './textbox.options';\n\n@Component({\n  selector: 'desx-textbox',\n  templateUrl: './textbox.component.html',\n  styleUrls: ['./textbox.component.scss'],\n  encapsulation: ViewEncapsulation.None,\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      useExisting: TextboxComponent,\n      multi: true,\n    },\n  ],\n})\nexport class TextboxComponent implements OnInit, ControlValueAccessor {\n  @Input()\n  id: string = '';\n\n  @Input()\n  options?: Partial<TextboxOptions>;\n\n  @Input()\n  textboxType: TextboxType = 'text';\n\n  @Input()\n  size: TextboxSize = '';\n\n  @Input()\n  placeholder: string = '';\n\n  @Input()\n  label: string = '';\n\n  @Input()\n  validFeedback: string = '';\n\n  @Input()\n  invalidFeedback: string = '';\n\n  @Input()\n  parentForm?: FormGroup;\n\n  get value() {\n    return this._value;\n  }\n\n  set value(val: string) {\n    if (val !== undefined && val !== this._value) {\n      this._value = val;\n\n      this.onChange(val);\n      this.onTouch();\n    }\n  }\n\n  private _value: string = '';\n  private onChange = (val: any) => {};\n  private onTouch = () => {};\n\n  constructor(@Inject(TEXTBOX_OPTIONS) private defaultOptions: TextboxOptions) {}\n\n  writeValue(obj: any): void {\n    this.value = obj;\n  }\n\n  registerOnChange(fn: any): void {\n    this.onChange = fn;\n  }\n\n  registerOnTouched(fn: any): void {\n    this.onTouch = fn;\n  }\n\n  ngOnInit(): void {\n    this.options = {\n      ...this.defaultOptions,\n      ...this.options,\n    };\n  }\n}\n",
+            "sourceCode": "import { Component, Inject, Input, OnInit, ViewEncapsulation } from '@angular/core';\r\nimport { ControlValueAccessor, FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';\r\nimport { TextboxSize, TextboxType } from './textbox.models';\r\nimport { TextboxOptions, TEXTBOX_OPTIONS } from './textbox.options';\r\n\r\n@Component({\r\n  selector: 'desx-textbox',\r\n  templateUrl: './textbox.component.html',\r\n  styleUrls: ['./textbox.component.scss'],\r\n  encapsulation: ViewEncapsulation.None,\r\n  providers: [\r\n    {\r\n      provide: NG_VALUE_ACCESSOR,\r\n      useExisting: TextboxComponent,\r\n      multi: true,\r\n    },\r\n  ],\r\n})\r\nexport class TextboxComponent implements OnInit, ControlValueAccessor {\r\n  @Input()\r\n  id: string = '';\r\n\r\n  @Input()\r\n  options?: Partial<TextboxOptions>;\r\n\r\n  @Input()\r\n  textboxType: TextboxType = 'text';\r\n\r\n  @Input()\r\n  size: TextboxSize = '';\r\n\r\n  @Input()\r\n  placeholder: string = '';\r\n\r\n  @Input()\r\n  label: string = '';\r\n\r\n  @Input()\r\n  validFeedback: string = '';\r\n\r\n  @Input()\r\n  invalidFeedback: string = '';\r\n\r\n  @Input()\r\n  parentForm?: FormGroup;\r\n\r\n  get value() {\r\n    return this._value;\r\n  }\r\n\r\n  set value(val: string) {\r\n    if (val !== undefined && val !== this._value) {\r\n      this._value = val;\r\n\r\n      this.onChange(val);\r\n      this.onTouch();\r\n    }\r\n  }\r\n\r\n  private _value: string = '';\r\n  private onChange = (val: any) => {};\r\n  private onTouch = () => {};\r\n\r\n  constructor(@Inject(TEXTBOX_OPTIONS) private defaultOptions: TextboxOptions) {}\r\n\r\n  writeValue(obj: any): void {\r\n    this.value = obj;\r\n  }\r\n\r\n  registerOnChange(fn: any): void {\r\n    this.onChange = fn;\r\n  }\r\n\r\n  registerOnTouched(fn: any): void {\r\n    this.onTouch = fn;\r\n  }\r\n\r\n  ngOnInit(): void {\r\n    this.options = {\r\n      ...this.defaultOptions,\r\n      ...this.options,\r\n    };\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -5288,7 +5288,7 @@
                     }
                 }
             },
-            "templateData": "<ng-container\n  *ngTemplateOutlet=\"options?.floatingLabels ? floatingTextboxTemplate : labeledTextboxTemplate\"\n></ng-container>\n\n<ng-template #defaultTextboxTemplate>\n  <input\n    [id]=\"id\"\n    [name]=\"id\"\n    [type]=\"textboxType\"\n    [placeholder]=\"placeholder\"\n    [ngClass]=\"['form-control', size]\"\n    [(ngModel)]=\"value\"\n  />\n</ng-template>\n\n<ng-template #validationTemplate>\n  <div *ngIf=\"parentForm?.valid && parentForm?.touched\" class=\"valid-feedback\">\n    {{ validFeedback }}\n  </div>\n  <div *ngIf=\"parentForm?.invalid\" class=\"invalid-feedback\">{{ invalidFeedback }}</div>\n</ng-template>\n\n<ng-template #labeledTextboxTemplate>\n  <label class=\"form-label\" [for]=\"id\">{{ label }}</label>\n  <ng-container *ngTemplateOutlet=\"defaultTextboxTemplate\"></ng-container>\n  <ng-container *ngTemplateOutlet=\"validationTemplate\"></ng-container>\n</ng-template>\n\n<ng-template #floatingTextboxTemplate>\n  <div class=\"form-floating\">\n    <ng-container *ngTemplateOutlet=\"defaultTextboxTemplate\"></ng-container>\n    <label class=\"form-label\" [for]=\"id\">{{ label }}</label>\n  </div>\n  <ng-container *ngTemplateOutlet=\"validationTemplate\"></ng-container>\n</ng-template>\n"
+            "templateData": "<ng-container\r\n  *ngTemplateOutlet=\"options?.floatingLabels ? floatingTextboxTemplate : labeledTextboxTemplate\"\r\n></ng-container>\r\n\r\n<ng-template #defaultTextboxTemplate>\r\n  <input\r\n    [id]=\"id\"\r\n    [name]=\"id\"\r\n    [type]=\"textboxType\"\r\n    [placeholder]=\"placeholder\"\r\n    [ngClass]=\"['form-control', size]\"\r\n    [(ngModel)]=\"value\"\r\n  />\r\n</ng-template>\r\n\r\n<ng-template #validationTemplate>\r\n  <div *ngIf=\"parentForm?.valid && parentForm?.touched\" class=\"valid-feedback\">\r\n    {{ validFeedback }}\r\n  </div>\r\n  <div *ngIf=\"parentForm?.invalid\" class=\"invalid-feedback\">{{ invalidFeedback }}</div>\r\n</ng-template>\r\n\r\n<ng-template #labeledTextboxTemplate>\r\n  <label class=\"form-label\" [for]=\"id\">{{ label }}</label>\r\n  <ng-container *ngTemplateOutlet=\"defaultTextboxTemplate\"></ng-container>\r\n  <ng-container *ngTemplateOutlet=\"validationTemplate\"></ng-container>\r\n</ng-template>\r\n\r\n<ng-template #floatingTextboxTemplate>\r\n  <div class=\"form-floating\">\r\n    <ng-container *ngTemplateOutlet=\"defaultTextboxTemplate\"></ng-container>\r\n    <label class=\"form-label\" [for]=\"id\">{{ label }}</label>\r\n  </div>\r\n  <ng-container *ngTemplateOutlet=\"validationTemplate\"></ng-container>\r\n</ng-template>\r\n"
         },
         {
             "name": "TextboxWrapperComponent",
@@ -5382,7 +5382,7 @@
         },
         {
             "name": "ToastComponent",
-            "id": "component-ToastComponent-597923762522a2225f449dee9cfb64a9d06796af1c387daa410525bfcffca9c3991d0c5214773b6ffb3bb4d80cb007364bf46e405c6cb62e24942ef2f406b432",
+            "id": "component-ToastComponent-433a05b2229f39ae9ce99e9704bdf885a517b00cf61e7a479b6e6ec4ab15ff893a6e7534a2d284cdaaf74a0cb9065a76df3b4d3a0c44f5c0e2ac52d97fcdefa7",
             "file": "src/app/shared/components/toast/toast.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -5420,7 +5420,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'desx-toast',\n  templateUrl: './toast.component.html',\n  styleUrls: ['./toast.component.scss'],\n})\nexport class ToastComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-toast',\r\n  templateUrl: './toast.component.html',\r\n  styleUrls: ['./toast.component.scss'],\r\n})\r\nexport class ToastComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -5440,11 +5440,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>toast works!</p>\n"
+            "templateData": "<p>toast works!</p>\r\n"
         },
         {
             "name": "TooltipsComponent",
-            "id": "component-TooltipsComponent-a1913b7078ce99a733dc77cc752df8a64637528ef23463078c2738c7428736677b65a0365d29dc8fefb2fde3431e161eae916e63d9d8b0fab08ab503eadf856c",
+            "id": "component-TooltipsComponent-9641d270871eca84279dccb6b3376fda1107e1a79c22eca9357182fb758399df65732c64a570919e929b36b30c1812709030d5f2168cd521ec99dc14685295de",
             "file": "src/app/shared/components/tooltips/tooltips.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -5482,7 +5482,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'desx-tooltips',\n  templateUrl: './tooltips.component.html',\n  styleUrls: ['./tooltips.component.scss'],\n})\nexport class TooltipsComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-tooltips',\r\n  templateUrl: './tooltips.component.html',\r\n  styleUrls: ['./tooltips.component.scss'],\r\n})\r\nexport class TooltipsComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -5502,12 +5502,12 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>tooltips works!</p>\n"
+            "templateData": "<p>tooltips works!</p>\r\n"
         },
         {
-            "name": "UserProfileComponent",
-            "id": "component-UserProfileComponent-283a728bae6f001dc12ac778a6659272afb4e3a74e78e1b8f004f1eb47df811cbfd6341d5b88e486241f4375fd357e55908667776bbd52cfeee1fd38e38b93ad",
-            "file": "src/app/modules/user-profile/user-profile.component.ts",
+            "name": "UserProfilePresComponent",
+            "id": "component-UserProfilePresComponent-c65f062f519c1ace3f01a2acec0226d6162b7d99356b5f134070c497a0959051ccd99d0297611d253f004778b2e882842028c6ff6088116da970858fe424e089",
+            "file": "src/app/modules/user-profile/presenter/user-profile-pres.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
             ],
@@ -5515,13 +5515,13 @@
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "desx-user-profile",
+            "selector": "desx-user-profile-pres",
             "styleUrls": [
-                "./user-profile.component.scss"
+                "./user-profile-pres.component.scss"
             ],
             "styles": [],
             "templateUrl": [
-                "./user-profile.component.html"
+                "./user-profile-pres.component.html"
             ],
             "viewProviders": [],
             "inputsClass": [
@@ -5563,12 +5563,12 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Inject, Input, OnInit, Optional, ViewEncapsulation } from '@angular/core';\nimport { UserProfile } from './user-profile.models';\nimport { UserProfileOptions, USER_PROFILE_OPTIONS } from './user-profile.options';\n\n@Component({\n  selector: 'desx-user-profile',\n  templateUrl: './user-profile.component.html',\n  styleUrls: ['./user-profile.component.scss'],\n  encapsulation: ViewEncapsulation.None,\n})\nexport class UserProfileComponent implements OnInit {\n  @Input()\n  options?: Partial<UserProfileOptions>;\n\n  @Input()\n  profile!: UserProfile;\n\n  constructor(\n    @Optional() @Inject(USER_PROFILE_OPTIONS) private defaultOptions: UserProfileOptions,\n  ) {}\n\n  ngOnInit(): void {\n    this.options = {\n      ...this.defaultOptions,\n      ...this.options,\n    };\n  }\n}\n",
+            "sourceCode": "import { Component, Inject, Input, OnInit, Optional, ViewEncapsulation } from '@angular/core';\nimport { UserProfile } from './user-profile-pres.models';\nimport { UserProfileOptions, USER_PROFILE_OPTIONS } from './user-profile-pres.options';\n\n@Component({\n  selector: 'desx-user-profile-pres',\n  templateUrl: './user-profile-pres.component.html',\n  styleUrls: ['./user-profile-pres.component.scss'],\n  encapsulation: ViewEncapsulation.None,\n})\nexport class UserProfilePresComponent implements OnInit {\n  @Input()\n  options?: Partial<UserProfileOptions>;\n\n  @Input()\n  profile!: UserProfile;\n\n  constructor(\n    @Optional() @Inject(USER_PROFILE_OPTIONS) private defaultOptions: UserProfileOptions,\n  ) {}\n\n  ngOnInit(): void {\n    this.options = {\n      ...this.defaultOptions,\n      ...this.options,\n    };\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
                     "data": "",
-                    "styleUrl": "./user-profile.component.scss"
+                    "styleUrl": "./user-profile-pres.component.scss"
                 }
             ],
             "stylesData": "",
@@ -5606,14 +5606,14 @@
     ],
     "modules": [
         {
-            "name": "AppModule",
-            "id": "module-AppModule-0571a28d1031cfeec6d835c085683e84326b379fcef0dc70166a65508c4d84362c79b50e42847894741bd954830b650de6d62c324ca70470badb214597664aa4",
+            "name": "AppComponentsModule",
+            "id": "module-AppComponentsModule-20a40ba8d8fc48f5d4d253056b38e87f44463d8c622981d1d6407dc832f6660ad0f5e53bbc2c8a469925b5b40432d507e232f8697349af7309f457533f9451dc",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
-            "file": "src/app/app.module.ts",
+            "file": "src/app/components/app-components.module.ts",
             "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { AppComponent } from './app.component';\nimport { SharedModule } from './shared/shared.module';\nimport { RouterModule } from '@angular/router';\nimport { ReactiveFormsModule } from '@angular/forms';\nimport { ProfileComponent } from '@components/profile/profile.component';\nimport { SocialButtonsComponent } from '@components/social-buttons/social-buttons.component';\nimport { StatisticsComponent } from '@components/statistics/statistics.component';\nimport { UserProfileComponent } from './modules/user-profile/user-profile.component';\nimport { LoginStatusComponent } from '@components/login-status/login-status.component';\nimport { LoginComponent } from '@components/login/login.component';\nimport { ProfileTemplateComponent } from './templates/profile-template/profile-template.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    ProfileComponent,\n    SocialButtonsComponent,\n    StatisticsComponent,\n    UserProfileComponent,\n    LoginStatusComponent,\n    LoginComponent,\n    ProfileTemplateComponent,\n  ],\n  imports: [BrowserModule, CommonModule, SharedModule, RouterModule, ReactiveFormsModule],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { LoginComponent } from './login/login.component';\nimport { LoginStatusComponent } from './login-status/login-status.component';\nimport { ProfileComponent } from './profile/profile.component';\nimport { SocialButtonsComponent } from './social-buttons/social-buttons.component';\nimport { StatisticsComponent } from './statistics/statistics.component';\nimport { SharedModule } from '@app/shared/shared.module';\n\n@NgModule({\n  declarations: [\n    LoginComponent,\n    LoginStatusComponent,\n    ProfileComponent,\n    SocialButtonsComponent,\n    StatisticsComponent,\n  ],\n  imports: [CommonModule, SharedModule],\n  exports: [\n    LoginComponent,\n    LoginStatusComponent,\n    ProfileComponent,\n    SocialButtonsComponent,\n    StatisticsComponent,\n  ],\n})\nexport class AppComponentsModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -5622,9 +5622,6 @@
                 {
                     "type": "declarations",
                     "elements": [
-                        {
-                            "name": "AppComponent"
-                        },
                         {
                             "name": "LoginComponent"
                         },
@@ -5635,16 +5632,10 @@
                             "name": "ProfileComponent"
                         },
                         {
-                            "name": "ProfileTemplateComponent"
-                        },
-                        {
                             "name": "SocialButtonsComponent"
                         },
                         {
                             "name": "StatisticsComponent"
-                        },
-                        {
-                            "name": "UserProfileComponent"
                         }
                     ]
                 },
@@ -5655,6 +5646,62 @@
                             "name": "SharedModule"
                         }
                     ]
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "LoginComponent"
+                        },
+                        {
+                            "name": "LoginStatusComponent"
+                        },
+                        {
+                            "name": "ProfileComponent"
+                        },
+                        {
+                            "name": "SocialButtonsComponent"
+                        },
+                        {
+                            "name": "StatisticsComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-074d2e4e67626d739956a53081a99c9a799ca1364224a0bfa4ba60f9cb6bf36fc5c50d03111d05114a0545aa4496ab78444cc02ff159b5f112f0d9c6f3925d40",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app.module.ts",
+            "methods": [],
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppComponent } from './app.component';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent],\r\n  imports: [BrowserModule, CommonModule],\r\n  bootstrap: [AppComponent],\r\n})\r\nexport class AppModule {}\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
                 },
                 {
                     "type": "exports",
@@ -5804,6 +5851,101 @@
                     "elements": []
                 }
             ]
+        },
+        {
+            "name": "TemplatesModule",
+            "id": "module-TemplatesModule-645da6f78d53681200aa371896f1247637b0fcd0749c56085108f0e89339e624add696a40981e2da7167d1d76f40cd9fa1cbae5e151c7db67ca0d4da5411b25a",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/templates/templates.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ProfileTemplateComponent } from './profile-template/profile-template.component';\n\n@NgModule({\n  declarations: [ProfileTemplateComponent],\n  imports: [CommonModule],\n  exports: [ProfileTemplateComponent],\n})\nexport class TemplatesModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "ProfileTemplateComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "ProfileTemplateComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "UserProfileModule",
+            "id": "module-UserProfileModule-6463b6e40740297d266d1211250c5275386a5bf67b1026c0fec1fbd182138bd3717033bed5416936f2d3e5eb39ba4c8fe6545680640db19f8134e65da76904d0",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/modules/user-profile/user-profile.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { UserProfilePresComponent } from './presenter/user-profile-pres.component';\nimport { TemplatesModule } from '@templates/templates.module';\nimport { SharedModule } from '@app/shared/shared.module';\nimport { AppComponentsModule } from '@components/app-components.module';\n\n@NgModule({\n  declarations: [UserProfilePresComponent],\n  imports: [CommonModule, TemplatesModule, SharedModule, AppComponentsModule],\n  exports: [UserProfilePresComponent],\n})\nexport class UserProfileModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "UserProfilePresComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "SharedModule"
+                        },
+                        {
+                            "name": "TemplatesModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "UserProfilePresComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
         }
     ],
     "miscellaneous": {
@@ -5816,7 +5958,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "new InjectionToken<AccordionOptions>(\n  'Default Accordion component options',\n)"
+                "defaultValue": "new InjectionToken<AccordionOptions>(\r\n  'Default Accordion component options',\r\n)"
             },
             {
                 "name": "actions",
@@ -5826,7 +5968,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\n  onShow: action(EventType.Show),\n  onShown: action(EventType.Shown),\n  onHide: action(EventType.Hide),\n  onHidden: action(EventType.Hidden),\n}",
+                "defaultValue": "{\r\n  onShow: action(EventType.Show),\r\n  onShown: action(EventType.Shown),\r\n  onHide: action(EventType.Hide),\r\n  onHidden: action(EventType.Hidden),\r\n}",
                 "rawdescription": "Component events",
                 "description": "<p>Component events</p>\n"
             },
@@ -5958,7 +6100,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/modules/user-profile/user-profile.stories.ts",
+                "file": "src/app/modules/user-profile/presenter/user-profile-pres.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -6034,7 +6176,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "AccordionOptions",
-                "defaultValue": "{\n  flush: false,\n}",
+                "defaultValue": "{\r\n  flush: false,\r\n}",
                 "rawdescription": "Default accordion component options",
                 "description": "<p>Default accordion component options</p>\n"
             },
@@ -6070,7 +6212,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "[]",
-                "defaultValue": "[\n  { provide: ACCORDION_OPTIONS, useValue: DEFAULT_ACCORDION_OPTIONS },\n  { provide: BUTTON_OPTIONS, useValue: DEFAULT_BUTTON_OPTIONS },\n  { provide: ALERT_OPTIONS, useValue: DEFAULT_ALERT_OPTIONS },\n  { provide: TEXTBOX_OPTIONS, useValue: DEFAULT_TEXTBOX_OPTIONS },\n  { provide: IMAGE_OPTIONS, useValue: DEFAULT_IMAGE_OPTIONS },\n]"
+                "defaultValue": "[\r\n  { provide: ACCORDION_OPTIONS, useValue: DEFAULT_ACCORDION_OPTIONS },\r\n  { provide: BUTTON_OPTIONS, useValue: DEFAULT_BUTTON_OPTIONS },\r\n  { provide: ALERT_OPTIONS, useValue: DEFAULT_ALERT_OPTIONS },\r\n  { provide: TEXTBOX_OPTIONS, useValue: DEFAULT_TEXTBOX_OPTIONS },\r\n  { provide: IMAGE_OPTIONS, useValue: DEFAULT_IMAGE_OPTIONS },\r\n]"
             },
             {
                 "name": "DEFAULT_IMAGE_OPTIONS",
@@ -6136,7 +6278,7 @@
                 "name": "DEFAULT_USER_PROFILE_OPTIONS",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/modules/user-profile/user-profile.options.ts",
+                "file": "src/app/modules/user-profile/presenter/user-profile-pres.options.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "UserProfileOptions",
@@ -6152,7 +6294,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\n  production: true,\n}"
+                "defaultValue": "{\r\n  production: true,\r\n}"
             },
             {
                 "name": "environment",
@@ -6162,7 +6304,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\n  production: false,\n}"
+                "defaultValue": "{\r\n  production: false,\r\n}"
             },
             {
                 "name": "Floating",
@@ -6333,7 +6475,7 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/modules/user-profile/user-profile.stories.ts",
+                "file": "src/app/modules/user-profile/presenter/user-profile-pres.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -6349,7 +6491,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "(args) => ({\n  props: {\n    ...args,\n    onShow: actions.onShow,\n    onShown: actions.onShown,\n    onHide: actions.onHide,\n    onHidden: actions.onHidden,\n  },\n  template: `\n    <desx-accordion id=\"mainAccordion\" [options]=\"options\"\n      (show)=\"onShow($event)\" (shown)=\"onShown($event)\" (hide)=\"onHide($event)\" (hidden)=\"onHidden($event)\">\n      <desx-accordion-item id=\"item1\">\n        <ng-template desxAccordionHeader>\n          Accordion Item #1\n        </ng-template>\n        <ng-template desxAccordionContent>\n          This is a test content\n        </ng-template>\n      </desx-accordion-item>\n      <desx-accordion-item id=\"item2\">\n        <ng-template desxAccordionHeader>\n          Accordion Item #2\n        </ng-template>\n        <ng-template desxAccordionContent>\n          This is a test content\n        </ng-template>\n      </desx-accordion-item>\n    </desx-accordion>\n  `,\n})",
+                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onShow: actions.onShow,\r\n    onShown: actions.onShown,\r\n    onHide: actions.onHide,\r\n    onHidden: actions.onHidden,\r\n  },\r\n  template: `\r\n    <desx-accordion id=\"mainAccordion\" [options]=\"options\"\r\n      (show)=\"onShow($event)\" (shown)=\"onShown($event)\" (hide)=\"onHide($event)\" (hidden)=\"onHidden($event)\">\r\n      <desx-accordion-item id=\"item1\">\r\n        <ng-template desxAccordionHeader>\r\n          Accordion Item #1\r\n        </ng-template>\r\n        <ng-template desxAccordionContent>\r\n          This is a test content\r\n        </ng-template>\r\n      </desx-accordion-item>\r\n      <desx-accordion-item id=\"item2\">\r\n        <ng-template desxAccordionHeader>\r\n          Accordion Item #2\r\n        </ng-template>\r\n        <ng-template desxAccordionContent>\r\n          This is a test content\r\n        </ng-template>\r\n      </desx-accordion-item>\r\n    </desx-accordion>\r\n  `,\r\n})",
                 "rawdescription": "Default template for stories",
                 "description": "<p>Default template for stories</p>\n"
             },
@@ -6427,7 +6569,7 @@
                 "name": "USER_PROFILE_OPTIONS",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/modules/user-profile/user-profile.options.ts",
+                "file": "src/app/modules/user-profile/presenter/user-profile-pres.options.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -6625,7 +6767,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "new InjectionToken<AccordionOptions>(\n  'Default Accordion component options',\n)"
+                    "defaultValue": "new InjectionToken<AccordionOptions>(\r\n  'Default Accordion component options',\r\n)"
                 },
                 {
                     "name": "DEFAULT_ACCORDION_OPTIONS",
@@ -6635,7 +6777,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "AccordionOptions",
-                    "defaultValue": "{\n  flush: false,\n}",
+                    "defaultValue": "{\r\n  flush: false,\r\n}",
                     "rawdescription": "Default accordion component options",
                     "description": "<p>Default accordion component options</p>\n"
                 }
@@ -6649,7 +6791,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\n  onShow: action(EventType.Show),\n  onShown: action(EventType.Shown),\n  onHide: action(EventType.Hide),\n  onHidden: action(EventType.Hidden),\n}",
+                    "defaultValue": "{\r\n  onShow: action(EventType.Show),\r\n  onShown: action(EventType.Shown),\r\n  onHide: action(EventType.Hide),\r\n  onHidden: action(EventType.Hidden),\r\n}",
                     "rawdescription": "Component events",
                     "description": "<p>Component events</p>\n"
                 },
@@ -6697,7 +6839,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "(args) => ({\n  props: {\n    ...args,\n    onShow: actions.onShow,\n    onShown: actions.onShown,\n    onHide: actions.onHide,\n    onHidden: actions.onHidden,\n  },\n  template: `\n    <desx-accordion id=\"mainAccordion\" [options]=\"options\"\n      (show)=\"onShow($event)\" (shown)=\"onShown($event)\" (hide)=\"onHide($event)\" (hidden)=\"onHidden($event)\">\n      <desx-accordion-item id=\"item1\">\n        <ng-template desxAccordionHeader>\n          Accordion Item #1\n        </ng-template>\n        <ng-template desxAccordionContent>\n          This is a test content\n        </ng-template>\n      </desx-accordion-item>\n      <desx-accordion-item id=\"item2\">\n        <ng-template desxAccordionHeader>\n          Accordion Item #2\n        </ng-template>\n        <ng-template desxAccordionContent>\n          This is a test content\n        </ng-template>\n      </desx-accordion-item>\n    </desx-accordion>\n  `,\n})",
+                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onShow: actions.onShow,\r\n    onShown: actions.onShown,\r\n    onHide: actions.onHide,\r\n    onHidden: actions.onHidden,\r\n  },\r\n  template: `\r\n    <desx-accordion id=\"mainAccordion\" [options]=\"options\"\r\n      (show)=\"onShow($event)\" (shown)=\"onShown($event)\" (hide)=\"onHide($event)\" (hidden)=\"onHidden($event)\">\r\n      <desx-accordion-item id=\"item1\">\r\n        <ng-template desxAccordionHeader>\r\n          Accordion Item #1\r\n        </ng-template>\r\n        <ng-template desxAccordionContent>\r\n          This is a test content\r\n        </ng-template>\r\n      </desx-accordion-item>\r\n      <desx-accordion-item id=\"item2\">\r\n        <ng-template desxAccordionHeader>\r\n          Accordion Item #2\r\n        </ng-template>\r\n        <ng-template desxAccordionContent>\r\n          This is a test content\r\n        </ng-template>\r\n      </desx-accordion-item>\r\n    </desx-accordion>\r\n  `,\r\n})",
                     "rawdescription": "Default template for stories",
                     "description": "<p>Default template for stories</p>\n"
                 }
@@ -6959,12 +7101,12 @@
                     "description": "<p>Default template for stories</p>\n"
                 }
             ],
-            "src/app/modules/user-profile/user-profile.stories.ts": [
+            "src/app/modules/user-profile/presenter/user-profile-pres.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/modules/user-profile/user-profile.stories.ts",
+                    "file": "src/app/modules/user-profile/presenter/user-profile-pres.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -6976,7 +7118,7 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/modules/user-profile/user-profile.stories.ts",
+                    "file": "src/app/modules/user-profile/presenter/user-profile-pres.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -7094,7 +7236,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "[]",
-                    "defaultValue": "[\n  { provide: ACCORDION_OPTIONS, useValue: DEFAULT_ACCORDION_OPTIONS },\n  { provide: BUTTON_OPTIONS, useValue: DEFAULT_BUTTON_OPTIONS },\n  { provide: ALERT_OPTIONS, useValue: DEFAULT_ALERT_OPTIONS },\n  { provide: TEXTBOX_OPTIONS, useValue: DEFAULT_TEXTBOX_OPTIONS },\n  { provide: IMAGE_OPTIONS, useValue: DEFAULT_IMAGE_OPTIONS },\n]"
+                    "defaultValue": "[\r\n  { provide: ACCORDION_OPTIONS, useValue: DEFAULT_ACCORDION_OPTIONS },\r\n  { provide: BUTTON_OPTIONS, useValue: DEFAULT_BUTTON_OPTIONS },\r\n  { provide: ALERT_OPTIONS, useValue: DEFAULT_ALERT_OPTIONS },\r\n  { provide: TEXTBOX_OPTIONS, useValue: DEFAULT_TEXTBOX_OPTIONS },\r\n  { provide: IMAGE_OPTIONS, useValue: DEFAULT_IMAGE_OPTIONS },\r\n]"
                 }
             ],
             "src/app/shared/components/image/image.options.ts": [
@@ -7217,12 +7359,12 @@
                     "defaultValue": "new InjectionToken<TextboxOptions>(\r\n  'Default Textbox component options',\r\n)"
                 }
             ],
-            "src/app/modules/user-profile/user-profile.options.ts": [
+            "src/app/modules/user-profile/presenter/user-profile-pres.options.ts": [
                 {
                     "name": "DEFAULT_USER_PROFILE_OPTIONS",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/modules/user-profile/user-profile.options.ts",
+                    "file": "src/app/modules/user-profile/presenter/user-profile-pres.options.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "UserProfileOptions",
@@ -7234,7 +7376,7 @@
                     "name": "USER_PROFILE_OPTIONS",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/modules/user-profile/user-profile.options.ts",
+                    "file": "src/app/modules/user-profile/presenter/user-profile-pres.options.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -7250,7 +7392,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\n  production: true,\n}"
+                    "defaultValue": "{\r\n  production: true,\r\n}"
                 }
             ],
             "src/environments/environment.ts": [
@@ -7262,7 +7404,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\n  production: false,\n}"
+                    "defaultValue": "{\r\n  production: false,\r\n}"
                 }
             ],
             "src/app/components/social-buttons/social-buttons.mocks.ts": [
@@ -7767,16 +7909,16 @@
                 "status": "very-good"
             },
             {
-                "filePath": "src/app/modules/user-profile/user-profile.component.ts",
+                "filePath": "src/app/modules/user-profile/presenter/user-profile-pres.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "UserProfileComponent",
+                "name": "UserProfilePresComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/5",
                 "status": "low"
             },
             {
-                "filePath": "src/app/modules/user-profile/user-profile.models.ts",
+                "filePath": "src/app/modules/user-profile/presenter/user-profile-pres.models.ts",
                 "type": "interface",
                 "linktype": "interface",
                 "name": "UserProfile",
@@ -7785,7 +7927,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/modules/user-profile/user-profile.options.ts",
+                "filePath": "src/app/modules/user-profile/presenter/user-profile-pres.options.ts",
                 "type": "interface",
                 "linktype": "interface",
                 "name": "UserProfileOptions",
@@ -7794,7 +7936,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/modules/user-profile/user-profile.options.ts",
+                "filePath": "src/app/modules/user-profile/presenter/user-profile-pres.options.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -7804,7 +7946,7 @@
                 "status": "very-good"
             },
             {
-                "filePath": "src/app/modules/user-profile/user-profile.options.ts",
+                "filePath": "src/app/modules/user-profile/presenter/user-profile-pres.options.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -7814,7 +7956,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/modules/user-profile/user-profile.stories.ts",
+                "filePath": "src/app/modules/user-profile/presenter/user-profile-pres.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -7824,7 +7966,7 @@
                 "status": "very-good"
             },
             {
-                "filePath": "src/app/modules/user-profile/user-profile.stories.ts",
+                "filePath": "src/app/modules/user-profile/presenter/user-profile-pres.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

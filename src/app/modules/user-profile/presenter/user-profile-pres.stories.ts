@@ -2,20 +2,20 @@ import { moduleMetadata, Meta, Story, componentWrapperDecorator } from '@storybo
 import { SOCIAL_BUTTONS } from '@components/social-buttons/social-buttons.mocks';
 import { STATISTICS } from '@components/statistics/statistics.mocks';
 import { SharedModule } from '@shared/shared.module';
-import { UserProfileComponent } from './user-profile.component';
 import { ProfileComponent } from '@components/profile/profile.component';
 import { StatisticsComponent } from '@components/statistics/statistics.component';
 import { SocialButtonsComponent } from '@components/social-buttons/social-buttons.component';
 import { ProfileTemplateComponent } from '@templates/profile-template/profile-template.component';
+import { UserProfilePresComponent } from './user-profile-pres.component';
 
 export default {
   title: 'Design System/@Modules/Organisms/User Profile',
-  component: UserProfileComponent,
+  component: UserProfilePresComponent,
   decorators: [
     moduleMetadata({
       imports: [SharedModule],
       declarations: [
-        UserProfileComponent,
+        UserProfilePresComponent,
         StatisticsComponent,
         ProfileComponent,
         SocialButtonsComponent,
