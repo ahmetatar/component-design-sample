@@ -1,6 +1,6 @@
 import { Component, Inject, Input, OnInit, Optional, ViewEncapsulation } from '@angular/core';
 import { UserProfile } from './user-profile-pres.models';
-import { UserProfileOptions, USER_PROFILE_OPTIONS } from './user-profile-pres.options';
+import { UserProfilePresOptions, USER_PROFILE_PRES_OPTIONS } from './user-profile-pres.options';
 
 @Component({
   selector: 'desx-user-profile-pres',
@@ -10,13 +10,13 @@ import { UserProfileOptions, USER_PROFILE_OPTIONS } from './user-profile-pres.op
 })
 export class UserProfilePresComponent implements OnInit {
   @Input()
-  options?: Partial<UserProfileOptions>;
+  options?: Partial<UserProfilePresOptions>;
 
   @Input()
   profile!: UserProfile;
 
   constructor(
-    @Optional() @Inject(USER_PROFILE_OPTIONS) private defaultOptions: UserProfileOptions,
+    @Optional() @Inject(USER_PROFILE_PRES_OPTIONS) private defaultOptions: UserProfilePresOptions,
   ) {}
 
   ngOnInit(): void {

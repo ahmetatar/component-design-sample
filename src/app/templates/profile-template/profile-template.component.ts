@@ -1,6 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
-import { Profile } from '@components/profile/profile.models';
-import { ProfileOptions } from '@components/profile/profile.options';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'desx-profile-template',
@@ -8,10 +6,4 @@ import { ProfileOptions } from '@components/profile/profile.options';
   styleUrls: ['./profile-template.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class ProfileTemplateComponent {
-  @Input()
-  options?: ProfileOptions;
-
-  @Input()
-  profile?: Profile;
-}
+export class ProfileTemplateComponent {}

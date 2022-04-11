@@ -1,6 +1,6 @@
 <div class="user-profile">
   <div class="profile-section">
-    <desx-profile [profile]="profile" [options]="options"></desx-profile>
+    <ng-content select="[profile]"></ng-content>
   </div>
   <div class="social-button">
     <ng-content select="[social]"></ng-content>
