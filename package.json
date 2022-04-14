@@ -27,6 +27,7 @@
   },
   "private": true,
   "dependencies": {
+    "@ahmetatar/cds-sdk": "^1.0.0",
     "@angular/animations": "~13.0.0",
     "@angular/common": "~13.0.0",
     "@angular/compiler": "~13.0.0",

@@ -7,6 +7,11 @@
   resolved "https://registry.yarnpkg.com/@aduh95/viz.js/-/viz.js-3.5.0.tgz#23f075b11a5555f33195c033b3330a8deab4bc2b"
   integrity sha512-ahLdpRAoGsdgEfy2SGV2wnnHrBSLDHuwA32v+BoNGnz1gqajr8VMzF8y6mIQt28hHi4LQ272wqSi78DK4YdT2g==
 
+"@ahmetatar/cds-sdk@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@ahmetatar/cds-sdk/-/cds-sdk-1.0.0.tgz#6cc0a97f368d943fb789c97cea2bc2ccf13de789"
+  integrity sha512-xe84VLZKKKZNP4FhmpHnCwcSlKvoatDrgLV5sHvEqtXZUIEEd/6IXLorwvOAYJCYMsi3G0c8+ZXMZEDtf1BtjQ==
+
 "@ampproject/remapping@1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@ampproject/remapping/-/remapping-1.0.1.tgz#1398e73e567c2a7992df6554c15bb94a89b68ba2"

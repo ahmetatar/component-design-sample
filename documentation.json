@@ -486,13 +486,25 @@
             "methods": []
         },
         {
-            "name": "UserProfileOptions",
-            "id": "interface-UserProfileOptions-4c9bd5da8a2f49cc5fe2d832cbd906bf90f47184792c9e8b9746904deb96a3f502ad42dea6502d3b88373f20345fc2f5392e71cc472610a467033c0478685514",
+            "name": "UserProfileContOptions",
+            "id": "interface-UserProfileContOptions-cd6827197b7f48222934a58a43934515d681eb53a353f8e6eee4cd6d392f1fab41867275163f82d49b9433e743c7190ebb9b6d1ba1cdbab096bffe30fcc7b6da",
+            "file": "src/app/modules/user-profile/container/user-profile-cont.options.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { InjectionToken } from '@angular/core';\r\n\r\nexport interface UserProfileContOptions {}\r\n\r\n/**\r\n * Default user profile container component options\r\n */\r\nexport const DEFAULT_USER_PROFILE_CONT_OPTIONS: UserProfileContOptions = {};\r\n\r\nexport const USER_PROFILE_CONT_OPTIONS = new InjectionToken<UserProfileContOptions>(\r\n  'Default user profile container component options',\r\n);\r\n",
+            "properties": [],
+            "indexSignatures": [],
+            "methods": []
+        },
+        {
+            "name": "UserProfilePresOptions",
+            "id": "interface-UserProfilePresOptions-5c4cbf54765a525a3c3e919363f462a7e40ce4a14cfb0a04e652fac22f1a5d73676ce419aed97591e30b7283eb714c439ce454813055051ce76a4e31e1a5fc96",
             "file": "src/app/modules/user-profile/presenter/user-profile-pres.options.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "import { InjectionToken } from '@angular/core';\r\nimport { ButtonOptions } from '@app/shared/components/button/button.options';\r\nimport { ProfileOptions } from '@components/profile/profile.options';\r\nimport { SocialButtonOptions } from '@components/social-buttons/social-buttons.options';\r\nimport { StatisticsOptions } from '@components/statistics/statistics.options';\r\n\r\nexport interface UserProfileOptions {\r\n  profileOptions?: ProfileOptions;\r\n  socialButtonsOptions?: SocialButtonOptions;\r\n  statisticsOptions?: StatisticsOptions;\r\n  buttonOptions?: ButtonOptions;\r\n}\r\n\r\n/**\r\n * Default user profile component options\r\n */\r\nexport const DEFAULT_USER_PROFILE_OPTIONS: UserProfileOptions = {};\r\n\r\nexport const USER_PROFILE_OPTIONS = new InjectionToken<UserProfileOptions>(\r\n  'Default user profile component options',\r\n);\r\n",
+            "sourceCode": "import { InjectionToken } from '@angular/core';\r\nimport { ButtonOptions } from '@app/shared/components/button/button.options';\r\nimport { ProfileOptions } from '@components/profile/profile.options';\r\nimport { SocialButtonOptions } from '@components/social-buttons/social-buttons.options';\r\nimport { StatisticsOptions } from '@components/statistics/statistics.options';\r\n\r\nexport interface UserProfilePresOptions {\r\n  profileOptions?: ProfileOptions;\r\n  socialButtonsOptions?: SocialButtonOptions;\r\n  statisticsOptions?: StatisticsOptions;\r\n  buttonOptions?: ButtonOptions;\r\n}\r\n\r\n/**\r\n * Default user profile component options\r\n */\r\nexport const DEFAULT_USER_PROFILE_PRES_OPTIONS: UserProfilePresOptions = {};\r\n\r\nexport const USER_PROFILE_PRES_OPTIONS = new InjectionToken<UserProfilePresOptions>(\r\n  'Default user profile component options',\r\n);\r\n",
             "properties": [
                 {
                     "name": "buttonOptions",
@@ -4231,6 +4243,68 @@
             "templateData": "<p>login-status works!</p>\r\n"
         },
         {
+            "name": "MainLayoutComponent",
+            "id": "component-MainLayoutComponent-6c0ae322a8fddfbcde428c176f2b93637ceb6a377a7f9eb14e62ccd9d35decc0e8d5ac994f7be79bd8f70485fc691ee621a8e8b387c68858bf5923d4075d81da",
+            "file": "src/app/layouts/main-layout/main-layout.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "desx-main-layout",
+            "styleUrls": [
+                "./main-layout.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./main-layout.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 11,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-main-layout',\r\n  templateUrl: './main-layout.component.html',\r\n  styleUrls: ['./main-layout.component.scss'],\r\n})\r\nexport class MainLayoutComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./main-layout.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>main-layout works!</p>\r\n"
+        },
+        {
             "name": "ModalComponent",
             "id": "component-ModalComponent-1b287f85d54f89a4b39a60dcd56f337dd26320c3a66aaef99a89926d5287fa5f5f12e4e8ee859307cac4db803c27a6dc7d768c152d756eabb317f5847965cc8f",
             "file": "src/app/shared/components/modal/modal.component.ts",
@@ -4579,7 +4653,7 @@
         },
         {
             "name": "ProfileTemplateComponent",
-            "id": "component-ProfileTemplateComponent-86a70c7be2f7dde0453cf71dc0bcc8411dac787871cb43addf3d6523a5e5ccbfd0bfe43f58593e457b976b678ad79d2735d264759095060cd307a27d51ce9c60",
+            "id": "component-ProfileTemplateComponent-41e3419a6c6793028997a7e859085465e977dae86cc686e2d719c0e1dfc817e4360751d26e97e3ba86b4edc634b109fc445106f5afd22511e2b7b6557c757c0c",
             "file": "src/app/templates/profile-template/profile-template.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -4597,24 +4671,7 @@
                 "./profile-template.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "options",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 13,
-                    "type": "ProfileOptions",
-                    "decorators": []
-                },
-                {
-                    "name": "profile",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 16,
-                    "type": "Profile",
-                    "decorators": []
-                }
-            ],
+            "inputsClass": [],
             "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [],
@@ -4625,7 +4682,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, ViewEncapsulation } from '@angular/core';\r\nimport { Profile } from '@components/profile/profile.models';\r\nimport { ProfileOptions } from '@components/profile/profile.options';\r\n\r\n@Component({\r\n  selector: 'desx-profile-template',\r\n  templateUrl: './profile-template.component.html',\r\n  styleUrls: ['./profile-template.component.scss'],\r\n  encapsulation: ViewEncapsulation.None,\r\n})\r\nexport class ProfileTemplateComponent {\r\n  @Input()\r\n  options?: ProfileOptions;\r\n\r\n  @Input()\r\n  profile?: Profile;\r\n}\r\n",
+            "sourceCode": "import { Component, ViewEncapsulation } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-profile-template',\r\n  templateUrl: './profile-template.component.html',\r\n  styleUrls: ['./profile-template.component.scss'],\r\n  encapsulation: ViewEncapsulation.None,\r\n})\r\nexport class ProfileTemplateComponent {}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -4634,7 +4691,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"user-profile\">\r\n  <div class=\"profile-section\">\r\n    <desx-profile [profile]=\"profile\" [options]=\"options\"></desx-profile>\r\n  </div>\r\n  <div class=\"social-button\">\r\n    <ng-content select=\"[social]\"></ng-content>\r\n  </div>\r\n  <div class=\"booking-section\">\r\n    <ng-content select=\"[booking]\"></ng-content>\r\n  </div>\r\n  <div class=\"statistic-section\">\r\n    <ng-content selec=\"[statistic]\"></ng-content>\r\n  </div>\r\n</div>\r\n"
+            "templateData": "<div class=\"user-profile\">\r\n  <div class=\"profile-section\">\r\n    <ng-content select=\"[profile]\"></ng-content>\r\n  </div>\r\n  <div class=\"social-button\">\r\n    <ng-content select=\"[social]\"></ng-content>\r\n  </div>\r\n  <div class=\"booking-section\">\r\n    <ng-content select=\"[booking]\"></ng-content>\r\n  </div>\r\n  <div class=\"statistic-section\">\r\n    <ng-content selec=\"[statistic]\"></ng-content>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "ProgressComponent",
@@ -5505,8 +5562,73 @@
             "templateData": "<p>tooltips works!</p>\r\n"
         },
         {
+            "name": "UserProfileContComponent",
+            "id": "component-UserProfileContComponent-8d8bdb1abf37bf1a7d946c9fffb66a7996472b2d286d60c37dedbc12d99b1d3c7d388da9624cb928f35097f9eb70d2596bf9ac80a76cefef17d17a582a281f5d",
+            "file": "src/app/modules/user-profile/container/user-profile-cont.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [
+                "ViewEncapsulation.None"
+            ],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "desx-user-profile-cont",
+            "styleUrls": [
+                "./user-profile-cont.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./user-profile-cont.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 13,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-user-profile-cont',\r\n  templateUrl: './user-profile-cont.component.html',\r\n  styleUrls: ['./user-profile-cont.component.scss'],\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n  encapsulation: ViewEncapsulation.None,\r\n})\r\nexport class UserProfileContComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./user-profile-cont.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 10
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>user-profile-cont works!</p>\r\n"
+        },
+        {
             "name": "UserProfilePresComponent",
-            "id": "component-UserProfilePresComponent-c65f062f519c1ace3f01a2acec0226d6162b7d99356b5f134070c497a0959051ccd99d0297611d253f004778b2e882842028c6ff6088116da970858fe424e089",
+            "id": "component-UserProfilePresComponent-bcc452aa94de546cfa9f6337b74e20e0ab05fa2aa1e086af1ebf77bc475153d5e3d2601503276475b725c04e41409f7407663174afa3676d1031b0c80b25f7a3",
             "file": "src/app/modules/user-profile/presenter/user-profile-pres.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -5530,7 +5652,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 13,
-                    "type": "Partial<UserProfileOptions>",
+                    "type": "Partial<UserProfilePresOptions>",
                     "decorators": []
                 },
                 {
@@ -5563,7 +5685,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Inject, Input, OnInit, Optional, ViewEncapsulation } from '@angular/core';\nimport { UserProfile } from './user-profile-pres.models';\nimport { UserProfileOptions, USER_PROFILE_OPTIONS } from './user-profile-pres.options';\n\n@Component({\n  selector: 'desx-user-profile-pres',\n  templateUrl: './user-profile-pres.component.html',\n  styleUrls: ['./user-profile-pres.component.scss'],\n  encapsulation: ViewEncapsulation.None,\n})\nexport class UserProfilePresComponent implements OnInit {\n  @Input()\n  options?: Partial<UserProfileOptions>;\n\n  @Input()\n  profile!: UserProfile;\n\n  constructor(\n    @Optional() @Inject(USER_PROFILE_OPTIONS) private defaultOptions: UserProfileOptions,\n  ) {}\n\n  ngOnInit(): void {\n    this.options = {\n      ...this.defaultOptions,\n      ...this.options,\n    };\n  }\n}\n",
+            "sourceCode": "import { Component, Inject, Input, OnInit, Optional, ViewEncapsulation } from '@angular/core';\r\nimport { UserProfile } from './user-profile-pres.models';\r\nimport { UserProfilePresOptions, USER_PROFILE_PRES_OPTIONS } from './user-profile-pres.options';\r\n\r\n@Component({\r\n  selector: 'desx-user-profile-pres',\r\n  templateUrl: './user-profile-pres.component.html',\r\n  styleUrls: ['./user-profile-pres.component.scss'],\r\n  encapsulation: ViewEncapsulation.None,\r\n})\r\nexport class UserProfilePresComponent implements OnInit {\r\n  @Input()\r\n  options?: Partial<UserProfilePresOptions>;\r\n\r\n  @Input()\r\n  profile!: UserProfile;\r\n\r\n  constructor(\r\n    @Optional() @Inject(USER_PROFILE_PRES_OPTIONS) private defaultOptions: UserProfilePresOptions,\r\n  ) {}\r\n\r\n  ngOnInit(): void {\r\n    this.options = {\r\n      ...this.defaultOptions,\r\n      ...this.options,\r\n    };\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -5580,7 +5702,7 @@
                 "args": [
                     {
                         "name": "defaultOptions",
-                        "type": "UserProfileOptions",
+                        "type": "UserProfilePresOptions",
                         "deprecated": false,
                         "deprecationMessage": ""
                     }
@@ -5589,7 +5711,7 @@
                 "jsdoctags": [
                     {
                         "name": "defaultOptions",
-                        "type": "UserProfileOptions",
+                        "type": "UserProfilePresOptions",
                         "deprecated": false,
                         "deprecationMessage": "",
                         "tagName": {
@@ -5601,19 +5723,19 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<desx-profile-template [profile]=\"profile.profile\" [options]=\"options?.profileOptions\">\n  <desx-social-buttons\n    social\n    [buttons]=\"profile.socialLinks\"\n    [options]=\"options?.profileOptions\"\n  ></desx-social-buttons>\n  <desx-button booking [options]=\"options?.buttonOptions\"\n    ><i class=\"bi bi-clock\"></i> Book Now</desx-button\n  >\n  <desx-statistics statistic [statistics]=\"profile.statistics\"></desx-statistics>\n</desx-profile-template>\n"
+            "templateData": "<desx-profile-template>\r\n  <desx-profile [profile]=\"profile.profile\" [options]=\"options?.profileOptions\"></desx-profile>\r\n  <desx-social-buttons\r\n    social\r\n    [buttons]=\"profile.socialLinks\"\r\n    [options]=\"options?.profileOptions\"\r\n  ></desx-social-buttons>\r\n  <desx-button booking [options]=\"options?.buttonOptions\"\r\n    ><i class=\"bi bi-clock\"></i> Book Now</desx-button\r\n  >\r\n  <desx-statistics statistic [statistics]=\"profile.statistics\"></desx-statistics>\r\n</desx-profile-template>\r\n"
         }
     ],
     "modules": [
         {
             "name": "AppComponentsModule",
-            "id": "module-AppComponentsModule-20a40ba8d8fc48f5d4d253056b38e87f44463d8c622981d1d6407dc832f6660ad0f5e53bbc2c8a469925b5b40432d507e232f8697349af7309f457533f9451dc",
+            "id": "module-AppComponentsModule-3e100c126ec0988323f98964a9f3efacb0c48cd513223efb30f47f252566a1f62716cf1ae584ea0c7a90840bceb8581be7a8c2e49bab668ce8cfea7710d0df1b",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/components/app-components.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { LoginComponent } from './login/login.component';\nimport { LoginStatusComponent } from './login-status/login-status.component';\nimport { ProfileComponent } from './profile/profile.component';\nimport { SocialButtonsComponent } from './social-buttons/social-buttons.component';\nimport { StatisticsComponent } from './statistics/statistics.component';\nimport { SharedModule } from '@app/shared/shared.module';\n\n@NgModule({\n  declarations: [\n    LoginComponent,\n    LoginStatusComponent,\n    ProfileComponent,\n    SocialButtonsComponent,\n    StatisticsComponent,\n  ],\n  imports: [CommonModule, SharedModule],\n  exports: [\n    LoginComponent,\n    LoginStatusComponent,\n    ProfileComponent,\n    SocialButtonsComponent,\n    StatisticsComponent,\n  ],\n})\nexport class AppComponentsModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { LoginComponent } from './login/login.component';\r\nimport { LoginStatusComponent } from './login-status/login-status.component';\r\nimport { ProfileComponent } from './profile/profile.component';\r\nimport { SocialButtonsComponent } from './social-buttons/social-buttons.component';\r\nimport { StatisticsComponent } from './statistics/statistics.component';\r\nimport { SharedModule } from '@app/shared/shared.module';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    LoginComponent,\r\n    LoginStatusComponent,\r\n    ProfileComponent,\r\n    SocialButtonsComponent,\r\n    StatisticsComponent,\r\n  ],\r\n  imports: [CommonModule, SharedModule],\r\n  exports: [\r\n    LoginComponent,\r\n    LoginStatusComponent,\r\n    ProfileComponent,\r\n    SocialButtonsComponent,\r\n    StatisticsComponent,\r\n  ],\r\n})\r\nexport class AppComponentsModule {}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -5714,6 +5836,154 @@
                             "name": "AppComponent"
                         }
                     ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "BookingModule",
+            "id": "module-BookingModule-622500661357678d29b2692c45d1c3bb9097ea902b645d6b27cb5990f3d0d2e0c1ad05afcc67d19d2983bc922c1f2e973f2a98503071114ec862e208b7975c9d",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/pages/booking/booking.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n@NgModule({\r\n  declarations: [],\r\n  imports: [CommonModule],\r\n})\r\nexport class BookingModule {}\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "ConfirmationModule",
+            "id": "module-ConfirmationModule-c9b21d384508beb91270e602858e09923fca319f9a6edabe1cacc2bb0eb2aeaece5cd2c4cbbc548df74fd432ac6d6bd42047e4db342ecfc4947e1f9ddece2a1e",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/pages/confirmation/confirmation.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n@NgModule({\r\n  declarations: [],\r\n  imports: [CommonModule],\r\n})\r\nexport class ConfirmationModule {}\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "LayoutsModule",
+            "id": "module-LayoutsModule-1d77785df00233b5b47f212c5cb6ce5531b9b14c9e1f3554b20f5264fa94b23433b235e7a1612eba9f16ee72097e923dc2d8d96f479ac59413b3e5b62f03cc29",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/layouts/layouts.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MainLayoutComponent } from './main-layout/main-layout.component';\r\n\r\n@NgModule({\r\n  declarations: [MainLayoutComponent],\r\n  imports: [CommonModule],\r\n})\r\nexport class LayoutsModule {}\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "MainLayoutComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "PaymentModule",
+            "id": "module-PaymentModule-e995af78b9dfe837d2a7b47fc3fc29dcc103af1cf91d5d2e334f74b7d6aba157ca33f35e66683d5f1eef252094ac7b923abf40676546938066dedf5c6fe377c0",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/pages/payment/payment.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n@NgModule({\r\n  declarations: [],\r\n  imports: [CommonModule],\r\n})\r\nexport class PaymentModule {}\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
                 },
                 {
                     "type": "classes",
@@ -5854,13 +6124,13 @@
         },
         {
             "name": "TemplatesModule",
-            "id": "module-TemplatesModule-645da6f78d53681200aa371896f1247637b0fcd0749c56085108f0e89339e624add696a40981e2da7167d1d76f40cd9fa1cbae5e151c7db67ca0d4da5411b25a",
+            "id": "module-TemplatesModule-75d03b885720b99ac83ac39350d8066e473bc044820fc308b6e10ce4c4e2524c612d7a56885bf630fb1f7f3384112fdee3579bf0e9066fa16292b34c5637fe34",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/templates/templates.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ProfileTemplateComponent } from './profile-template/profile-template.component';\n\n@NgModule({\n  declarations: [ProfileTemplateComponent],\n  imports: [CommonModule],\n  exports: [ProfileTemplateComponent],\n})\nexport class TemplatesModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { ProfileTemplateComponent } from './profile-template/profile-template.component';\r\n\r\n@NgModule({\r\n  declarations: [ProfileTemplateComponent],\r\n  imports: [CommonModule],\r\n  exports: [ProfileTemplateComponent],\r\n})\r\nexport class TemplatesModule {}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -5898,13 +6168,13 @@
         },
         {
             "name": "UserProfileModule",
-            "id": "module-UserProfileModule-6463b6e40740297d266d1211250c5275386a5bf67b1026c0fec1fbd182138bd3717033bed5416936f2d3e5eb39ba4c8fe6545680640db19f8134e65da76904d0",
+            "id": "module-UserProfileModule-26186de11d53a526b8db8b4c118a8d533020f5b815509d0174c75d5c35e76e0a9603143c3b98be3922545295eac7edb235f18eac23c3020d6b971e4e856ae761",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/modules/user-profile/user-profile.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { UserProfilePresComponent } from './presenter/user-profile-pres.component';\nimport { TemplatesModule } from '@templates/templates.module';\nimport { SharedModule } from '@app/shared/shared.module';\nimport { AppComponentsModule } from '@components/app-components.module';\n\n@NgModule({\n  declarations: [UserProfilePresComponent],\n  imports: [CommonModule, TemplatesModule, SharedModule, AppComponentsModule],\n  exports: [UserProfilePresComponent],\n})\nexport class UserProfileModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { UserProfilePresComponent } from './presenter/user-profile-pres.component';\r\nimport { TemplatesModule } from '@templates/templates.module';\r\nimport { SharedModule } from '@app/shared/shared.module';\r\nimport { AppComponentsModule } from '@components/app-components.module';\r\nimport { UserProfileContComponent } from './container/user-profile-cont.component';\r\n\r\n@NgModule({\r\n  declarations: [UserProfilePresComponent, UserProfileContComponent],\r\n  imports: [CommonModule, TemplatesModule, SharedModule, AppComponentsModule],\r\n  exports: [UserProfilePresComponent],\r\n})\r\nexport class UserProfileModule {}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -5913,6 +6183,9 @@
                 {
                     "type": "declarations",
                     "elements": [
+                        {
+                            "name": "UserProfileContComponent"
+                        },
                         {
                             "name": "UserProfilePresComponent"
                         }
@@ -6275,13 +6548,25 @@
                 "description": "<p>Default button component options</p>\n"
             },
             {
-                "name": "DEFAULT_USER_PROFILE_OPTIONS",
+                "name": "DEFAULT_USER_PROFILE_CONT_OPTIONS",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/user-profile/container/user-profile-cont.options.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "UserProfileContOptions",
+                "defaultValue": "{}",
+                "rawdescription": "Default user profile container component options",
+                "description": "<p>Default user profile container component options</p>\n"
+            },
+            {
+                "name": "DEFAULT_USER_PROFILE_PRES_OPTIONS",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/app/modules/user-profile/presenter/user-profile-pres.options.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "UserProfileOptions",
+                "type": "UserProfilePresOptions",
                 "defaultValue": "{}",
                 "rawdescription": "Default user profile component options",
                 "description": "<p>Default user profile component options</p>\n"
@@ -6304,7 +6589,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\r\n  production: false,\r\n}"
+                "defaultValue": "{\r\n  production: false,\r\n  API_BASE_PATH: 'http://localhost:5000',\r\n}"
             },
             {
                 "name": "Floating",
@@ -6566,14 +6851,24 @@
                 "description": "<p>Textbox w/ form wrapper</p>\n"
             },
             {
-                "name": "USER_PROFILE_OPTIONS",
+                "name": "USER_PROFILE_CONT_OPTIONS",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/user-profile/container/user-profile-cont.options.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "new InjectionToken<UserProfileContOptions>(\r\n  'Default user profile container component options',\r\n)"
+            },
+            {
+                "name": "USER_PROFILE_PRES_OPTIONS",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/app/modules/user-profile/presenter/user-profile-pres.options.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "new InjectionToken<UserProfileOptions>(\r\n  'Default user profile component options',\r\n)"
+                "defaultValue": "new InjectionToken<UserProfilePresOptions>(\r\n  'Default user profile component options',\r\n)"
             }
         ],
         "functions": [],
@@ -7359,28 +7654,52 @@
                     "defaultValue": "new InjectionToken<TextboxOptions>(\r\n  'Default Textbox component options',\r\n)"
                 }
             ],
+            "src/app/modules/user-profile/container/user-profile-cont.options.ts": [
+                {
+                    "name": "DEFAULT_USER_PROFILE_CONT_OPTIONS",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/user-profile/container/user-profile-cont.options.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "UserProfileContOptions",
+                    "defaultValue": "{}",
+                    "rawdescription": "Default user profile container component options",
+                    "description": "<p>Default user profile container component options</p>\n"
+                },
+                {
+                    "name": "USER_PROFILE_CONT_OPTIONS",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/user-profile/container/user-profile-cont.options.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "new InjectionToken<UserProfileContOptions>(\r\n  'Default user profile container component options',\r\n)"
+                }
+            ],
             "src/app/modules/user-profile/presenter/user-profile-pres.options.ts": [
                 {
-                    "name": "DEFAULT_USER_PROFILE_OPTIONS",
+                    "name": "DEFAULT_USER_PROFILE_PRES_OPTIONS",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "src/app/modules/user-profile/presenter/user-profile-pres.options.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "UserProfileOptions",
+                    "type": "UserProfilePresOptions",
                     "defaultValue": "{}",
                     "rawdescription": "Default user profile component options",
                     "description": "<p>Default user profile component options</p>\n"
                 },
                 {
-                    "name": "USER_PROFILE_OPTIONS",
+                    "name": "USER_PROFILE_PRES_OPTIONS",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "src/app/modules/user-profile/presenter/user-profile-pres.options.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "new InjectionToken<UserProfileOptions>(\r\n  'Default user profile component options',\r\n)"
+                    "defaultValue": "new InjectionToken<UserProfilePresOptions>(\r\n  'Default user profile component options',\r\n)"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -7404,7 +7723,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\r\n  production: false,\r\n}"
+                    "defaultValue": "{\r\n  production: false,\r\n  API_BASE_PATH: 'http://localhost:5000',\r\n}"
                 }
             ],
             "src/app/components/social-buttons/social-buttons.mocks.ts": [
@@ -7630,7 +7949,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 42,
+        "count": 41,
         "status": "medium",
         "files": [
             {
@@ -7909,6 +8228,53 @@
                 "status": "very-good"
             },
             {
+                "filePath": "src/app/layouts/main-layout/main-layout.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MainLayoutComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/user-profile/container/user-profile-cont.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "UserProfileContComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/user-profile/container/user-profile-cont.options.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "UserProfileContOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/user-profile/container/user-profile-cont.options.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DEFAULT_USER_PROFILE_CONT_OPTIONS",
+                "coveragePercent": 100,
+                "coverageCount": "1/1",
+                "status": "very-good"
+            },
+            {
+                "filePath": "src/app/modules/user-profile/container/user-profile-cont.options.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "USER_PROFILE_CONT_OPTIONS",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/modules/user-profile/presenter/user-profile-pres.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -7930,7 +8296,7 @@
                 "filePath": "src/app/modules/user-profile/presenter/user-profile-pres.options.ts",
                 "type": "interface",
                 "linktype": "interface",
-                "name": "UserProfileOptions",
+                "name": "UserProfilePresOptions",
                 "coveragePercent": 0,
                 "coverageCount": "0/5",
                 "status": "low"
@@ -7940,7 +8306,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "DEFAULT_USER_PROFILE_OPTIONS",
+                "name": "DEFAULT_USER_PROFILE_PRES_OPTIONS",
                 "coveragePercent": 100,
                 "coverageCount": "1/1",
                 "status": "very-good"
@@ -7950,7 +8316,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "USER_PROFILE_OPTIONS",
+                "name": "USER_PROFILE_PRES_OPTIONS",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -8635,7 +9001,7 @@
                 "linktype": "component",
                 "name": "ProfileTemplateComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {

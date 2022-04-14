@@ -16,5 +16,7 @@ describe('UserProfileComponent', () => {
     component = fixture.componentInstance;
   });
 
-  it('should create', () => {});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });
