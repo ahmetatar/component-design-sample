@@ -26,6 +26,7 @@ import { ProgressComponent } from './components/progress/progress.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { PopoversComponent } from './components/popovers/popovers.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { ButtonGroupStylePipe } from './components/button-group/pipes/button-group-style.pipe';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     SpinnerComponent,
     PopoversComponent,
     CarouselComponent,
+    ButtonGroupStylePipe,
   ],
   providers: [...DEFAULT_COMPONENT_OPTIONS],
   imports: [CommonModule, ReactiveFormsModule, FormsModule],
