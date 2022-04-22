@@ -26,6 +26,12 @@ import { ProgressComponent } from './components/progress/progress.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { PopoversComponent } from './components/popovers/popovers.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { NavComponent } from './components/navbar/nav/nav.component';
+import { RouterModule } from '@angular/router';
+import { NavBrandTextDirective } from './components/navbar/nav/directives/nav-brand-text.directive';
+import { NavBrandDirective } from './components/navbar/nav/directives/nav-brand.directive';
+import { NavLinkDirective } from './components/navbar/nav/directives/nav-link.directive';
+import { NavItemDirective } from './components/navbar/nav/directives/nav-item.directive';
 
 @NgModule({
   declarations: [
@@ -53,9 +59,14 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     SpinnerComponent,
     PopoversComponent,
     CarouselComponent,
+    NavComponent,
+    NavItemDirective,
+    NavLinkDirective,
+    NavBrandDirective,
+    NavBrandTextDirective,
   ],
   providers: [...DEFAULT_COMPONENT_OPTIONS],
-  imports: [CommonModule, ReactiveFormsModule, FormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, RouterModule],
   exports: [
     AccordionComponent,
     AccordionItemDirective,

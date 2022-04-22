@@ -9,6 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:ci": "ng test --browsers=Headless --no-watch",
+    "test:debug": "ng test --browsers=ChromeHeadlessNoSandbox",
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
     "storybook": "yarn docs:json && start-storybook -p 6006",
     "start-server": "node ./server/entrypoint.js",

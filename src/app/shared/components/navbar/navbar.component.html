@@ -1,1 +1,5 @@
-<p>navbar works!</p>
+<nav [ngClass]="['navbar navbar-expand-md', color, options?.placement]">
+  <div class="container-fluid">
+    <ng-content></ng-content>
+  </div>
+</nav>

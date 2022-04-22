@@ -3,7 +3,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { ProfileComponent } from './profile.component';
 
 export default {
-  title: 'Design System/@Components/Organisms/Profile',
+  title: 'Design System/Components/Organisms/Profile',
   component: ProfileComponent,
   decorators: [
     moduleMetadata({
