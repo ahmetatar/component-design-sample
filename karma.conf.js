@@ -40,6 +40,16 @@ module.exports = function (config) {
         base: 'ChromeHeadless',
         flags: ['--no-sandbox', '--disable-setuid-sandbox'],
       },
+      ChromeHeadlessNoSandbox: {
+        base: "ChromeHeadless",
+        flags: [
+          "--no-sandbox",
+          "--user-data-dir=/tmp/chrome-test-profile",
+          "--disable-web-security",
+          "--remote-debugging-port=9222",
+        ],
+        debug: true,
+      },
     },
     singleRun: false,
     restartOnFileChange: true,

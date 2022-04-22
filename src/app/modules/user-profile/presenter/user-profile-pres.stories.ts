@@ -9,7 +9,7 @@ import { ProfileTemplateComponent } from '@templates/profile-template/profile-te
 import { UserProfilePresComponent } from './user-profile-pres.component';
 
 export default {
-  title: 'Design System/@Modules/Organisms/User Profile',
+  title: 'Design System/Modules/Organisms/User Profile',
   component: UserProfilePresComponent,
   decorators: [
     moduleMetadata({
