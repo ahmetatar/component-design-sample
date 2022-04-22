@@ -1,34 +1,6 @@
 const express = require('express');
 const profileRoute = express.Router();
-
-const PROFILES = [
-  {
-    id: 1,
-    profileImage: '/assets/profile/default-avatar-1.png',
-    fullName: 'Julie L. Arsenault',
-    link: 'microsoft.com',
-    userName: '@juliar',
-    basePrice: 20,
-    currency: 'USD',
-    isDailyPrice: false,
-    skills: ['android', 'ios'],
-    hourAvailability: '5',
-    isAvailable: true,
-  },
-  {
-    id: 2,
-    profileImage: '/assets/profile/default-avatar-2.png',
-    fullName: 'Callista Mike',
-    link: 'google.com',
-    userName: '@mike',
-    basePrice: 200,
-    currency: 'EUR',
-    isDailyPrice: true,
-    skills: ['ios'],
-    hourAvailability: 'fulltime',
-    isAvailable: true,
-  },
-];
+const PROFILES = require('../data/profiles');
 
 /**
  * Returns all profiles
