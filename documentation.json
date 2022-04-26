@@ -2697,12 +2697,12 @@
         },
         {
             "name": "NavbarComponentFixture",
-            "id": "class-NavbarComponentFixture-42b37d08bff46a941cba69a68b283df85bd21be71439e80a0b8ae5cb8cb6833a90dcc2e73850a203a09fc3e540a1f737f74b4270012dd0ba2ef4eebdbf2219bd",
+            "id": "class-NavbarComponentFixture-1a820b4f0aa7a16589da58e44c839a2d5af6e6ca92b6de746306b08ccbb51d8939b5c1edd14519bf25ac63545ca4969d0f7aedb0a44d4871212e64be9f274447",
             "file": "src/app/shared/components/navbar/navbar.component.fixture.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "class",
-            "sourceCode": "import { DebugElement } from '@angular/core';\r\nimport { ComponentBaseFixture } from '@app/shared/testing/component.base-fixture';\r\nimport { NavbarColors } from './navbar.models';\r\nimport { PlacementOptions } from './navbar.options';\r\n\r\nexport class NavbarComponentFixture extends ComponentBaseFixture {\r\n  protected readonly NAVBAR = '.navbar';\r\n\r\n  constructor(element: DebugElement) {\r\n    super(element);\r\n  }\r\n\r\n  /**\r\n   * Returns navbar\r\n   * @returns navbar element\r\n   */\r\n  getNavbar() {\r\n    return this.getElement(this.NAVBAR);\r\n  }\r\n\r\n  /**\r\n   * Returns navbar element by color\r\n   * @param color class of navbar\r\n   */\r\n  getNavbarByColor(color: NavbarColors) {\r\n    return this.getElement('.' + color);\r\n  }\r\n\r\n  /**\r\n   * Returns navbar element by placement option\r\n   * @param placement option\r\n   */\r\n  getNavbarByPlacement(placement: PlacementOptions) {\r\n    return this.getElement('.' + placement);\r\n  }\r\n}\r\n",
+            "sourceCode": "import { DebugElement } from '@angular/core';\r\nimport { ComponentBaseFixture } from '@app/shared/testing/component.base-fixture';\r\nimport { NavbarColors } from './navbar.models';\r\nimport { PlacementOptions } from './navbar.options';\r\n\r\nexport class NavbarComponentFixture extends ComponentBaseFixture {\r\n  protected readonly NAVBAR = '.navbar';\r\n\r\n  constructor(element: DebugElement) {\r\n    super(element);\r\n  }\r\n\r\n  /**\r\n   * Returns navbar\r\n   * @returns navbar element\r\n   */\r\n  getNavbar() {\r\n    return this.getElement(this.NAVBAR);\r\n  }\r\n\r\n  /**\r\n   * Returns navbar element by color\r\n   * @param color class of navbar\r\n   */\r\n  getNavbarByColor(color: NavbarColors) {\r\n    return this.getElement(this.normalizeClass(color));\r\n  }\r\n\r\n  /**\r\n   * Returns navbar element by placement option\r\n   * @param placement option\r\n   */\r\n  getNavbarByPlacement(placement: PlacementOptions) {\r\n    return this.getElement(this.normalizeClass(placement));\r\n  }\r\n\r\n  /**\r\n   * Merges class names with dot char\r\n   * @param cls string that contains class definations\r\n   */\r\n  private normalizeClass(cls: string) {\r\n    return '.' + cls.split(' ').join('.');\r\n  }\r\n}\r\n",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
@@ -2838,8 +2838,8 @@
                     "jsdoctags": [
                         {
                             "name": {
-                                "pos": 794,
-                                "end": 803,
+                                "pos": 809,
+                                "end": 818,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -2850,8 +2850,8 @@
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
-                                "pos": 788,
-                                "end": 793,
+                                "pos": 803,
+                                "end": 808,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -2859,6 +2859,54 @@
                                 "escapedText": "param"
                             },
                             "comment": "<p>option</p>\n"
+                        }
+                    ]
+                },
+                {
+                    "name": "normalizeClass",
+                    "args": [
+                        {
+                            "name": "cls",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "string",
+                    "typeParameters": [],
+                    "line": 41,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nMerges class names with dot char\n",
+                    "description": "<p>Merges class names with dot char</p>\n",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": {
+                                "pos": 1015,
+                                "end": 1018,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "cls"
+                            },
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "pos": 1009,
+                                "end": 1014,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "param"
+                            },
+                            "comment": "<p>string that contains class definations</p>\n"
                         }
                     ]
                 },
@@ -5994,12 +6042,12 @@
         },
         {
             "name": "NavBrandDirective",
-            "id": "directive-NavBrandDirective-4c741cc11f9e96409260d11943e30880f4aaffa782ff1339b5318704349d2ad4598b12f151d5faa18dbdd59d33ab8852dd25813032c170711abb4528af812703",
+            "id": "directive-NavBrandDirective-9692370b7fedbb682dbfb2e855bb4eeb798fd2a41b9221f157ff9d6c1fcc7f6ec4f09f26e8e7eee46a506d10c6b33869cbade7e5decb34affa4d7c30d36c7742",
             "file": "src/app/shared/components/navbar/nav/directives/nav-brand.directive.ts",
             "type": "directive",
             "description": "<p>This directive abstracts bootstrap class implementation\nand it applies .navbar-brand class to host element</p>\n",
             "rawdescription": "\n\nThis directive abstracts bootstrap class implementation\nand it applies .navbar-brand class to host element\n",
-            "sourceCode": "import { Directive } from '@angular/core';\n\n/**\n * This directive abstracts bootstrap class implementation\n * and it applies .navbar-brand class to host element\n */\n@Directive({\n  selector: '[desxNavBrand]',\n  host: {\n    class: 'navbar-brand'\n  }\n})\nexport class NavBrandDirective {}\n",
+            "sourceCode": "import { Directive } from '@angular/core';\r\n\r\n/**\r\n * This directive abstracts bootstrap class implementation\r\n * and it applies .navbar-brand class to host element\r\n */\r\n@Directive({\r\n  selector: '[desxNavBrand]',\r\n  host: {\r\n    class: 'navbar-brand',\r\n  },\r\n})\r\nexport class NavBrandDirective {}\r\n",
             "selector": "[desxNavBrand]",
             "providers": [],
             "inputsClass": [],
@@ -6013,12 +6061,12 @@
         },
         {
             "name": "NavBrandTextDirective",
-            "id": "directive-NavBrandTextDirective-a1340042c17c0661a703ca3e700136caee95c1e443ba5e8b9c038760406fe9226317b592003218bc82e4521f7a442a55386afb9566b81ae35c45ec5871c8cd01",
+            "id": "directive-NavBrandTextDirective-a9b1189f32479ea8492a5098591ee3edea5bdb77b617cab76266af19f2661b5825d6a9fa1296a25c6e44092cfbde1358d77fca4a87f20aecc83871f99f0af743",
             "file": "src/app/shared/components/navbar/nav/directives/nav-brand-text.directive.ts",
             "type": "directive",
             "description": "<p>This directive abstracts bootstrap class implementation\nand it applies .navbar-text class to host element. Also it provides\na template ref to place content of applied element in host navbar</p>\n",
             "rawdescription": "\n\nThis directive abstracts bootstrap class implementation\nand it applies .navbar-text class to host element. Also it provides\na template ref to place content of applied element in host navbar\n",
-            "sourceCode": "import { Directive, TemplateRef } from '@angular/core';\n\n/**\n * This directive abstracts bootstrap class implementation\n * and it applies .navbar-text class to host element. Also it provides\n * a template ref to place content of applied element in host navbar\n */\n@Directive({\n  selector: 'ng-template[desxNavBrandText]',\n  host: {\n    class: 'navbar-text',\n  },\n})\nexport class NavBrandTextDirective {\n  constructor(public tmplRef: TemplateRef<any>) {}\n}\n",
+            "sourceCode": "import { Directive, TemplateRef } from '@angular/core';\r\n\r\n/**\r\n * This directive abstracts bootstrap class implementation\r\n * and it applies .navbar-text class to host element. Also it provides\r\n * a template ref to place content of applied element in host navbar\r\n */\r\n@Directive({\r\n  selector: 'ng-template[desxNavBrandText]',\r\n  host: {\r\n    class: 'navbar-text',\r\n  },\r\n})\r\nexport class NavBrandTextDirective {\r\n  constructor(public tmplRef: TemplateRef<any>) {}\r\n}\r\n",
             "selector": "ng-template[desxNavBrandText]",
             "providers": [],
             "inputsClass": [],
@@ -6071,12 +6119,12 @@
         },
         {
             "name": "NavItemDirective",
-            "id": "directive-NavItemDirective-8f2ae4a10c597bb4d7dd2fbe7564164fcf7d5f1a2e698b3ecc792e23c4422881ba4a9fd9bda93d1581d44379b04fe8458af784e191c8f5a30f40f902daa01c67",
+            "id": "directive-NavItemDirective-b628ee800e69037ab8c8ceb11675b8cd7afeec67ff5b1a89a279c321da5e809ab103a86431d800a499da5919f5b2cdfa574cb8c5c14815308248e144a948d391",
             "file": "src/app/shared/components/navbar/nav/directives/nav-item.directive.ts",
             "type": "directive",
             "description": "<p>This directive provides a template ref to access\nthe content of each element to be repeated in the navbar.</p>\n",
             "rawdescription": "\n\nThis directive provides a template ref to access\nthe content of each element to be repeated in the navbar.\n",
-            "sourceCode": "import { Directive, TemplateRef } from '@angular/core';\n\n/**\n * This directive provides a template ref to access\n * the content of each element to be repeated in the navbar.\n */\n@Directive({\n  selector: 'ng-template[desxNavItem]',\n})\nexport class NavItemDirective {\n  constructor(public tmplRef: TemplateRef<any>) {}\n}\n",
+            "sourceCode": "import { Directive, TemplateRef } from '@angular/core';\r\n\r\n/**\r\n * This directive provides a template ref to access\r\n * the content of each element to be repeated in the navbar.\r\n */\r\n@Directive({\r\n  selector: 'ng-template[desxNavItem]',\r\n})\r\nexport class NavItemDirective {\r\n  constructor(public tmplRef: TemplateRef<any>) {}\r\n}\r\n",
             "selector": "ng-template[desxNavItem]",
             "providers": [],
             "inputsClass": [],
@@ -6129,12 +6177,12 @@
         },
         {
             "name": "NavLinkDirective",
-            "id": "directive-NavLinkDirective-7d403a7f52457685295202a88cc886ca906bd3f6a43989a1ef87cccfb7044fdcca4ce5b29d4fd5cae41ff70ae6a10aa85fa90f82168b2371816d36ae2bfd3132",
+            "id": "directive-NavLinkDirective-79a3cbee001046977f5813d76ea01903c802f49ac29a27951c8aad422bab910772ab2f790e903f16561dafa386bab32711badc0b89818ab58251cfe9e4e440a3",
             "file": "src/app/shared/components/navbar/nav/directives/nav-link.directive.ts",
             "type": "directive",
             "description": "<p>This directive abstracts bootstrap class implementation\nand it applies .navbar-brand class to host element</p>\n",
             "rawdescription": "\n\nThis directive abstracts bootstrap class implementation\nand it applies .navbar-brand class to host element\n",
-            "sourceCode": "import { Directive } from '@angular/core';\n\n/**\n * This directive abstracts bootstrap class implementation\n * and it applies .navbar-brand class to host element\n */\n@Directive({\n  selector: '[desxNavLink]',\n  host: {\n    class: 'nav-link',\n  },\n})\nexport class NavLinkDirective {}\n",
+            "sourceCode": "import { Directive } from '@angular/core';\r\n\r\n/**\r\n * This directive abstracts bootstrap class implementation\r\n * and it applies .navbar-brand class to host element\r\n */\r\n@Directive({\r\n  selector: '[desxNavLink]',\r\n  host: {\r\n    class: 'nav-link',\r\n  },\r\n})\r\nexport class NavLinkDirective {}\r\n",
             "selector": "[desxNavLink]",
             "providers": [],
             "inputsClass": [],
@@ -7015,7 +7063,7 @@
         },
         {
             "name": "ImageComponent",
-            "id": "component-ImageComponent-924f3100f2c3909d087cd8509076ba95f4d11f918a05c3540245a2600a7d2386ad1fd81ffdaea31fd009c4de9e07ba401f8509c2067bc763f2c1d48a9aea8014",
+            "id": "component-ImageComponent-0a3d7cd86386c3d9ec31d0b463951cde2f5e5e194ff1908d7fc8bdd759e966ac291f04c35399f1a74baa623bb50fcb629d77e94064937a8ba533ac0e37c7766a",
             "file": "src/app/shared/components/image/image.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -7080,7 +7128,7 @@
                 },
                 {
                     "name": "type",
-                    "defaultValue": "'rounded'",
+                    "defaultValue": "ImageTypes.ROUNDED",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 31,
@@ -7118,7 +7166,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Inject, Input, OnInit, ViewEncapsulation } from '@angular/core';\r\nimport { ImageType } from './image.models';\r\nimport { ImageOptions, IMAGE_OPTIONS } from './image.options';\r\n\r\n@Component({\r\n  selector: 'desx-image',\r\n  templateUrl: './image.component.html',\r\n  styleUrls: ['./image.component.scss'],\r\n  encapsulation: ViewEncapsulation.None,\r\n})\r\nexport class ImageComponent implements OnInit {\r\n  @Input()\r\n  id: string = '';\r\n\r\n  @Input()\r\n  options?: Partial<ImageOptions>;\r\n\r\n  @Input()\r\n  source: string = '';\r\n\r\n  @Input()\r\n  altText: string = '';\r\n\r\n  @Input()\r\n  width: string = '0';\r\n\r\n  @Input()\r\n  height: string = '0';\r\n\r\n  @Input()\r\n  type: ImageType = 'rounded';\r\n\r\n  constructor(@Inject(IMAGE_OPTIONS) private defaultOptions: ImageOptions) {}\r\n\r\n  ngOnInit(): void {\r\n    this.options = {\r\n      ...this.defaultOptions,\r\n      ...this.options,\r\n    };\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, Inject, Input, OnInit, ViewEncapsulation } from '@angular/core';\r\nimport { ImageType, ImageTypes } from './image.models';\r\nimport { ImageOptions, IMAGE_OPTIONS } from './image.options';\r\n\r\n@Component({\r\n  selector: 'desx-image',\r\n  templateUrl: './image.component.html',\r\n  styleUrls: ['./image.component.scss'],\r\n  encapsulation: ViewEncapsulation.None,\r\n})\r\nexport class ImageComponent implements OnInit {\r\n  @Input()\r\n  id: string = '';\r\n\r\n  @Input()\r\n  options?: Partial<ImageOptions>;\r\n\r\n  @Input()\r\n  source: string = '';\r\n\r\n  @Input()\r\n  altText: string = '';\r\n\r\n  @Input()\r\n  width: string = '0';\r\n\r\n  @Input()\r\n  height: string = '0';\r\n\r\n  @Input()\r\n  type: ImageType = ImageTypes.ROUNDED;\r\n\r\n  constructor(@Inject(IMAGE_OPTIONS) private defaultOptions: ImageOptions) {}\r\n\r\n  ngOnInit(): void {\r\n    this.options = {\r\n      ...this.defaultOptions,\r\n      ...this.options,\r\n    };\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -7281,130 +7329,6 @@
                 "OnInit"
             ],
             "templateData": "<p>list-group works!</p>\r\n"
-        },
-        {
-            "name": "LoginComponent",
-            "id": "component-LoginComponent-0d963edf290874b15c5275ae85678ce3e7abbe9cb92e14ec6cb1fcf23695aba5f3c5acee649830557b11a1c9131eef662d22f72ad4ba078fbfdb9b22b2cbe7e8",
-            "file": "src/app/components/login/login.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "desx-login",
-            "styleUrls": [
-                "./login.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./login.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 11,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-login',\r\n  templateUrl: './login.component.html',\r\n  styleUrls: ['./login.component.scss'],\r\n})\r\nexport class LoginComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "",
-                    "styleUrl": "./login.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "args": [],
-                "line": 8
-            },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<p>login works!</p>\r\n"
-        },
-        {
-            "name": "LoginStatusComponent",
-            "id": "component-LoginStatusComponent-f1a3abf0f60b282f0042e2ac1736e82495eb9f5bedd978e90c64d76c18b5f247892dfc34d392acc216c0fed9f99d95a220c75d72542e0bdab55231602e8de117",
-            "file": "src/app/components/login-status/login-status.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "desx-login-status",
-            "styleUrls": [
-                "./login-status.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./login-status.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 11,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'desx-login-status',\r\n  templateUrl: './login-status.component.html',\r\n  styleUrls: ['./login-status.component.scss'],\r\n})\r\nexport class LoginStatusComponent implements OnInit {\r\n  constructor() {}\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "",
-                    "styleUrl": "./login-status.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "args": [],
-                "line": 8
-            },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<p>login-status works!</p>\r\n"
         },
         {
             "name": "MainLayoutComponent",
@@ -7632,7 +7556,7 @@
         },
         {
             "name": "NavComponent",
-            "id": "component-NavComponent-4c6bcbf35c0cbdf34a79cb62fc2a50b0400cdabd5fc444235f857e54db4fa9fd9f7330a7e8cd105ce433e0815b81b754e1b29390e79c3bd2aa2d1610e020d902",
+            "id": "component-NavComponent-4be74608a21ec4836b6e963007a0fdb4e1f345b19d39eb6bc768ad4a0303f7d065323d56a96be7c80a5fc1da91f61ab6eb695f01fab64e656864e484702f422c",
             "file": "src/app/shared/components/navbar/nav/nav.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -7704,7 +7628,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {\n  Component,\n  ContentChild,\n  ContentChildren,\n  Input,\n  QueryList,\n  ViewEncapsulation,\n} from '@angular/core';\nimport { generateId } from '@app/shared/helpers/random-id.helper';\nimport { NavBrandTextDirective } from './directives/nav-brand-text.directive';\nimport { NavItemDirective } from './directives/nav-item.directive';\n\n@Component({\n  selector: 'desx-nav',\n  templateUrl: './nav.component.html',\n  styleUrls: ['./nav.component.scss'],\n  encapsulation: ViewEncapsulation.None,\n})\nexport class NavComponent {\n  @Input()\n  id: string = generateId('nav_');\n\n  /**\n   * It queries nav brand element which applied NavBrandTextDirective\n   */\n  @ContentChild(NavBrandTextDirective) brandText!: NavBrandTextDirective;\n\n  /**\n   * It queries all nav-item ng-templates which applied NavItemDirective.\n   * Each template ref is placed as nav-item content in host navbar.\n   */\n  @ContentChildren(NavItemDirective) items!: QueryList<NavItemDirective>;\n}\n",
+            "sourceCode": "import {\r\n  Component,\r\n  ContentChild,\r\n  ContentChildren,\r\n  Input,\r\n  QueryList,\r\n  ViewEncapsulation,\r\n} from '@angular/core';\r\nimport { generateId } from '@app/shared/helpers/random-id.helper';\r\nimport { NavBrandTextDirective } from './directives/nav-brand-text.directive';\r\nimport { NavItemDirective } from './directives/nav-item.directive';\r\n\r\n@Component({\r\n  selector: 'desx-nav',\r\n  templateUrl: './nav.component.html',\r\n  styleUrls: ['./nav.component.scss'],\r\n  encapsulation: ViewEncapsulation.None,\r\n})\r\nexport class NavComponent {\r\n  @Input()\r\n  id: string = generateId('nav_');\r\n\r\n  /**\r\n   * It queries nav brand element which applied NavBrandTextDirective\r\n   */\r\n  @ContentChild(NavBrandTextDirective) brandText!: NavBrandTextDirective;\r\n\r\n  /**\r\n   * It queries all nav-item ng-templates which applied NavItemDirective.\r\n   * Each template ref is placed as nav-item content in host navbar.\r\n   */\r\n  @ContentChildren(NavItemDirective) items!: QueryList<NavItemDirective>;\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -7713,7 +7637,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<button\n  class=\"navbar-toggler\"\n  type=\"button\"\n  data-bs-toggle=\"collapse\"\n  [attr.data-bs-target]=\"'#' + id\"\n  [attr.aria-controls]=\"id\"\n  aria-expanded=\"false\"\n  aria-label=\"toggle navigation\"\n>\n  <span class=\"navbar-toggler-icon\"></span>\n</button>\n<div class=\"collapse navbar-collapse\" [id]=\"id\">\n  <ul class=\"navbar-nav\">\n    <li class=\"nav-item\" *ngFor=\"let item of items\">\n      <ng-container *ngTemplateOutlet=\"item.tmplRef\"></ng-container>\n    </li>\n  </ul>\n  <ng-container *ngTemplateOutlet=\"brandText.tmplRef\"></ng-container>\n</div>\n"
+            "templateData": "<button\r\n  class=\"navbar-toggler\"\r\n  type=\"button\"\r\n  data-bs-toggle=\"collapse\"\r\n  [attr.data-bs-target]=\"'#' + id\"\r\n  [attr.aria-controls]=\"id\"\r\n  aria-expanded=\"false\"\r\n  aria-label=\"toggle navigation\"\r\n>\r\n  <span class=\"navbar-toggler-icon\"></span>\r\n</button>\r\n<div class=\"collapse navbar-collapse\" [id]=\"id\">\r\n  <ul class=\"navbar-nav\">\r\n    <li class=\"nav-item\" *ngFor=\"let item of items\">\r\n      <ng-container *ngTemplateOutlet=\"item.tmplRef\"></ng-container>\r\n    </li>\r\n  </ul>\r\n  <ng-container *ngIf=\"brandText\" [ngTemplateOutlet]=\"brandText.tmplRef\"></ng-container>\r\n</div>\r\n"
         },
         {
             "name": "PaginationComponent",
@@ -9016,13 +8940,13 @@
     "modules": [
         {
             "name": "AppComponentsModule",
-            "id": "module-AppComponentsModule-3e100c126ec0988323f98964a9f3efacb0c48cd513223efb30f47f252566a1f62716cf1ae584ea0c7a90840bceb8581be7a8c2e49bab668ce8cfea7710d0df1b",
+            "id": "module-AppComponentsModule-b094f1ece332a1c604fc5faf830115a26461cf574f7a5956f42ee11f341cd19588fbcd50aa71a9fc4884f5cddf89ad486632be65e9fdc86cbe2e322eec43e899",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/components/app-components.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { LoginComponent } from './login/login.component';\r\nimport { LoginStatusComponent } from './login-status/login-status.component';\r\nimport { ProfileComponent } from './profile/profile.component';\r\nimport { SocialButtonsComponent } from './social-buttons/social-buttons.component';\r\nimport { StatisticsComponent } from './statistics/statistics.component';\r\nimport { SharedModule } from '@app/shared/shared.module';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    LoginComponent,\r\n    LoginStatusComponent,\r\n    ProfileComponent,\r\n    SocialButtonsComponent,\r\n    StatisticsComponent,\r\n  ],\r\n  imports: [CommonModule, SharedModule],\r\n  exports: [\r\n    LoginComponent,\r\n    LoginStatusComponent,\r\n    ProfileComponent,\r\n    SocialButtonsComponent,\r\n    StatisticsComponent,\r\n  ],\r\n})\r\nexport class AppComponentsModule {}\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { ProfileComponent } from './profile/profile.component';\r\nimport { SocialButtonsComponent } from './social-buttons/social-buttons.component';\r\nimport { StatisticsComponent } from './statistics/statistics.component';\r\nimport { SharedModule } from '@app/shared/shared.module';\r\n\r\n@NgModule({\r\n  declarations: [ProfileComponent, SocialButtonsComponent, StatisticsComponent],\r\n  imports: [CommonModule, SharedModule],\r\n  exports: [ProfileComponent, SocialButtonsComponent, StatisticsComponent],\r\n})\r\nexport class AppComponentsModule {}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -9031,12 +8955,6 @@
                 {
                     "type": "declarations",
                     "elements": [
-                        {
-                            "name": "LoginComponent"
-                        },
-                        {
-                            "name": "LoginStatusComponent"
-                        },
                         {
                             "name": "ProfileComponent"
                         },
@@ -9059,12 +8977,6 @@
                 {
                     "type": "exports",
                     "elements": [
-                        {
-                            "name": "LoginComponent"
-                        },
-                        {
-                            "name": "LoginStatusComponent"
-                        },
                         {
                             "name": "ProfileComponent"
                         },
@@ -9651,18 +9563,6 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/social-buttons/social-buttons.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})",
-                "rawdescription": "Default story",
-                "description": "<p>Default story</p>\n"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/components/statistics/statistics.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -9675,7 +9575,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/modules/user-profile/presenter/user-profile-pres.stories.ts",
+                "file": "src/app/components/social-buttons/social-buttons.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -9748,6 +9648,18 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/app/shared/components/textbox/textbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})",
+                "rawdescription": "Default story",
+                "description": "<p>Default story</p>\n"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/user-profile/presenter/user-profile-pres.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -9926,8 +9838,8 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({})",
-                "rawdescription": "Sticky top story",
-                "description": "<p>Sticky top story</p>\n"
+                "rawdescription": "Fixed bottom story",
+                "description": "<p>Fixed bottom story</p>\n"
             },
             {
                 "name": "FixedTop",
@@ -9938,8 +9850,8 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({})",
-                "rawdescription": "Sticky top story",
-                "description": "<p>Sticky top story</p>\n"
+                "rawdescription": "Fixed top story",
+                "description": "<p>Fixed top story</p>\n"
             },
             {
                 "name": "Floating",
@@ -10096,18 +10008,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/social-buttons/social-buttons.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "(args) => ({\r\n  props: args,\r\n})",
-                "rawdescription": "Default template for stories",
-                "description": "<p>Default template for stories</p>\n"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/components/statistics/statistics.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -10120,7 +10020,7 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/modules/user-profile/presenter/user-profile-pres.stories.ts",
+                "file": "src/app/components/social-buttons/social-buttons.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -10193,6 +10093,18 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/app/shared/components/textbox/textbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args) => ({\r\n  props: args,\r\n})",
+                "rawdescription": "Default template for stories",
+                "description": "<p>Default template for stories</p>\n"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/user-profile/presenter/user-profile-pres.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -10325,8 +10237,8 @@
                 "jsdoctags": [
                     {
                         "name": {
-                            "pos": 143,
-                            "end": 146,
+                            "pos": 71,
+                            "end": 74,
                             "flags": 4194304,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
@@ -10337,8 +10249,8 @@
                         "deprecated": false,
                         "deprecationMessage": "",
                         "tagName": {
-                            "pos": 137,
-                            "end": 142,
+                            "pos": 65,
+                            "end": 70,
                             "flags": 4194304,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
@@ -10349,8 +10261,8 @@
                     },
                     {
                         "name": {
-                            "pos": 187,
-                            "end": 195,
+                            "pos": 115,
+                            "end": 123,
                             "flags": 4194304,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
@@ -10361,8 +10273,8 @@
                         "deprecated": false,
                         "deprecationMessage": "",
                         "tagName": {
-                            "pos": 181,
-                            "end": 186,
+                            "pos": 109,
+                            "end": 114,
                             "flags": 4194304,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
@@ -10423,7 +10335,7 @@
                 "name": "ImageType",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "\"rounded\" | \"rounded-circle\"",
+                "rawtype": "ImageTypes.ROUNDED | ImageTypes.ROUNDED_CIRCLE",
                 "file": "src/app/shared/components/image/image.models.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -10533,6 +10445,29 @@
                 "deprecationMessage": "",
                 "description": "<p>Alert events</p>\n",
                 "file": "src/app/shared/components/alert/alert.models.ts"
+            },
+            {
+                "name": "ImageTypes",
+                "childs": [
+                    {
+                        "name": "ROUNDED",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "rounded"
+                    },
+                    {
+                        "name": "ROUNDED_CIRCLE",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "rounded-circle"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "file": "src/app/shared/components/image/image.models.ts"
             },
             {
                 "name": "NavbarColors",
@@ -10926,32 +10861,6 @@
                     "description": "<p>Default template for stories</p>\n"
                 }
             ],
-            "src/app/components/social-buttons/social-buttons.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/social-buttons/social-buttons.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})",
-                    "rawdescription": "Default story",
-                    "description": "<p>Default story</p>\n"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/social-buttons/social-buttons.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})",
-                    "rawdescription": "Default template for stories",
-                    "description": "<p>Default template for stories</p>\n"
-                }
-            ],
             "src/app/components/statistics/statistics.stories.ts": [
                 {
                     "name": "Default",
@@ -10978,12 +10887,12 @@
                     "description": "<p>Default template for stories</p>\n"
                 }
             ],
-            "src/app/modules/user-profile/presenter/user-profile-pres.stories.ts": [
+            "src/app/components/social-buttons/social-buttons.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/modules/user-profile/presenter/user-profile-pres.stories.ts",
+                    "file": "src/app/components/social-buttons/social-buttons.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -10995,7 +10904,7 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/modules/user-profile/presenter/user-profile-pres.stories.ts",
+                    "file": "src/app/components/social-buttons/social-buttons.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -11052,8 +10961,8 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "Template.bind({})",
-                    "rawdescription": "Sticky top story",
-                    "description": "<p>Sticky top story</p>\n"
+                    "rawdescription": "Fixed bottom story",
+                    "description": "<p>Fixed bottom story</p>\n"
                 },
                 {
                     "name": "FixedTop",
@@ -11064,8 +10973,8 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "Template.bind({})",
-                    "rawdescription": "Sticky top story",
-                    "description": "<p>Sticky top story</p>\n"
+                    "rawdescription": "Fixed top story",
+                    "description": "<p>Fixed top story</p>\n"
                 },
                 {
                     "name": "Template",
@@ -11152,6 +11061,32 @@
                     "defaultValue": "FormTemplate.bind({})",
                     "rawdescription": "Textbox w/ form wrapper",
                     "description": "<p>Textbox w/ form wrapper</p>\n"
+                }
+            ],
+            "src/app/modules/user-profile/presenter/user-profile-pres.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/user-profile/presenter/user-profile-pres.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})",
+                    "rawdescription": "Default story",
+                    "description": "<p>Default story</p>\n"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/user-profile/presenter/user-profile-pres.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})",
+                    "rawdescription": "Default template for stories",
+                    "description": "<p>Default template for stories</p>\n"
                 }
             ],
             "src/app/shared/components/components.config.ts": [
@@ -11492,8 +11427,8 @@
                     "jsdoctags": [
                         {
                             "name": {
-                                "pos": 143,
-                                "end": 146,
+                                "pos": 71,
+                                "end": 74,
                                 "flags": 4194304,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -11504,8 +11439,8 @@
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
-                                "pos": 137,
-                                "end": 142,
+                                "pos": 65,
+                                "end": 70,
                                 "flags": 4194304,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -11516,8 +11451,8 @@
                         },
                         {
                             "name": {
-                                "pos": 187,
-                                "end": 195,
+                                "pos": 115,
+                                "end": 123,
                                 "flags": 4194304,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -11528,8 +11463,8 @@
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
-                                "pos": 181,
-                                "end": 186,
+                                "pos": 109,
+                                "end": 114,
                                 "flags": 4194304,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -11603,6 +11538,31 @@
                     "deprecationMessage": "",
                     "description": "<p>Alert events</p>\n",
                     "file": "src/app/shared/components/alert/alert.models.ts"
+                }
+            ],
+            "src/app/shared/components/image/image.models.ts": [
+                {
+                    "name": "ImageTypes",
+                    "childs": [
+                        {
+                            "name": "ROUNDED",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "rounded"
+                        },
+                        {
+                            "name": "ROUNDED_CIRCLE",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "rounded-circle"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "file": "src/app/shared/components/image/image.models.ts"
                 }
             ],
             "src/app/shared/components/navbar/navbar.models.ts": [
@@ -11765,7 +11725,7 @@
                     "name": "ImageType",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "\"rounded\" | \"rounded-circle\"",
+                    "rawtype": "ImageTypes.ROUNDED | ImageTypes.ROUNDED_CIRCLE",
                     "file": "src/app/shared/components/image/image.models.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
@@ -11827,7 +11787,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 46,
+        "count": 47,
         "status": "medium",
         "files": [
             {
@@ -11837,24 +11797,6 @@
                 "name": "AppComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/components/login-status/login-status.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "LoginStatusComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/3",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/components/login/login.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "LoginComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/3",
                 "status": "low"
             },
             {
@@ -12753,8 +12695,8 @@
                 "type": "class",
                 "linktype": "classe",
                 "name": "NavbarComponentFixture",
-                "coveragePercent": 70,
-                "coverageCount": "7/10",
+                "coveragePercent": 72,
+                "coverageCount": "8/11",
                 "status": "good"
             },
             {
