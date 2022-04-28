@@ -136,6 +136,7 @@ components:
         - endDate
         - profileId
         - totalPrice
+        - currency
         - notes
       properties:
         beginDate:
@@ -145,6 +146,8 @@ components:
         profileId:
           type: number
         totalPrice:
+          type: number
+        currency:
           type: number
         notes:
           type: string

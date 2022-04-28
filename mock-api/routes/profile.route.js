@@ -1,19 +1,20 @@
 const express = require('express');
 const profileRoute = express.Router();
-const PROFILES = require('../data/profiles');
+const { profiles } = require('../mocks');
 
 /**
- * Returns all profiles
+ * GET/ profiles
  */
 profileRoute.get('profiles/', (req, res) => {
-  return res.json(PROFILES);
+  return res.json(profiles);
 });
 
 /**
- * Returns profile based on given id parameter.
+ * GET/ profiles/1
+ * @param route param - profile id
  */
-profileRoute.get('profiles/:id', (req, res) => {
-  const profile = PROFILES.find((profile) => profile.id === +req.params.id);
+profileRoute.get('/:id', (req, res) => {
+  const profile = profiles.find((profile) => profile.id === +req.params.id);
 
   if (profile) {
     return res.json(profile);

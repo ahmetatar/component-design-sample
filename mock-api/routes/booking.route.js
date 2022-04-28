@@ -1,31 +1,19 @@
 const express = require('express');
 const bookingRouter = express.Router();
-
-let bookings = [
-  {
-    id: 1,
-    status: 'closed',
-    beginDate: '04/03/2022',
-    endDate: '10/03/2022',
-    profileId: 1,
-    totalPrice: 600,
-    tax: 0,
-    notes: '',
-    attachment: '',
-  },
-];
+let { bookings } = require('../mocks');
 
 /**
- * Returns all bookings
+ * GET/ bookings
  */
-bookingRouter.get('/bookings', (req, res) => {
+bookingRouter.get('/', (req, res) => {
   return res.json(bookings);
 });
 
 /**
- * Returns profile based on given id parameter.
+ * GET/ bookings/1
+ * @param route param - booking id
  */
-bookingRouter.get('/bookings/:id', (req, res) => {
+bookingRouter.get('/:id', (req, res) => {
   const booking = bookings.find((booking) => booking.id === +req.params.id);
 
   if (booking) {
@@ -36,32 +24,34 @@ bookingRouter.get('/bookings/:id', (req, res) => {
 });
 
 /**
- * Creates a new booking.
+ * POST/ bookings
+ * @param payload - booking object
  */
-bookingRouter.post('/bookings', (req, res) => {
+bookingRouter.post('/', (req, res) => {
   const ids = bookings.map((booking) => booking.id);
   const id = Math.max(...ids) + 1;
 
   const newBooking = { id, ...req.body };
   bookings.push(newBooking);
 
-  return res.status(201).json({ success: true });
+  return res.status(201);
 });
 
 /**
- * Delete a booking from booking list
+ * DELETE/ bookings/1
+ * @param route param - booking id
  */
-bookingRouter.delete('/bookings/:id', (req, res) => {
+bookingRouter.delete('/:id', (req, res) => {
   const bookingIndex = bookings.findIndex((booking) => {
     return booking.id === +req.params.id;
   });
 
   if (bookingIndex !== -1) {
     bookings = bookings.slice(bookingIndex + 1, 1);
-    return res.status(204).json({ success: true });
+    return res.status(204);
   }
 
-  return res.status(404).json({ error: 'not found' });
+  return res.status(404);
 });
 
 module.exports = bookingRouter;
