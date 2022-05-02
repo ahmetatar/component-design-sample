@@ -32,6 +32,7 @@ import { NavBrandTextDirective } from './components/navbar/nav/directives/nav-br
 import { NavBrandDirective } from './components/navbar/nav/directives/nav-brand.directive';
 import { NavLinkDirective } from './components/navbar/nav/directives/nav-link.directive';
 import { NavItemDirective } from './components/navbar/nav/directives/nav-item.directive';
+import { ButtonGroupStylePipe } from './components/button-group/pipes/button-group-style.pipe';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { NavItemDirective } from './components/navbar/nav/directives/nav-item.di
     NavLinkDirective,
     NavBrandDirective,
     NavBrandTextDirective,
+    ButtonGroupStylePipe,
   ],
   providers: [...DEFAULT_COMPONENT_OPTIONS],
   imports: [CommonModule, ReactiveFormsModule, FormsModule, RouterModule],
