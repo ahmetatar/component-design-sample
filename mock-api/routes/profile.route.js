@@ -20,7 +20,7 @@ profileRoute.get('/:id', (req, res) => {
     return res.json(profile);
   }
 
-  return res.status(404).json({ error: 'not found' });
+  return res.sendStatus(404);
 });
 
 module.exports = profileRoute;

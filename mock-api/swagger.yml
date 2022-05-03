@@ -10,6 +10,56 @@ tags:
   - name: Profiles
     description: API for users in the system
 paths:
+  /login:
+    post:
+      tags:
+        - Auth
+      summary: Generates token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Credentials'
+      responses:
+        '200':
+          description: 'OK'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponse'
+  /token:
+    post:
+      tags:
+        - Auth
+      summary: Generate access and refresh token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TokenRequest'
+      responses:
+        '200':
+          description: 'OK'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponse'
+  /logout:
+    post:
+      tags:
+        - Auth
+      summary: Logouts the user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TokenRequest'
+      responses:
+        '200':
+          description: 'OK'
   /profiles:
     get:
       tags:
@@ -17,7 +67,7 @@ paths:
       summary: Get all profiles
       responses:
         '200':
-          description: OK
+          description: 'OK'
           content:
             application/json:
               schema:
@@ -95,6 +145,13 @@ paths:
           description: The specified booking ID is invalid (not a number)
 components:
   schemas:
+    TokenRequest:
+      type: object
+      required:
+        - token
+      properties:
+        token:
+          type: string
     Profile:
       type: object
       required:
@@ -129,6 +186,25 @@ components:
             type: string
         hourAvailability:
           type: number
+    TokenResponse:
+      type: object
+      required:
+        - accessToken
+      properties:
+        accessToken:
+          type: string
+        refreshToken:
+          type: string
+    Credentials:
+      type: object
+      required:
+        - userName
+        - password
+      properties:
+        userName:
+          type: string
+        password:
+          type: string
     Booking:
       type: object
       required:

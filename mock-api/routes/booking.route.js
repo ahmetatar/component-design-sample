@@ -20,7 +20,7 @@ bookingRouter.get('/:id', (req, res) => {
     return res.json(booking);
   }
 
-  return res.status(404).json({ error: 'not found' });
+  return res.sendStatus(404);
 });
 
 /**
@@ -34,7 +34,7 @@ bookingRouter.post('/', (req, res) => {
   const newBooking = { id, ...req.body };
   bookings.push(newBooking);
 
-  return res.status(201);
+  return res.sendStatus(201);
 });
 
 /**
@@ -47,11 +47,11 @@ bookingRouter.delete('/:id', (req, res) => {
   });
 
   if (bookingIndex !== -1) {
-    bookings = bookings.slice(bookingIndex + 1, 1);
-    return res.status(204);
+    bookings.splice(bookingIndex, 1);
+    return res.sendStatus(204);
   }
 
-  return res.status(404);
+  return res.sendStatus(404);
 });
 
 module.exports = bookingRouter;

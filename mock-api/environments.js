@@ -1,3 +1,4 @@
 module.exports = {
-  tokenSecret: 'cdstokensecret',
+  accessTokenSecret: 'cdstokensecret',
+  refreshTokenSecret: 'cdsrefreshtokensecret',
 };
