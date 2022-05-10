@@ -30,7 +30,9 @@ route.post('/token', (req, res) => {
       return res.sendStatus(403);
     }
 
-    const accessToken = jwt.sign({ username: user.username, role: user.role }, accessTokenSecret, { expiresIn: '20m' });
+    const accessToken = jwt.sign({ username: user.username, role: user.role }, accessTokenSecret, {
+      expiresIn: '20m',
+    });
 
     return res.json({
       accessToken,
@@ -50,7 +52,9 @@ route.post('/login', (req, res) => {
   });
 
   if (user) {
-    const accessToken = jwt.sign({ username: user.username, role: user.role }, accessTokenSecret, { expiresIn: '20m' });
+    const accessToken = jwt.sign({ username: user.username, role: user.role }, accessTokenSecret, {
+      expiresIn: '20m',
+    });
     const refreshToken = jwt.sign({ username: user.username, role: user.role }, refreshTokenSecret);
 
     inMemRefreshTokens.push(refreshToken);
