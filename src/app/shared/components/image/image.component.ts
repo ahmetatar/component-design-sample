@@ -1,5 +1,5 @@
 import { Component, Inject, Input, OnInit, ViewEncapsulation } from '@angular/core';
-import { ImageType } from './image.models';
+import { ImageType, ImageTypes } from './image.models';
 import { ImageOptions, IMAGE_OPTIONS } from './image.options';
 
 @Component({
@@ -28,7 +28,7 @@ export class ImageComponent implements OnInit {
   height: string = '0';
 
   @Input()
-  type: ImageType = 'rounded';
+  type: ImageType = ImageTypes.ROUNDED;
 
   constructor(@Inject(IMAGE_OPTIONS) private defaultOptions: ImageOptions) {}
 

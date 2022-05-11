@@ -1,0 +1,29 @@
+desx-button-group {
+  .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  desx-button:first-child .btn {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+
+  desx-button:last-child .btn {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+
+  .btn-toolbar .btn {
+    border-radius: 0.25rem;
+  }
+
+  .btn-group-vertical {
+    .btn,
+    desx-button {
+      width: 100%;
+    }
+  }
+}

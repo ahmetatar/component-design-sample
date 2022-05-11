@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ImageComponent } from './image.component';
 import { ImageComponentFixture } from './image.component.fixture';
+import { ImageTypes } from './image.models';
 import { DEFAULT_IMAGE_OPTIONS, IMAGE_OPTIONS } from './image.options';
 
 describe('ImageComponent', () => {
@@ -31,7 +32,7 @@ describe('ImageComponent', () => {
     component.height = '50';
     component.altText = 'profile image';
     component.source = 'assests/profile.png';
-    component.type = 'rounded-circle';
+    component.type = ImageTypes.ROUNDED_CIRCLE;
 
     fixture.detectChanges();
 

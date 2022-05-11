@@ -1,5 +1,11 @@
 import { Component, Inject, Input, OnInit, ViewEncapsulation } from '@angular/core';
-import { BadgeBorders, BadgeColors, BadgeShapes, BadgeTextColors } from './badge.models';
+import {
+  BadgeBorders,
+  BadgeColors,
+  BadgeModes,
+  BadgeShapes,
+  BadgeTextColors,
+} from './badge.models';
 import { BadgeOptions, BADGE_OPTIONS } from './badge.options';
 
 @Component({
@@ -15,6 +21,7 @@ export class BadgeComponent implements OnInit {
   @Input() shape: BadgeShapes = '';
   @Input() textColor: BadgeTextColors = '';
   @Input() border: BadgeBorders = '';
+  @Input() mode: BadgeModes = '';
 
   constructor(@Inject(BADGE_OPTIONS) private defaultOptions: BadgeOptions) {}
 
@@ -23,15 +30,5 @@ export class BadgeComponent implements OnInit {
       ...this.defaultOptions,
       ...this.options,
     };
-  }
-
-  get borderValue() {
-    if (this.border == 'border-dark') {
-      return 'border border-dark';
-    } else if (this.border == 'border-light') {
-      return 'border border-light';
-    } else {
-      return '';
-    }
   }
 }

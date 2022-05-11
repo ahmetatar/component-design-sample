@@ -19,6 +19,8 @@ import { TooltipsComponent } from './components/tooltips/tooltips.component';
 import { LabelComponent } from './components/label/label.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { BadgeComponent } from './components/badge/badge.component';
+import { BadgeBorderPipe } from './components/badge/pipes/badge-border.pipe';
+import { BadgeModePipe } from './components/badge/pipes/badge-mode.pipe';
 import { CardComponent } from './components/card/card.component';
 import { ButtonGroupComponent } from './components/button-group/button-group.component';
 import { ListGroupComponent } from './components/list-group/list-group.component';
@@ -32,6 +34,7 @@ import { NavBrandTextDirective } from './components/navbar/nav/directives/nav-br
 import { NavBrandDirective } from './components/navbar/nav/directives/nav-brand.directive';
 import { NavLinkDirective } from './components/navbar/nav/directives/nav-link.directive';
 import { NavItemDirective } from './components/navbar/nav/directives/nav-item.directive';
+import { ButtonGroupStylePipe } from './components/button-group/pipes/button-group-style.pipe';
 
 @NgModule({
   declarations: [
@@ -52,6 +55,8 @@ import { NavItemDirective } from './components/navbar/nav/directives/nav-item.di
     LabelComponent,
     PaginationComponent,
     BadgeComponent,
+    BadgeBorderPipe,
+    BadgeModePipe,
     CardComponent,
     ButtonGroupComponent,
     ListGroupComponent,
@@ -64,6 +69,7 @@ import { NavItemDirective } from './components/navbar/nav/directives/nav-item.di
     NavLinkDirective,
     NavBrandDirective,
     NavBrandTextDirective,
+    ButtonGroupStylePipe,
   ],
   providers: [...DEFAULT_COMPONENT_OPTIONS],
   imports: [CommonModule, ReactiveFormsModule, FormsModule, RouterModule],
@@ -75,6 +81,9 @@ import { NavItemDirective } from './components/navbar/nav/directives/nav-item.di
     TextboxComponent,
     ButtonComponent,
     ImageComponent,
+    BadgeComponent,
+    BadgeBorderPipe,
+    BadgeModePipe,
   ],
 })
 export class SharedModule {}

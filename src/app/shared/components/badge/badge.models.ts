@@ -19,3 +19,6 @@ export type BadgeTextColors = typeof BadgeTextColorsValues[number];
 
 export const BadgeBordersValues = ['', 'border-dark', 'border-light'] as const;
 export type BadgeBorders = typeof BadgeBordersValues[number];
+
+export const BadgeModesValues = ['', 'counter', 'dot'] as const;
+export type BadgeModes = typeof BadgeModesValues[number];

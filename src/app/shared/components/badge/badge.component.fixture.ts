@@ -1,11 +1,5 @@
 import { DebugElement } from '@angular/core';
 import { ComponentBaseFixture } from '../../testing/component.base-fixture';
-import {
-  BadgeBordersValues,
-  BadgeColorsValues,
-  BadgeShapesValues,
-  BadgeTextColorsValues,
-} from './badge.models';
 
 export class BadgeComponentFixture extends ComponentBaseFixture {
   constructor(element: DebugElement) {
@@ -25,7 +19,7 @@ export class BadgeComponentFixture extends ComponentBaseFixture {
    * @returns {HTMLSpanElement | null} HTMLSpanElement
    */
   public getDangerBadge(): HTMLSpanElement | null {
-    return this.getElement('.' + BadgeColorsValues[3]);
+    return this.getElement('.bg-danger');
   }
 
   /**
@@ -33,7 +27,7 @@ export class BadgeComponentFixture extends ComponentBaseFixture {
    * @returns {HTMLSpanElement | null} HTMLSpanElement
    */
   public getRoundedPillBadge(): HTMLSpanElement | null {
-    return this.getElement('.' + BadgeShapesValues[1]);
+    return this.getElement('.rounded-pill');
   }
 
   /**
@@ -41,14 +35,6 @@ export class BadgeComponentFixture extends ComponentBaseFixture {
    * @returns {HTMLSpanElement | null} HTMLSpanElement
    */
   public getTextDarkBadge(): HTMLSpanElement | null {
-    return this.getElement('.' + BadgeTextColorsValues[1]);
-  }
-
-  /**
-   * Returns .border-dark applied badge element
-   * @returns {HTMLSpanElement | null} HTMLSpanElement
-   */
-  public getBorderDarkBadge(): HTMLSpanElement | null {
-    return this.getElement('.border.' + BadgeBordersValues[1]);
+    return this.getElement('.text-dark');
   }
 }
