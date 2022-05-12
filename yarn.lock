@@ -1598,10 +1598,10 @@
   resolved "https://pkgs.dev.azure.com/mayallc/00350226-1c15-4504-adac-6a9b92bed9ff/_packaging/cds-sdk/npm/registry/@base2/pretty-print-object/-/pretty-print-object-1.0.1.tgz#371ba8be66d556812dc7fb169ebc3c08378f69d4"
   integrity sha1-NxuovmbVVoEtx/sWnrw8CDePadQ=
 
-"@cds/sdk@1.0.0":
-  version "1.0.0"
-  resolved "https://pkgs.dev.azure.com/mayallc/00350226-1c15-4504-adac-6a9b92bed9ff/_packaging/cds-sdk/npm/registry/@cds/sdk/-/sdk-1.0.0.tgz#0b9c83a686b352ca643defc770c9b99aa2a64d00"
-  integrity sha1-C5yDpoazUspkPe/HcMm5mqKmTQA=
+"@cds/sdk@1.0.5":
+  version "1.0.5"
+  resolved "https://pkgs.dev.azure.com/mayallc/00350226-1c15-4504-adac-6a9b92bed9ff/_packaging/cds-sdk/npm/registry/@cds/sdk/-/sdk-1.0.5.tgz#66857d1fcbfca6f52cfaeb189fa228d0a4213a8e"
+  integrity sha1-ZoV9H8v8pvUs+usYn6Io0KQhOo4=
   dependencies:
     isomorphic-fetch "^3.0.0"
 
