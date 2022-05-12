@@ -11,6 +11,26 @@ module.exports = [
     skills: ['android', 'ios', 'ionic'],
     hourAvailability: '5',
     isAvailable: true,
+    rating: 4.5,
+    socials: [
+      'https://twitter.com/julie',
+      'https://skype.com/arsen',
+      'https://linkedin.com/julie-arsen',
+    ],
+    statistics: [
+      {
+        label: 'Wallet Balance',
+        value: '8471',
+      },
+      {
+        label: 'Income amounts',
+        value: '8512',
+      },
+      {
+        label: 'Total Transactions',
+        value: '4751',
+      },
+    ],
   },
   {
     id: 2,
@@ -24,5 +44,22 @@ module.exports = [
     skills: ['ios'],
     hourAvailability: 'fulltime',
     isAvailable: true,
+    rating: 4,
+    socials: ['https://twitter.com/mike', 'https://skype.com/mike', 'https://linkedin.com/mike'],
+    statistics: [
+      ,
+      {
+        label: 'Wallet Balance',
+        value: '8423',
+      },
+      {
+        label: 'Income amounts',
+        value: '1000',
+      },
+      {
+        label: 'Total Transactions',
+        value: '4723',
+      },
+    ],
   },
 ];

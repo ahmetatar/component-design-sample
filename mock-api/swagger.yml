@@ -186,6 +186,18 @@ components:
             type: string
         hourAvailability:
           type: number
+        isAvailable:
+          type: boolean
+        rating:
+          type: number
+        socials:
+          type: array
+          items:
+            type: string
+        statistics:
+          type: array
+          items:
+            type: string
     TokenResponse:
       type: object
       required:
