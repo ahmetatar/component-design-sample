@@ -19,6 +19,8 @@ import { TooltipsComponent } from './components/tooltips/tooltips.component';
 import { LabelComponent } from './components/label/label.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { BadgeComponent } from './components/badge/badge.component';
+import { BadgeBorderPipe } from './components/badge/pipes/badge-border.pipe';
+import { BadgeModePipe } from './components/badge/pipes/badge-mode.pipe';
 import { CardComponent } from './components/card/card.component';
 import { ButtonGroupComponent } from './components/button-group/button-group.component';
 import { ListGroupComponent } from './components/list-group/list-group.component';
@@ -53,6 +55,8 @@ import { ButtonGroupStylePipe } from './components/button-group/pipes/button-gro
     LabelComponent,
     PaginationComponent,
     BadgeComponent,
+    BadgeBorderPipe,
+    BadgeModePipe,
     CardComponent,
     ButtonGroupComponent,
     ListGroupComponent,
@@ -77,6 +81,9 @@ import { ButtonGroupStylePipe } from './components/button-group/pipes/button-gro
     TextboxComponent,
     ButtonComponent,
     ImageComponent,
+    BadgeComponent,
+    BadgeBorderPipe,
+    BadgeModePipe,
   ],
 })
 export class SharedModule {}
