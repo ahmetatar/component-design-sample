@@ -35,6 +35,7 @@ import { NavBrandDirective } from './components/navbar/nav/directives/nav-brand.
 import { NavLinkDirective } from './components/navbar/nav/directives/nav-link.directive';
 import { NavItemDirective } from './components/navbar/nav/directives/nav-item.directive';
 import { ButtonGroupStylePipe } from './components/button-group/pipes/button-group-style.pipe';
+import { RatingComponent } from './components/rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { ButtonGroupStylePipe } from './components/button-group/pipes/button-gro
     NavBrandDirective,
     NavBrandTextDirective,
     ButtonGroupStylePipe,
+    RatingComponent,
   ],
   providers: [...DEFAULT_COMPONENT_OPTIONS],
   imports: [CommonModule, ReactiveFormsModule, FormsModule, RouterModule],
@@ -84,6 +86,7 @@ import { ButtonGroupStylePipe } from './components/button-group/pipes/button-gro
     BadgeComponent,
     BadgeBorderPipe,
     BadgeModePipe,
+    RatingComponent,
   ],
 })
 export class SharedModule {}

@@ -1,0 +1,26 @@
+desx-rating {
+  input {
+    display: none;
+  }
+
+  label {
+    svg {
+      fill: #ddd;
+      width: 50px;
+      height: 50px;
+
+      &.active {
+        fill: #ffcc00;
+      }
+
+      path {
+        transform: scale(0.2);
+      }
+    }
+
+    &:not(.readonly):hover {
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+  }
+}
