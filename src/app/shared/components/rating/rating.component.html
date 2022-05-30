@@ -1,0 +1,14 @@
+<ng-template ngFor let-star [ngForOf]="stars">
+  <input
+    [id]="star"
+    name="star"
+    type="radio"
+    (click)="readonly ? $event.stopPropagation() : update(star)"
+    [(ngModel)]="value"
+  />
+  <label [ngClass]="{ readonly: readonly }" [for]="star" [title]="star">
+    <svg [ngClass]="{ 'star-icon': true, active: star <= value }">
+      <path d="m48,234 73-226 73,226-192-140h238z" />
+    </svg>
+  </label>
+</ng-template>

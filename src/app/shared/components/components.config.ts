@@ -7,6 +7,7 @@ import {
 } from './button-group/button-group.options';
 import { BUTTON_OPTIONS, DEFAULT_BUTTON_OPTIONS } from './button/button.options';
 import { DEFAULT_IMAGE_OPTIONS, IMAGE_OPTIONS } from './image/image.options';
+import { DEFAULT_RATING_OPTIONS, RATING_OPTIONS } from './rating/rating.options';
 import { DEFAULT_TEXTBOX_OPTIONS, TEXTBOX_OPTIONS } from './textbox/textbox.options';
 
 export const DEFAULT_COMPONENT_OPTIONS = [
@@ -17,4 +18,5 @@ export const DEFAULT_COMPONENT_OPTIONS = [
   { provide: TEXTBOX_OPTIONS, useValue: DEFAULT_TEXTBOX_OPTIONS },
   { provide: IMAGE_OPTIONS, useValue: DEFAULT_IMAGE_OPTIONS },
   { provide: BUTTON_GROUP_OPTIONS, useValue: DEFAULT_BUTTON_GROUP_OPTIONS },
+  { provide: RATING_OPTIONS, useValue: DEFAULT_RATING_OPTIONS },
 ];
